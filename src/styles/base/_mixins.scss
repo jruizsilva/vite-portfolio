@@ -1,17 +1,25 @@
-@use '../base/settings';
-
 @mixin center() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flex($justify, $align, $wrap: nowrap, $direction: row) {
+@mixin row($justify, $align, $gap-x: 0px, $wrap: nowrap) {
   display: flex;
+  flex-direction: row;
+  column-gap: $gap-x;
   justify-content: $justify;
   align-items: $align;
   flex-wrap: $wrap;
-  flex-direction: $direction;
+}
+
+@mixin column($justify, $align, $gap-y: 0px, $wrap: nowrap) {
+  display: flex;
+  flex-direction: column;
+  row-gap: $gap-y;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
 
 @mixin media($min-width) {

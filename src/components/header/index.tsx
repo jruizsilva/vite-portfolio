@@ -1,9 +1,14 @@
 import Button from '../button'
+import { icons } from '../../assets'
+import NavbarMenu from '../navbar-menu'
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
-    <header>
-      <Button />
+    <header className='header'>
+      <Button outline icon={icons.link}>
+        Descargar CV
+      </Button>
+      <NavbarMenu />
     </header>
   )
 }

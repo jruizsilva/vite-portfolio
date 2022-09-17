@@ -1,0 +1,6 @@
+@use '../base/mixins';
+
+.container {
+  padding: 16px;
+  @include mixins.column(start, start, 32px);
+}

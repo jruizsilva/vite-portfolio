@@ -1,0 +1,36 @@
+@use '../base/mixins';
+@use '../base/colors';
+
+.btn {
+  background-color: colors.$btn;
+  color: colors.$white;
+  height: 3rem;
+  @include mixins.row(center, center, 12px);
+  border-radius: 1rem;
+  width: 12.5rem;
+
+  &__text {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+  }
+  &__icon {
+    width: 22px;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  height: 3rem;
+  @include mixins.row(center, center, 12px);
+  border: 0.0625rem solid colors.$white;
+  border-radius: 1rem;
+  width: 12.5rem;
+
+  &__text {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+  }
+  &__icon {
+    width: 22px;
+  }
+}
