@@ -5,7 +5,7 @@ import NavbarMenu from '../navbar-menu'
 const Header = (): JSX.Element => {
   return (
     <header className='header'>
-      <Button outline icon={icons.link}>
+      <Button icon={icons.link} bg='transparent' border='#fff'>
         Descargar CV
       </Button>
       <NavbarMenu />

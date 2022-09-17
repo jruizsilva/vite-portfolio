@@ -1,2 +1,36 @@
+@use '../base/colors';
+@use '../base/mixins';
+
 .projects {
+  width: 100%;
+  &__h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  &__card {
+    background-color: colors.$white;
+    min-height: 300px;
+    border-radius: 16px;
+    padding: 16px;
+    @include mixins.column(start, start, 8px);
+  }
+  &__h3 {
+    color: colors.$card-title;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  &__p {
+    font-size: 14px;
+    color: colors.$black;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  &__ul {
+    margin-top: auto;
+    width: 100%;
+  }
 }
