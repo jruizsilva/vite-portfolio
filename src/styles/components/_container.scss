@@ -1,4 +1,4 @@
-@use '../base/mixins';
+@use "../base/mixins";
 
 .container {
   @include mixins.column(start, start, 32px);

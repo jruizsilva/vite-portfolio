@@ -8,13 +8,13 @@ interface Props {
 
 const CardButtons = ({ github, deploy }: Props): JSX.Element => {
   return (
-    <ul className='projects__ul--buttons'>
-      <li className='projects__li--button'>
+    <ul className='project__ul--buttons'>
+      <li className='project__li--button'>
         <AnchorButton href={github} icon={icons.github_white} w='100%'>
           Ver repositorio
         </AnchorButton>
       </li>
-      <li className='projects__li--button'>
+      <li className='project__li--button'>
         <AnchorButton
           href={deploy}
           icon={icons.globe}

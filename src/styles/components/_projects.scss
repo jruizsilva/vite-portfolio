@@ -3,35 +3,46 @@
 
 .projects {
   width: 100%;
+
   &__h2 {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 16px;
   }
-  &__ul--projects {
+
+  &__ul {
     @include mixins.column(start, start, 16px);
   }
-  &__li--project {
-    background-color: colors.$white;
-    min-height: 300px;
-    border-radius: 16px;
-    padding: 16px;
-    @include mixins.column(start, start, 8px);
-  }
+}
+
+.project {
+  background-color: colors.$white;
+  min-height: 300px;
+  border-radius: 16px;
+  padding: 16px;
+  @include mixins.column(start, start, 8px);
+
+  &__ul--tech-stack {}
+
+  &__li--tech-stack {}
+
   &__ul--buttons {
     margin-top: auto;
     @include mixins.column(start, start, 8px);
     width: 100%;
   }
+
   &__li--button {
     width: 100%;
   }
+
   &__h3 {
     color: colors.$card-title;
     font-size: 20px;
     font-weight: 500;
   }
+
   &__p {
     font-size: 14px;
     color: colors.$black;

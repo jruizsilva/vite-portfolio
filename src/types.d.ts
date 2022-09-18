@@ -1,3 +1,8 @@
+interface Technology {
+  id: number
+  svg: string
+}
+
 interface Project {
   id: number
   title: string
@@ -5,6 +10,7 @@ interface Project {
   to: string
   github: string
   deploy?: string
+  techList: Technology[]
 }
 
 interface FormField {
@@ -12,6 +18,7 @@ interface FormField {
   placeholder: string
   label: string
   type?: string
+  techList: string[]
 }
 
-export { Project, FormField }
+export { Technology, Project, FormField }
