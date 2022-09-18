@@ -13,6 +13,7 @@ interface Props {
 }
 interface AnchorProps extends Props {
   href: string
+  type?: string
 }
 interface NavLinkProps extends Props {
   to: string
@@ -73,12 +74,14 @@ const AnchorButton = ({
   icon,
   w,
   border,
-  href
+  href,
+  type
 }: AnchorProps): JSX.Element => {
   return (
     <StyledButton
+      type={type}
       href={href}
-      target='_blank'
+      target={type === 'submit' ? '_self' : '_blank'}
       bg={bg}
       text={text}
       w={w}

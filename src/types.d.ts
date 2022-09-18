@@ -7,4 +7,11 @@ interface Project {
   deploy?: string
 }
 
-export { Project }
+interface FormField {
+  id: number
+  placeholder: string
+  label: string
+  type?: string
+}
+
+export { Project, FormField }

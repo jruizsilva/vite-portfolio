@@ -4,7 +4,8 @@ import linkedin from './svg/linkedin.svg'
 import github from './svg/github.svg'
 import github_white from './svg/github_white.svg'
 import globe from './svg/globe.svg'
+import send from './svg/send.svg'
 
-const icons = { link, menu, linkedin, github, github_white, globe }
+const icons = { link, menu, linkedin, github, github_white, globe, send }
 
 export { icons }
