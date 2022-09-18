@@ -9,12 +9,20 @@
     font-weight: 500;
     margin-bottom: 16px;
   }
-  &__card {
+  &__ul--projects {
+  }
+  &__li--project {
     background-color: colors.$white;
     min-height: 300px;
     border-radius: 16px;
     padding: 16px;
     @include mixins.column(start, start, 8px);
+  }
+  &__ul--buttons {
+    margin-top: auto;
+    width: 100%;
+  }
+  &__li--button {
   }
   &__h3 {
     color: colors.$card-title;
@@ -28,9 +36,5 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-  &__ul {
-    margin-top: auto;
-    width: 100%;
   }
 }
