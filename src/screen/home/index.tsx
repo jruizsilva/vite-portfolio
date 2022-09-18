@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
 import VerMas from '../../components/ver-mas'
 import Contact from '../../components/contact'
+import Footer from '../../components/footer'
 
 const theme = {
   bg: '#3870ba',
@@ -24,6 +25,7 @@ const Home = (): JSX.Element => {
           <Projects />
           <VerMas />
           <Contact />
+          <Footer />
         </div>
       </ThemeProvider>
     </BrowserRouter>
