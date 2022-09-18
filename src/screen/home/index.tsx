@@ -3,6 +3,7 @@ import Header from '../../components/header'
 import Projects from '../../components/projects'
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
+import VerMas from '../../components/ver-mas'
 
 const theme = {
   bg: '#3870ba',
@@ -20,6 +21,7 @@ const Home = (): JSX.Element => {
           <Header />
           <About />
           <Projects />
+          <VerMas />
         </div>
       </ThemeProvider>
     </BrowserRouter>

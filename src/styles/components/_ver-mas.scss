@@ -1,0 +1,12 @@
+@use '../base/mixins';
+
+.ver-mas {
+  width: 100%;
+  @include mixins.column(start, center);
+
+  &__h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
