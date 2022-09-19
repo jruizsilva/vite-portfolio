@@ -1,3 +1,4 @@
+import useHorizontalDragScroll from '../../hooks/useHorizontalDragScroll'
 import { Technology } from '../../types'
 
 interface Props {
@@ -5,12 +6,15 @@ interface Props {
 }
 
 const TechStack = ({ techList }: Props): JSX.Element => {
+  const ulRef = useHorizontalDragScroll()
+
   return (
-    <ul className='project__ul--tech-stack'>
-      <>
-        {console.log(techList)}
-        <li style={{ color: 'black' }}>tech stack</li>
-      </>
+    <ul ref={ulRef} className='project__ul--tech-stack'>
+      {techList.map(({ id, svg, name }: Technology) => (
+        <li className='project__li--tech-stack' key={id}>
+          <img src={svg} alt={name} />
+        </li>
+      ))}
     </ul>
   )
 }

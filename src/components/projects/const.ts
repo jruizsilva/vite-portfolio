@@ -11,14 +11,14 @@ const projectList: Project[] = [
     github: 'https://github.com/jruizsilva/e-commerce-labs',
     deploy: 'https://e-commerce-labs.vercel.app',
     techList: [
-      { id: 1, svg: icons.html },
-      { id: 2, svg: icons.css3 },
-      { id: 3, svg: icons.javascript },
-      { id: 4, svg: icons.react },
-      { id: 5, svg: icons.redux },
-      { id: 6, svg: icons.express },
-      { id: 7, svg: icons.postgresql },
-      { id: 8, svg: icons.sequelize }
+      { id: 1, name: 'html', svg: icons.html },
+      { id: 2, name: 'css3', svg: icons.css3 },
+      { id: 3, name: 'javascript', svg: icons.javascript },
+      { id: 4, name: 'react', svg: icons.react },
+      { id: 5, name: 'redux', svg: icons.redux },
+      { id: 6, name: 'express', svg: icons.express },
+      { id: 7, name: 'postgresql', svg: icons.postgresql },
+      { id: 8, name: 'sequelize', svg: icons.sequelize }
     ]
   },
   {
@@ -30,14 +30,14 @@ const projectList: Project[] = [
     github: 'https://github.com/jruizsilva/challenge-fullstack-alkemy',
     deploy: 'https://challenge-fullstack-alkemy-six.vercel.app',
     techList: [
-      { id: 1, svg: icons.html },
-      { id: 2, svg: icons.css3 },
-      { id: 3, svg: icons.javascript },
-      { id: 4, svg: icons.react },
-      { id: 5, svg: icons.redux },
-      { id: 6, svg: icons.express },
-      { id: 7, svg: icons.postgresql },
-      { id: 8, svg: icons.sequelize }
+      { id: 1, name: 'html', svg: icons.html },
+      { id: 2, name: 'css3', svg: icons.css3 },
+      { id: 3, name: 'javascript', svg: icons.javascript },
+      { id: 4, name: 'react', svg: icons.react },
+      { id: 5, name: 'redux', svg: icons.redux },
+      { id: 6, name: 'express', svg: icons.express },
+      { id: 7, name: 'postgresql', svg: icons.postgresql },
+      { id: 8, name: 'sequelize', svg: icons.sequelize }
     ]
   }
 ]

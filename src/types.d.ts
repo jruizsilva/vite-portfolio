@@ -1,5 +1,6 @@
 interface Technology {
   id: number
+  name: string
   svg: string
 }
 

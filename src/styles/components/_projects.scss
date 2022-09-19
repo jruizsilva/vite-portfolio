@@ -19,13 +19,34 @@
 .project {
   background-color: colors.$white;
   min-height: 300px;
+  max-width: 288px;
+  margin: auto;
   border-radius: 16px;
   padding: 16px;
   @include mixins.column(start, start, 8px);
+  overflow-x: hidden;
 
-  &__ul--tech-stack {}
+  &__ul--tech-stack {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+  }
 
-  &__li--tech-stack {}
+  &__li--tech-stack {
+    min-width: 36px;
+    min-height: 36px;
+    display: inline-block;
+    margin: 0 2px;
+
+    &:hover {
+      box-shadow: 1px 1px 5px blue;
+    }
+  }
+
+  &__img--tech-stack {}
 
   &__ul--buttons {
     margin-top: auto;
