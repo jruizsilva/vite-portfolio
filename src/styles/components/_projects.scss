@@ -32,21 +32,30 @@
     overflow-y: hidden;
     white-space: nowrap;
     user-select: none;
-    cursor: pointer;
+    margin-top: auto;
+
   }
 
   &__li--tech-stack {
-    min-width: 36px;
-    min-height: 36px;
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 16px;
+    margin-top: auto;
+    transition: transform 300ms;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:hover {
-      box-shadow: 1px 1px 5px blue;
+      cursor: pointer;
+      transform: translate(0px, 2px);
     }
   }
 
-  &__img--tech-stack {}
 
   &__ul--buttons {
     margin-top: auto;
@@ -71,5 +80,49 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  // Modal
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.20);
+    @include mixins.row(center, center)
+  }
+
+  &__modal {
+    background-color: #fff;
+    max-width: 320px;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  &__modal-title {
+    color: #5F889A;
+  }
+
+  &__btn {
+    border: 2px solid #fff;
+    border-radius: .3rem;
+    background-color: #FEC46C;
+    color: #313F4B;
+    ;
+    padding: .5rem 1.5rem;
+    margin-top: .5rem;
+  }
+
+  &__btn:hover {
+    cursor: pointer;
+  }
+
+  &__btn-modal-open {
+    margin-top: 1em;
+  }
+
+  &__btn-modal-close {
+    border: 2px solid #5F889A;
   }
 }
