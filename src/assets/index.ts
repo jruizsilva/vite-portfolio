@@ -13,6 +13,7 @@ import redux from './svg/redux.svg'
 import express from './svg/express.svg'
 import postgresql from './svg/postgresql.svg'
 import sequelize from './svg/sequelize.svg'
+import close from './svg/close.svg'
 
 const icons = {
   link,
@@ -29,7 +30,8 @@ const icons = {
   redux,
   express,
   postgresql,
-  sequelize
+  sequelize,
+  close
 }
 
 export { icons }

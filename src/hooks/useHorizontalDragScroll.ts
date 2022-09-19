@@ -10,13 +10,16 @@ const useHorizontalDragScroll = (): React.RefObject<HTMLUListElement> => {
     const onClickPress = (e: MouseEvent): void => {
       isDown = true
       if (ulRef.current !== null) {
-        ulRef.current.classList.add('active')
+        ulRef.current.style.cursor = 'grabbing'
         startX = e.pageX - ulRef.current.offsetLeft
         scrollLeft = ulRef.current.scrollLeft
       }
     }
     const onMouseLeaveOrUp = (e: MouseEvent): void => {
       isDown = false
+      if (ulRef.current !== null) {
+        ulRef.current.style.cursor = 'grab'
+      }
     }
     const onMousePressAndMove = (e: MouseEvent): void => {
       if (!isDown) return

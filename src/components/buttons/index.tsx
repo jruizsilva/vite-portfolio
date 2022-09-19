@@ -10,6 +10,7 @@ interface Props {
   icon?: string
   border?: string
   w?: string
+  onClick?: () => void
 }
 interface AnchorProps extends Props {
   href: string
@@ -81,7 +82,7 @@ const AnchorButton = ({
     <StyledButton
       type={type}
       href={href}
-      target={type === 'submit' ? '_self' : '_blank'}
+      target={type === 'submit' || type === 'button' ? '_self' : '_blank'}
       bg={bg}
       text={text}
       w={w}

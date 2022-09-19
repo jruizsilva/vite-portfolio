@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { icons } from '../../assets'
 import useHorizontalDragScroll from '../../hooks/useHorizontalDragScroll'
+import useModal from '../../hooks/useModal'
 import { Technology } from '../../types'
 
 interface Props {
@@ -9,30 +10,17 @@ interface Props {
 const TechStack = ({ techList }: Props): JSX.Element => {
   const ulRef = useHorizontalDragScroll()
 
-  const [isOpenModal, setIsOpenModal] = useState(false)
-  const [techName, setTechName] = useState('')
-
-  const handleOpenModal = (name: string): void => {
-    console.log('open modal')
-    setIsOpenModal(true)
-    setTechName(name)
-  }
-
-  const handleCloseModal = (): void => {
-    console.log('close modal')
-    setIsOpenModal(false)
-    setTechName('')
-  }
-  console.log(isOpenModal)
+  const { isOpenModal, openModal, closeModal, modalTitle, modalContent } =
+    useModal()
 
   return (
     <>
       <ul ref={ulRef} className='project__ul--tech-stack'>
-        {techList.map(({ id, svg, name }: Technology) => (
+        {techList.map(({ id, svg, name, content }: Technology) => (
           <li
             key={id}
             className='project__li--tech-stack'
-            onClick={() => handleOpenModal(name)}
+            onClick={() => openModal(name, content)}
             data-title={name}
           >
             <img src={svg} alt={name} />
@@ -40,14 +28,12 @@ const TechStack = ({ techList }: Props): JSX.Element => {
         ))}
       </ul>
       {isOpenModal && (
-        <div className='project__overlay'>
-          <div className='project__modal'>
-            <h3 className='project__modal-title'>{techName}</h3>
-            <button
-              className='project__btn project__btn-modal-close'
-              onClick={handleCloseModal}
-            >
-              Close Me!
+        <div className='project__overlay' onClick={closeModal}>
+          <div className='project__modal' onClick={e => e.stopPropagation()}>
+            <h3 className='project__h3--modal'>{modalTitle}</h3>
+            <p className='project__p--modal'>{modalContent}</p>
+            <button className='project__button--modal' onClick={closeModal}>
+              <img src={icons.close} alt='close' />
             </button>
           </div>
         </div>
