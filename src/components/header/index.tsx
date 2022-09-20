@@ -1,8 +1,11 @@
 import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
 import NavbarMenu from '../navbar-menu'
+import useShowMenuIcon from '../../hooks/useBurgerMenu'
 
 const Header = (): JSX.Element => {
+  const { showMenuIcon } = useShowMenuIcon()
+
   return (
     <header className='header'>
       <div className='header__wrapper'>
@@ -14,7 +17,8 @@ const Header = (): JSX.Element => {
         >
           Descargar CV
         </AnchorButton>
-        <NavbarMenu />
+
+        <NavbarMenu showMenuIcon={showMenuIcon} />
       </div>
     </header>
   )

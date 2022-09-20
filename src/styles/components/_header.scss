@@ -7,6 +7,7 @@
   position: fixed;
   height: 82px;
   padding: 16px;
+
   top: 0;
   background-color: colors.$bg;
   border-bottom: 2px solid #fff;
@@ -30,11 +31,29 @@
 }
 
 .nav {
+  @include mixins.row(space-between, center, 36px);
+  height: 48px;
+
   &__ul {
-    @include mixins.row(start, start, 8px)
+    @include mixins.row(start, start, 36px);
+    margin: auto;
+    height: 100%;
   }
 
-  &__li {}
+  &__li {
+    height: 100%;
+    display: flex;
+    align-items: center;
 
-  &__a {}
+    &--active {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  &__a {
+    font-size: 24px;
+    font-weight: 300;
+
+
+  }
 }
