@@ -19,8 +19,8 @@ const Home = (): JSX.Element => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
+        <Header />
         <div className='container'>
-          <Header />
           <About />
           <Projects />
           <VerMas />

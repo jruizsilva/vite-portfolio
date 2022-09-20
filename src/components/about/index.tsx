@@ -2,7 +2,7 @@ import AboutCard from '../about-card'
 
 const About = (): JSX.Element => {
   return (
-    <div className='about'>
+    <div className='about' id='about'>
       <h1 className='about__h1'>
         Bienvenido! <br />
         Soy Jonathan

@@ -1,6 +1,40 @@
 @use '../base/mixins';
+@use '../base/colors';
+@use '../base/breakpoints';
 
 .header {
-  @include mixins.row(space-between, center);
   width: 100%;
+  position: fixed;
+  height: 82px;
+  padding: 16px;
+  top: 0;
+  background-color: colors.$bg;
+  border-bottom: 2px solid #fff;
+
+  &__wrapper {
+    @include mixins.row(space-between, center);
+
+    @media (min-width: breakpoints.$md) {
+      max-width: 768px;
+      margin: auto;
+    }
+
+    @media (min-width: breakpoints.$lg) {
+      max-width: 992px;
+      margin: auto;
+    }
+  }
+
+
+
+}
+
+.nav {
+  &__ul {
+    @include mixins.row(start, start, 8px)
+  }
+
+  &__li {}
+
+  &__a {}
 }

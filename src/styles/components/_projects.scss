@@ -4,16 +4,17 @@
 
 .projects {
   width: 100%;
+  scroll-margin-top: 82px;
 
   &__h2 {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 16px;
+    padding: 16px 0;
 
     @media (min-width: breakpoints.$sm) {
       font-size: 32px;
-      margin-bottom: 18px;
+      padding: 24px 0;
     }
   }
 

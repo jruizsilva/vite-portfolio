@@ -5,7 +5,7 @@ import { contactFields } from './const'
 
 const Contact = (): JSX.Element => {
   return (
-    <div className='contact'>
+    <div className='contact' id='contact'>
       <h2 className='contact__h2'>Contact</h2>
       <form className='contact__form'>
         {contactFields.map(({ id, label, type, placeholder }: FormField) => (

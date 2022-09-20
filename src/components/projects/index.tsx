@@ -3,7 +3,7 @@ import { projectList } from './const'
 
 const Projects = (): JSX.Element => {
   return (
-    <div className='projects'>
+    <div className='projects' id='projects'>
       <h2 className='projects__h2'>Projects</h2>
       <ul className='projects__ul'>
         {projectList.map(project => (
