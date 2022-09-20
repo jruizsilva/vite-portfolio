@@ -1,4 +1,4 @@
-import Card from '../card'
+import ProjectCard from '../project-card'
 import { projectList } from './const'
 
 const Projects = (): JSX.Element => {
@@ -7,7 +7,7 @@ const Projects = (): JSX.Element => {
       <h2 className='projects__h2'>Projects</h2>
       <ul className='projects__ul'>
         {projectList.map(project => (
-          <Card key={project.id} {...project} />
+          <ProjectCard key={project.id} {...project} />
         ))}
       </ul>
     </div>

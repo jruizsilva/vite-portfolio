@@ -3,7 +3,7 @@ import { Project } from '../../types'
 import CardButtons from '../card-buttons'
 import TechStack from '../tech-stack'
 
-const Card = ({
+const ProjectCard = ({
   title,
   description,
   to,
@@ -23,4 +23,4 @@ const Card = ({
   )
 }
 
-export default Card
+export default ProjectCard

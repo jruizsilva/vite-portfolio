@@ -21,7 +21,7 @@ const TechStack = ({ techList }: Props): JSX.Element => {
             key={id}
             className='project__li--tech-stack'
             onClick={() => openModal(name, content)}
-            data-title={name}
+            title={`${name} icon`}
           >
             <img src={svg} alt={name} />
           </li>

@@ -9,6 +9,8 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 16px;
+
+
   }
 
   &__ul {
@@ -52,8 +54,8 @@
     }
 
     &:hover {
-      cursor: auto;
-      transform: translate(0px, 4px);
+      cursor: pointer;
+      transform: translateY(4px);
     }
   }
 
@@ -73,6 +75,10 @@
     color: colors.$card-title;
     font-size: 20px;
     font-weight: 500;
+
+    &:hover {
+      text-decoration: underline
+    }
   }
 
   &__p {
