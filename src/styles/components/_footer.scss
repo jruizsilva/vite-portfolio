@@ -1,13 +1,20 @@
 @use '../base/mixins';
+@use '../base/breakpoints';
 
 .footer {
   @include mixins.row(center, center);
   width: 100%;
+
   &__p {
     font-size: 14px;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 18px;
+    }
   }
-  &__span {
-  }
+
+  &__span {}
+
   &__strong {
     font-weight: 600;
   }

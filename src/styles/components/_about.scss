@@ -3,6 +3,8 @@
 @use '../base/breakpoints';
 
 .about {
+  width: 100%;
+
   &__h1 {
     font-size: 24px;
     line-height: 1.4;
@@ -27,26 +29,41 @@
 
     @media (min-width: breakpoints.$sm) {
       font-size: 32px;
+      margin-bottom: 18px;
     }
   }
+}
 
-  &__card {
-    background-color: colors.$white;
-    border-radius: 16px;
-    padding: 16px;
-    min-height: 300px;
-    @include mixins.column(start, start, 8px);
+.about-card {
+  @include mixins.column(start, start, 8px);
+  background-color: colors.$white;
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 300px;
+  max-width: 425px;
+  margin: auto;
+
+  @media (min-width: breakpoints.$sm) {
+    padding: 22px;
   }
 
   &__h3 {
     color: colors.$card-title;
     font-size: 20px;
     font-weight: 500;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 22px;
+    }
   }
 
   &__p {
     font-size: 14px;
     color: colors.$black;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 16px;
+    }
   }
 
   &__ul {
@@ -63,5 +80,4 @@
       transform: translateY(4px);
     }
   }
-
 }

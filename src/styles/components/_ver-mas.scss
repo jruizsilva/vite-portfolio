@@ -1,4 +1,5 @@
 @use '../base/mixins';
+@use '../base/breakpoints';
 
 .ver-mas {
   width: 100%;
@@ -8,5 +9,10 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 16px;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
   }
 }

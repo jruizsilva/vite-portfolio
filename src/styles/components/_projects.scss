@@ -1,5 +1,6 @@
 @use '../base/colors';
 @use '../base/mixins';
+@use '../base/breakpoints';
 
 .projects {
   width: 100%;
@@ -10,23 +11,64 @@
     font-weight: 500;
     margin-bottom: 16px;
 
-
+    @media (min-width: breakpoints.$sm) {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
   }
 
   &__ul {
-    @include mixins.column(start, start, 16px);
+    @include mixins.column(start, center, 16px);
+
+    @media (min-width: breakpoints.$sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 16px;
+    }
   }
 }
 
 .project {
+  @include mixins.column(start, start, 8px);
   background-color: colors.$white;
   min-height: 300px;
   max-width: 288px;
-  margin: auto;
   border-radius: 16px;
   padding: 16px;
-  @include mixins.column(start, start, 8px);
   overflow-x: hidden;
+
+  @media (min-width: breakpoints.$sm) {
+    padding: 22px;
+  }
+
+  &__h3 {
+    color: colors.$card-title;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline
+    }
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__p {
+    font-size: 14px;
+    color: colors.$black;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 16px;
+    }
+  }
 
   &__ul--tech-stack {
     width: 100%;
@@ -69,25 +111,6 @@
 
   &__li--button {
     width: 100%;
-  }
-
-  &__h3 {
-    color: colors.$card-title;
-    font-size: 20px;
-    font-weight: 500;
-
-    &:hover {
-      text-decoration: underline
-    }
-  }
-
-  &__p {
-    font-size: 14px;
-    color: colors.$black;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   // Modal
