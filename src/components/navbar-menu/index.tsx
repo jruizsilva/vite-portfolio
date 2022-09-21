@@ -1,7 +1,7 @@
+import { Link } from 'react-scroll'
 import { icons } from '../../assets'
 import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
-import { Link } from 'react-scroll'
 
 interface Props {
   showMenuIcon: boolean
