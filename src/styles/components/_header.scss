@@ -7,10 +7,14 @@
   position: fixed;
   height: 82px;
   padding: 16px;
-
   top: 0;
   background-color: colors.$bg;
   border-bottom: 2px solid #fff;
+  transition: border-bottom 0.5s;
+
+  &.open {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
 
   &__nav {
     position: relative;
@@ -30,8 +34,14 @@
     width: 100vw;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -120vh;
     background-color: colors.$bg;
+    transition: left 0.5s;
+
+    &.open {
+      top: 0;
+      left: 0;
+    }
 
     @media (min-width: breakpoints.$md) {
       @include mixins.row(space-between, center, 48px);
@@ -40,7 +50,7 @@
       width: 100%;
     }
   }
-  &__ul--links {
+  &__ul &__ul--links {
     @include mixins.column(space-between, center, 48px);
     @media (min-width: breakpoints.$md) {
       @include mixins.row(space-between, center, 24px);
@@ -82,7 +92,7 @@
     background-color: colors.$bg;
   }
 
-  &__hambugar-menu {
+  &__hamburger-menu {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;

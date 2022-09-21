@@ -14,9 +14,9 @@ const Header = (): JSX.Element => {
   console.log(isOpenMenu)
 
   return (
-    <header className='header'>
+    <header className={`header ${isOpenMenu ? 'open' : ''}`}>
       <nav className='header__nav'>
-        <ul className='header__ul'>
+        <ul className={`header__ul ${isOpenMenu ? 'open' : ''}`}>
           <li className='header__li'>
             <AnchorButton
               href='http://google.com'
@@ -56,7 +56,7 @@ const Header = (): JSX.Element => {
           </li>
         </ul>
         <div
-          className={`header__hambugar-menu ${isOpenMenu ? 'open' : ''}`}
+          className={`header__hamburger-menu ${isOpenMenu ? 'open' : ''}`}
           onClick={toggleOpenMenu}
         >
           <div className='header__bar-top'></div>
