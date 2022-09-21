@@ -42,8 +42,7 @@
 
   &__li {
     height: 100%;
-    display: flex;
-    align-items: center;
+
 
     &--active {
       border-bottom: 2px solid #fff;
@@ -51,9 +50,16 @@
   }
 
   &__a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
     font-size: 24px;
     font-weight: 300;
+    border-bottom: 2px solid transparent;
 
-
+    &--active {
+      border-bottom: 2px solid #fff;
+    }
   }
 }

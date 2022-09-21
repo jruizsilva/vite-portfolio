@@ -1,15 +1,13 @@
 import { icons } from '../../assets'
-import useNavbarActiveLink from '../../hooks/useNavbarActiveLink'
 import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
+import { Link } from 'react-scroll'
 
 interface Props {
   showMenuIcon: boolean
 }
 
 const NavbarMenu = ({ showMenuIcon }: Props): JSX.Element => {
-  const { addActiveClassName } = useNavbarActiveLink()
-
   return (
     <>
       <nav className='nav'>
@@ -17,10 +15,17 @@ const NavbarMenu = ({ showMenuIcon }: Props): JSX.Element => {
         {!showMenuIcon && (
           <ul className='nav__ul'>
             {navbarLinkList.map(({ id, href, name }: NavbarLink) => (
-              <li key={id} className={`nav__li ${addActiveClassName(href)}`}>
-                <a className='nav__a' href={href}>
+              <li key={id} className='nav__li'>
+                <Link
+                  className='nav__a'
+                  activeClass='nav__a--active'
+                  to={href}
+                  spy
+                  smooth
+                  offset={-100}
+                >
                   {name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
