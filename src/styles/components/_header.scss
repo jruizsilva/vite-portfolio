@@ -25,9 +25,6 @@
       margin: auto;
     }
   }
-
-
-
 }
 
 .nav {
@@ -42,7 +39,6 @@
 
   &__li {
     height: 100%;
-
 
     &--active {
       border-bottom: 2px solid #fff;
@@ -61,5 +57,13 @@
     &--active {
       border-bottom: 2px solid #fff;
     }
+  }
+}
+
+.select-languaje {
+  outline: none;
+
+  &__option {
+    background-color: colors.$bg;
   }
 }

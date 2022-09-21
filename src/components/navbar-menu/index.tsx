@@ -32,9 +32,13 @@ const NavbarMenu = ({ showMenuIcon }: Props): JSX.Element => {
         )}
       </nav>
       {!showMenuIcon && (
-        <select>
-          <option value='es'>ES</option>
-          <option value='en'>EN</option>
+        <select className='select-languaje'>
+          <option className='select-languaje__option' value='es'>
+            ES
+          </option>
+          <option className='select-languaje__option' value='en'>
+            EN
+          </option>
         </select>
       )}
     </>
