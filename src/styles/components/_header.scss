@@ -12,21 +12,20 @@
   background-color: colors.$bg;
   border-bottom: 2px solid #fff;
 
-  &__wrapper {
+  &__nav {
+    position: relative;
     @media (min-width: breakpoints.$md) {
       max-width: 95%;
       margin: auto;
     }
-  }
-
-  &__nav {
-    @include mixins.row(space-between, center);
-    height: 48px;
+    @media (min-width: breakpoints.$lg) {
+      max-width: 90%;
+      margin: auto;
+    }
   }
 
   &__ul {
     @include mixins.column(center, center, 48px);
-    margin: auto;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -34,26 +33,30 @@
     left: 0;
     background-color: colors.$bg;
 
-    @media (min-width: 768px) {
-      @include mixins.row(center, center, 0px);
+    @media (min-width: breakpoints.$md) {
+      @include mixins.row(space-between, center, 48px);
       position: static;
-      background-color: transparent;
       height: 100%;
       width: 100%;
     }
   }
+  &__ul--links {
+    @include mixins.column(space-between, center, 48px);
+    @media (min-width: breakpoints.$md) {
+      @include mixins.row(space-between, center, 24px);
+    }
+    @media (min-width: breakpoints.$lg) {
+      @include mixins.row(space-between, center, 36px);
+    }
+  }
 
   &__li {
-    @media (min-width: 768px) {
+    &:first-of-type {
+      display: none;
+    }
+    @media (min-width: breakpoints.$md) {
       &:first-of-type {
-        margin-left: auto;
-        margin-right: 36px;
-      }
-      &:nth-child(2) {
-        margin-right: 36px;
-      }
-      &:last-of-type {
-        margin-left: auto;
+        display: block;
       }
     }
   }
@@ -78,13 +81,22 @@
   &__option {
     background-color: colors.$bg;
   }
+
+  &__burger {
+    height: 48px;
+    width: 48px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media (min-width: breakpoints.$md) {
+      &:first-of-type {
+        display: none;
+      }
+    }
+  }
   &__img {
     height: 100%;
-    width: 48px;
-    z-index: 1;
-
-    @media (min-width: 768px) {
-      display: none;
-    }
+    width: 100%;
   }
 }

@@ -54,6 +54,9 @@
   @media (min-width: breakpoints.$sm) {
     padding: 22px;
   }
+  @media (min-width: breakpoints.$lg) {
+    min-height: 280px;
+  }
 
   &__h3 {
     color: colors.$card-title;
