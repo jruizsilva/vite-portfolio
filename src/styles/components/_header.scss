@@ -88,9 +88,12 @@
     justify-content: space-between;
     height: 40px;
     width: 40px;
-
     position: absolute;
     right: 0;
+
+    @media (min-width: breakpoints.$md) {
+      display: none;
+    }
 
     &.open .header__bar-top {
       transform: rotate(45deg);
