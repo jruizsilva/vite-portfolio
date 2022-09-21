@@ -3,8 +3,16 @@ import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
 import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
+import { useState } from 'react'
 
 const Header = (): JSX.Element => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+
+  const toggleOpenMenu = (): void => {
+    setIsOpenMenu(!isOpenMenu)
+  }
+  console.log(isOpenMenu)
+
   return (
     <header className='header'>
       <nav className='header__nav'>
@@ -47,8 +55,13 @@ const Header = (): JSX.Element => {
             </select>
           </li>
         </ul>
-        <div className='header__burger'>
-          <img className='header__img' src={icons.menu} alt='navbar menu' />
+        <div
+          className={`header__hambugar-menu ${isOpenMenu ? 'open' : ''}`}
+          onClick={toggleOpenMenu}
+        >
+          <div className='header__bar-top'></div>
+          <div className='header__bar-middle'></div>
+          <div className='header__bar-bottom'></div>
         </div>
       </nav>
     </header>
