@@ -13,7 +13,6 @@ const setCurrentHash = (scrollY: number): void => {
 const useSetHashOnCurrentScroll = (): void => {
   useEffect(() => {
     let scrollY = window.scrollY
-    setCurrentHash(scrollY)
 
     const scrollHandler = (): void => {
       scrollY = window.scrollY

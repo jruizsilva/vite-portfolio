@@ -38,6 +38,7 @@ a {
   color: inherit;
   font-size: inherit;
 }
+
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
@@ -75,6 +76,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,
@@ -121,6 +123,7 @@ svg {
   display: block;
   fill: currentColor;
 }
+
 /* (Probándolo, no usar en producción) En el caso de añadir una  */
 /* p svg{
   display: inline;

@@ -3,10 +3,10 @@ import Projects from '../../components/projects'
 import VerMas from '../../components/ver-mas'
 import Contact from '../../components/contact'
 import Footer from '../../components/footer'
-import useSetHashOnCurrentScroll from '../../hooks/useSetHashOnCurrentScroll'
+// import useSetHashOnCurrentScroll from '../../hooks/useSetHashOnCurrentScroll'
 
 const Home = (): JSX.Element => {
-  useSetHashOnCurrentScroll()
+  // useSetHashOnCurrentScroll()
 
   return (
     <div className='container'>
