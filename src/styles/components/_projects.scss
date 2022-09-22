@@ -44,8 +44,10 @@
   }
 
   @media (min-width: breakpoints.$sm) {
-    padding: 22px;
-    max-width: 480px;
+    &.screen {
+      padding: 22px;
+      max-width: 480px;
+    }
   }
 
   &__h3 {
@@ -167,9 +169,11 @@
     &.image {
       border-radius: 4px;
       padding: 4px;
-      width: 80%;
-      height: 60%;
-      max-width: 100%;
+      min-width: 80%;
+      max-width: 95%;
+      @media (min-width: breakpoints.$md) {
+        height: 70%;
+      }
     }
   }
 
