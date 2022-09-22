@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import Footer from '../components/footer'
-import Home from '../screen/home'
+import HomeScreen from '../screen/home'
 import ProjectScreen from '../screen/project'
+import ProjectsScreen from '../screen/projects'
 
 const theme = {
   bg: '#3870ba',
@@ -17,7 +18,8 @@ const Router = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<HomeScreen />} />
+          <Route path='/projects' element={<ProjectsScreen />} />
           <Route path='/project/:id' element={<ProjectScreen />} />
         </Routes>
         <Footer />

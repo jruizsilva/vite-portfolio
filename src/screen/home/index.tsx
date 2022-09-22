@@ -4,7 +4,7 @@ import VerMas from '../../components/ver-mas'
 import Contact from '../../components/contact'
 import HeaderHome from '../../components/header-home'
 
-const Home = (): JSX.Element => {
+const HomeScreen = (): JSX.Element => {
   return (
     <>
       <HeaderHome />
@@ -18,4 +18,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default Home
+export default HomeScreen
