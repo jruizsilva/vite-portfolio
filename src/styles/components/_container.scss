@@ -2,6 +2,11 @@
 @use '../base/breakpoints';
 
 .container {
+  @include mixins.column(start, center, 0px);
+  min-height: 100vh;
+}
+
+.wrapper {
   @include mixins.column(start, start, 32px);
   padding: 0 16px;
 

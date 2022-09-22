@@ -4,7 +4,7 @@ const ProjectsScreen = (): JSX.Element => {
   return (
     <>
       <Header />
-      <div className='container'>
+      <div className='wrapper'>
         <div className='projects-screen'>
           <h1 className='projects-screen__h1'>Projectos</h1>
         </div>

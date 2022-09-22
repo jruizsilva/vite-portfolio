@@ -8,7 +8,7 @@ const HomeScreen = (): JSX.Element => {
   return (
     <>
       <HeaderHome />
-      <div className='container'>
+      <div className='wrapper'>
         <About />
         <Projects />
         <VerMas />

@@ -17,12 +17,14 @@ const Router = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomeScreen />} />
-          <Route path='/projects' element={<ProjectsScreen />} />
-          <Route path='/project/:id' element={<ProjectScreen />} />
-        </Routes>
-        <Footer />
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<HomeScreen />} />
+            <Route path='/projects' element={<ProjectsScreen />} />
+            <Route path='/project/:id' element={<ProjectScreen />} />
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
     </ThemeProvider>
   )

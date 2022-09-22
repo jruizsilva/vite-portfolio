@@ -13,6 +13,7 @@ interface Project {
   github: string
   deploy?: string
   techList: Technology[]
+  overview: string
 }
 
 interface FormField {

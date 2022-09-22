@@ -6,7 +6,7 @@ const projectList: Project[] = [
     id: 1,
     title: 'Marketplace App',
     description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo dedsa dsadsadsadsa dsad',
+      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
     to: '/project/1',
     github: 'https://github.com/jruizsilva/e-commerce-labs',
     deploy: 'https://e-commerce-labs.vercel.app',
@@ -67,13 +67,14 @@ const projectList: Project[] = [
         content:
           'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
       }
-    ]
+    ],
+    overview: 'https://i.ibb.co/3kLt0Z6/Marketplace-App.png'
   },
   {
     id: 2,
     title: 'Finances App',
     description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo dedsa dsadsadsadsa dsad',
+      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
     to: '/project/2',
     github: 'https://github.com/jruizsilva/challenge-fullstack-alkemy',
     deploy: 'https://challenge-fullstack-alkemy-six.vercel.app',
@@ -134,7 +135,8 @@ const projectList: Project[] = [
         content:
           'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
       }
-    ]
+    ],
+    overview: 'https://i.ibb.co/QPrwrV8/Mis-finanzas-app.png'
   }
 ]
 

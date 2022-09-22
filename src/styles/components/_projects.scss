@@ -39,6 +39,9 @@
   border-radius: 16px;
   padding: 16px;
   overflow-x: hidden;
+  &.screen {
+    row-gap: 16px;
+  }
 
   @media (min-width: breakpoints.$sm) {
     padding: 22px;
@@ -66,9 +69,18 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 
+    &.screen {
+      display: block;
+    }
+
     @media (min-width: breakpoints.$sm) {
       font-size: 16px;
     }
+  }
+
+  &__img {
+    border-radius: 16px;
+    object-fit: cover;
   }
 
   &__ul--tech-stack {
@@ -97,6 +109,7 @@
 
     &:hover {
       transform: translateY(4px);
+      cursor: auto;
     }
   }
 
