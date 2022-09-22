@@ -1,6 +1,6 @@
 import { icons } from '../../assets'
 import useHorizontalDragScroll from '../../hooks/useHorizontalDragScroll'
-import useModal from '../../hooks/useModal'
+import useTechModal from '../../hooks/useTechModal'
 import { Technology } from '../../types'
 
 interface Props {
@@ -10,8 +10,13 @@ interface Props {
 const TechStack = ({ techList }: Props): JSX.Element => {
   const ulRef = useHorizontalDragScroll()
 
-  const { isOpenModal, openModal, closeModal, modalTitle, modalContent } =
-    useModal()
+  const {
+    isOpenTechModal,
+    openTechModal,
+    closeTechModal,
+    modalTitle,
+    modalContent
+  } = useTechModal()
 
   return (
     <>
@@ -20,19 +25,20 @@ const TechStack = ({ techList }: Props): JSX.Element => {
           <li
             key={id}
             className='project__li--tech-stack'
-            onClick={() => openModal(name, content)}
+            onClick={() => openTechModal(name, content)}
             title={`${name} icon`}
           >
             <img src={svg} alt={name} />
           </li>
         ))}
       </ul>
-      {isOpenModal && (
-        <div className='project__overlay' onClick={closeModal}>
+
+      {isOpenTechModal && (
+        <div className='project__overlay' onClick={closeTechModal}>
           <div className='project__modal' onClick={e => e.stopPropagation()}>
             <h3 className='project__h3--modal'>{modalTitle}</h3>
             <p className='project__p--modal'>{modalContent}</p>
-            <button className='project__button--modal' onClick={closeModal}>
+            <button className='project__button--modal' onClick={closeTechModal}>
               <img src={icons.close} alt='close' />
             </button>
           </div>
