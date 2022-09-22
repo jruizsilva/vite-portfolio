@@ -3,10 +3,11 @@ import { NavbarLink } from '../../types'
 import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Header = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
+  const { pathname } = useLocation()
 
   return (
     <header className={`header ${isOpenMenu ? 'open' : ''}`}>
@@ -26,7 +27,11 @@ const Header = (): JSX.Element => {
             {navbarLinkList.map(({ id, href, name, offset }: NavbarLink) => (
               <li key={id} className='header__li--links'>
                 <NavLink
-                  className='header__a'
+                  className={`header__a ${
+                    pathname === '/projects' && href === pathname
+                      ? 'header__a--active'
+                      : ''
+                  } `}
                   to={href}
                   onClick={toggleOpenMenu}
                 >
