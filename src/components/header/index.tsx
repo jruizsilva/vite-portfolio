@@ -8,6 +8,8 @@ import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 const Header = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
 
+  console.log(isOpenMenu)
+
   return (
     <header className={`header ${isOpenMenu ? 'open' : ''}`}>
       <nav className='header__nav'>
