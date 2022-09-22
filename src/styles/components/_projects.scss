@@ -82,20 +82,22 @@
   &__img-container {
     @include mixins.row(center, center, 0px);
     width: 100%;
-    border-radius: 16px;
-    height: 120px;
+    height: 100%;
     overflow: hidden;
-    @media (min-width: breakpoints.$sm) {
-      height: 200px;
+
+    &.border {
+      border-radius: 16px;
     }
   }
 
   &__img {
     height: 100%;
-    border-radius: 16px;
     object-fit: cover;
     transition: transform 300ms;
-    &:hover {
+    &.border {
+      border-radius: 16px;
+    }
+    &:not(.modal):hover {
       cursor: pointer;
       transform: scale(1.05);
     }
@@ -148,7 +150,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #000000bb;
     @include mixins.row(center, center);
   }
 
@@ -161,6 +163,14 @@
     border-radius: 16px;
     padding: 16px;
     position: relative;
+
+    &.image {
+      border-radius: 4px;
+      padding: 4px;
+      width: 80%;
+      height: 60%;
+      max-width: 100%;
+    }
   }
 
   &__h3--modal {

@@ -14,6 +14,7 @@ import express from './svg/express.svg'
 import postgresql from './svg/postgresql.svg'
 import sequelize from './svg/sequelize.svg'
 import close from './svg/close.svg'
+import close_white from './svg/close_white.svg'
 
 const icons = {
   link,
@@ -31,7 +32,8 @@ const icons = {
   express,
   postgresql,
   sequelize,
-  close
+  close,
+  close_white
 }
 
 export { icons }

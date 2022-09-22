@@ -13,24 +13,24 @@ const ProjectScreenCard = (project: Project): JSX.Element => {
       <div className='project screen'>
         <p className='project__p screen'>{description}</p>
         <TechStack techList={techList} />
-        <div className='project__img-container' onClick={openImageModal}>
-          <img className='project__img' src={overview} alt={title} />
+        <div className='project__img-container border' onClick={openImageModal}>
+          <img className='project__img border' src={overview} alt={title} />
         </div>
         <CardButtons github={github} deploy={deploy ?? ''} />
       </div>
       {isOpenImageModal && (
         <div className='project__overlay' onClick={closeImageModal}>
-          <div className='project__modal' onClick={e => e.stopPropagation()}>
+          <div
+            className='project__modal image'
+            onClick={e => e.stopPropagation()}
+          >
             <div className='project__img-container'>
-              <img className='project__img' src={overview} alt={title} />
+              <img className='project__img modal' src={overview} alt={title} />
             </div>
-            <button
-              className='project__button--modal'
-              onClick={closeImageModal}
-            >
-              <img src={icons.close} alt='close' />
-            </button>
           </div>
+          <button className='project__button--modal' onClick={closeImageModal}>
+            <img src={icons.close_white} alt='close' />
+          </button>
         </div>
       )}
     </>
