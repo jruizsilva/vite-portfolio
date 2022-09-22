@@ -5,12 +5,14 @@ import TechStack from '../tech-stack'
 const ProjectScreenCard = (project: Project): JSX.Element => {
   const { title, description, github, deploy, techList, overview } = project
   return (
-    <li className='project screen'>
+    <div className='project screen'>
       <p className='project__p screen'>{description}</p>
       <TechStack techList={techList} />
-      <img className='project__img' src={overview} alt={title} />
+      <div className='project__img-container'>
+        <img className='project__img' src={overview} alt={title} />
+      </div>
       <CardButtons github={github} deploy={deploy ?? ''} />
-    </li>
+    </div>
   )
 }
 

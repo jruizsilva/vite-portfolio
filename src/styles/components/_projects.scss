@@ -45,6 +45,7 @@
 
   @media (min-width: breakpoints.$sm) {
     padding: 22px;
+    max-width: 480px;
   }
 
   &__h3 {
@@ -78,9 +79,26 @@
     }
   }
 
+  &__img-container {
+    @include mixins.row(center, center, 0px);
+    width: 100%;
+    border-radius: 16px;
+    height: 120px;
+    overflow: hidden;
+    @media (min-width: breakpoints.$sm) {
+      height: 200px;
+    }
+  }
+
   &__img {
+    height: 100%;
     border-radius: 16px;
     object-fit: cover;
+    transition: transform 300ms;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
   }
 
   &__ul--tech-stack {
@@ -109,7 +127,7 @@
 
     &:hover {
       transform: translateY(4px);
-      cursor: auto;
+      cursor: pointer;
     }
   }
 
