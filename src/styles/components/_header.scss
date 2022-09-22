@@ -62,10 +62,13 @@
 
   &__li {
     &:first-of-type {
-      display: none;
+      position: fixed;
+      top: 16px;
+      left: 16px;
     }
     @media (min-width: breakpoints.$md) {
       &:first-of-type {
+        position: static;
         display: block;
       }
     }

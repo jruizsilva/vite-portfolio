@@ -3,15 +3,10 @@ import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
 import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
-import { useState } from 'react'
+import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 
 const Header = (): JSX.Element => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
-
-  const toggleOpenMenu = (): void => {
-    setIsOpenMenu(!isOpenMenu)
-  }
-  console.log(isOpenMenu)
+  const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
 
   return (
     <header className={`header ${isOpenMenu ? 'open' : ''}`}>
@@ -34,6 +29,7 @@ const Header = (): JSX.Element => {
                   className='header__a'
                   activeClass='header__a--active'
                   to={href}
+                  onClick={toggleOpenMenu}
                   spy
                   smooth
                   offset={offset}
