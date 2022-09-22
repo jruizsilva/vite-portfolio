@@ -53,10 +53,12 @@
   &__ul &__ul--links {
     @include mixins.column(space-between, center, 48px);
     @media (min-width: breakpoints.$md) {
-      @include mixins.row(space-between, center, 24px);
+      min-width: 360px;
+      @include mixins.row(space-evenly, center, 24px);
     }
     @media (min-width: breakpoints.$lg) {
-      @include mixins.row(space-between, center, 36px);
+      min-width: 560px;
+      @include mixins.row(space-evenly, center, 36px);
     }
   }
 

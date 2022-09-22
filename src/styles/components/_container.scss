@@ -1,10 +1,9 @@
-@use "../base/mixins";
-@use "../base/breakpoints";
+@use '../base/mixins';
+@use '../base/breakpoints';
 
 .container {
   @include mixins.column(start, start, 32px);
   padding: 0 16px;
-  padding-bottom: 24px;
 
   @media (min-width: breakpoints.$sm) {
     row-gap: 36px;

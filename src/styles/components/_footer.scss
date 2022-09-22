@@ -4,6 +4,8 @@
 .footer {
   @include mixins.row(center, center);
   width: 100%;
+  padding-top: 36px;
+  padding-bottom: 24px;
 
   &__p {
     font-size: 14px;
@@ -13,7 +15,8 @@
     }
   }
 
-  &__span {}
+  &__span {
+  }
 
   &__strong {
     font-weight: 600;

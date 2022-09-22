@@ -1,11 +1,11 @@
+import { Link } from 'react-scroll'
 import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
 import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
-import { NavLink } from 'react-router-dom'
 
-const Header = (): JSX.Element => {
+const HeaderHome = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
 
   return (
@@ -25,13 +25,17 @@ const Header = (): JSX.Element => {
           <ul className='header__ul--links'>
             {navbarLinkList.map(({ id, href, name, offset }: NavbarLink) => (
               <li key={id} className='header__li--links'>
-                <NavLink
+                <Link
                   className='header__a'
+                  activeClass='header__a--active'
                   to={href}
                   onClick={toggleOpenMenu}
+                  spy
+                  smooth
+                  offset={offset}
                 >
                   {name}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
@@ -60,4 +64,4 @@ const Header = (): JSX.Element => {
   )
 }
 
-export default Header
+export default HeaderHome
