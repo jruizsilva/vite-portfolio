@@ -1,25 +1,18 @@
-import { useState } from 'react'
+import useTabs from '../../hooks/useTabs'
 
 const Tabs = (): JSX.Element => {
-  const [index, setIndex] = useState(1)
-
-  const changeCurrentIndex = (newIndex: number): void => {
-    setIndex(newIndex)
-  }
+  const { index, showFullStackTab, showFrontEndTab, showHTMLCSSTab } = useTabs()
 
   return (
     <div className='tabs'>
       <ul className='tabs__ul'>
-        <li
-          className='tabs__li tabs__li--active'
-          onClick={() => changeCurrentIndex(1)}
-        >
+        <li className='tabs__li tabs__li--active' onClick={showFullStackTab}>
           FULL-STACK
         </li>
-        <li className='tabs__li' onClick={() => changeCurrentIndex(2)}>
+        <li className='tabs__li' onClick={showFrontEndTab}>
           FRONT-END
         </li>
-        <li className='tabs__li' onClick={() => changeCurrentIndex(3)}>
+        <li className='tabs__li' onClick={showHTMLCSSTab}>
           HTML/CSS
         </li>
       </ul>
