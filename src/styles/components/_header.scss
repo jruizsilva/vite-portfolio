@@ -7,6 +7,7 @@
   position: fixed;
   height: 82px;
   padding: 16px;
+  z-index: 1;
   top: 0;
   background-color: colors.$bg;
   border-bottom: 2px solid #fff;
@@ -84,6 +85,8 @@
     font-weight: 300;
     padding: 8px 0;
     border-bottom: 2px solid transparent;
+    cursor: default;
+    user-select: none;
 
     &--active {
       border-bottom: 2px solid #fff;

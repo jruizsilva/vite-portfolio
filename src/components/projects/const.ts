@@ -68,7 +68,8 @@ const projectList: Project[] = [
           'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
       }
     ],
-    overview: 'https://i.ibb.co/3kLt0Z6/Marketplace-App.png'
+    overview: 'https://i.ibb.co/3kLt0Z6/Marketplace-App.png',
+    category: 'full-stack'
   },
   {
     id: 2,
@@ -136,7 +137,8 @@ const projectList: Project[] = [
           'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
       }
     ],
-    overview: 'https://i.ibb.co/dPGYGvb/Mis-finanzas-app.png'
+    overview: 'https://i.ibb.co/dPGYGvb/Mis-finanzas-app.png',
+    category: 'full-stack'
   }
 ]
 

@@ -32,7 +32,7 @@ const Tabs = (): JSX.Element => {
             index === 1 ? 'tabs__content--active' : ''
           }`}
         >
-          <Projects />
+          <Projects category='full-stack' />
         </div>
         <div
           className={`tabs__content ${

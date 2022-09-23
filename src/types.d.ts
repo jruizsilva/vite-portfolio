@@ -1,3 +1,5 @@
+type projectCategory = 'full-stack' | 'front-end' | 'html-css'
+
 interface Technology {
   id: number
   name: string
@@ -14,6 +16,7 @@ interface Project {
   deploy?: string
   techList: Technology[]
   overview: string
+  category: projectCategory
 }
 
 interface FormField {
