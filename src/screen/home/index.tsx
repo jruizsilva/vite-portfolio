@@ -10,7 +10,7 @@ const HomeScreen = (): JSX.Element => {
       <HeaderHome />
       <div className='wrapper'>
         <About />
-        <Projects />
+        <Projects title='Proyectos' />
         <VerMas />
         <Contact />
       </div>

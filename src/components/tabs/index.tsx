@@ -1,4 +1,5 @@
 import useTabs from '../../hooks/useTabs'
+import Projects from '../projects'
 
 const Tabs = (): JSX.Element => {
   const { index, showFullStackTab, showFrontEndTab, showHTMLCSSTab } = useTabs()
@@ -6,13 +7,22 @@ const Tabs = (): JSX.Element => {
   return (
     <div className='tabs'>
       <ul className='tabs__ul'>
-        <li className='tabs__li tabs__li--active' onClick={showFullStackTab}>
+        <li
+          className={`tabs__li ${index === 1 ? 'tabs__li--active' : ''}`}
+          onClick={showFullStackTab}
+        >
           FULL-STACK
         </li>
-        <li className='tabs__li' onClick={showFrontEndTab}>
+        <li
+          className={`tabs__li ${index === 2 ? 'tabs__li--active' : ''}`}
+          onClick={showFrontEndTab}
+        >
           FRONT-END
         </li>
-        <li className='tabs__li' onClick={showHTMLCSSTab}>
+        <li
+          className={`tabs__li ${index === 3 ? 'tabs__li--active' : ''}`}
+          onClick={showHTMLCSSTab}
+        >
           HTML/CSS
         </li>
       </ul>
@@ -22,7 +32,7 @@ const Tabs = (): JSX.Element => {
             index === 1 ? 'tabs__content--active' : ''
           }`}
         >
-          FULL-STACK
+          <Projects />
         </div>
         <div
           className={`tabs__content ${

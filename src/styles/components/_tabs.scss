@@ -1,14 +1,23 @@
 @use '../base/mixins';
+@use '../base/breakpoints';
 
 .tabs {
   &__ul {
     @include mixins.row(center, center, 16px);
+
+    @media (min-width: breakpoints.$sm) {
+      column-gap: 24px;
+    }
   }
   &__li {
     user-select: none;
     font-size: 14px;
     text-transform: uppercase;
     padding-bottom: 4px;
+
+    @media (min-width: breakpoints.$sm) {
+      font-size: 18px;
+    }
 
     &.tabs__li--active {
       border-bottom: 1px solid #fff;
