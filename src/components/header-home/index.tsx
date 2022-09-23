@@ -6,7 +6,7 @@ import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 
 const HeaderHome = (): JSX.Element => {
-  const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
+  const { isOpenMenu, toggleOpenMenu, closeMenu } = useResponsiveMenu()
 
   return (
     <header className={`header ${isOpenMenu ? 'open' : ''}`}>
@@ -29,7 +29,7 @@ const HeaderHome = (): JSX.Element => {
                   className='header__a'
                   activeClass='header__a--active'
                   to={href}
-                  onClick={toggleOpenMenu}
+                  onClick={closeMenu}
                   spy
                   smooth
                   offset={offset}
