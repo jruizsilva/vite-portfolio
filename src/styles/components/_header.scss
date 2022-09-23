@@ -27,6 +27,10 @@
       max-width: 90%;
       margin: auto;
     }
+    @media (min-width: breakpoints.$xl) {
+      max-width: 992px;
+      margin: auto;
+    }
   }
 
   &__ul {
