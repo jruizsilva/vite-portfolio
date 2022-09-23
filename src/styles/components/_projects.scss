@@ -94,7 +94,7 @@
 
   &__img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 300ms;
     &.border {
       border-radius: 16px;
@@ -169,7 +169,6 @@
     &.image {
       border-radius: 4px;
       padding: 4px;
-      min-width: 80%;
       max-width: 95%;
       @media (min-width: breakpoints.$md) {
         height: 70%;
@@ -201,10 +200,11 @@
   width: 100%;
   padding-top: 82px;
 
-  &__h1 {
+  &__h2 {
     font-size: 24px;
     line-height: 1.4;
     padding: 32px 0;
+    text-align: center;
 
     @media (min-width: breakpoints.$sm) {
       text-align: center;
@@ -218,10 +218,11 @@
   width: 100%;
   padding-top: 82px;
 
-  &__h1 {
+  &__h2 {
     font-size: 24px;
     line-height: 1.4;
     padding: 32px 0;
+    text-align: center;
 
     @media (min-width: breakpoints.$sm) {
       text-align: center;

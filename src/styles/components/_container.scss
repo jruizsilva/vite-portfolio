@@ -9,6 +9,7 @@
 .wrapper {
   @include mixins.column(start, start, 32px);
   padding: 0 16px;
+  margin: 0 auto;
 
   @media (min-width: breakpoints.$sm) {
     row-gap: 36px;
@@ -18,11 +19,9 @@
 
   @media (min-width: breakpoints.$md) {
     max-width: 768px;
-    margin: auto;
   }
 
   @media (min-width: breakpoints.$lg) {
     max-width: 992px;
-    margin: auto;
   }
 }

@@ -1,0 +1,26 @@
+@use '../base/mixins';
+
+.tabs {
+  &__ul {
+    @include mixins.row(center, center, 16px);
+  }
+  &__li {
+    user-select: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+
+    &.tabs__li--active {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__content-container {
+  }
+  &__content {
+    display: none;
+
+    &.tabs__content--active {
+      display: block;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Header from '../../components/header'
+import Tabs from '../../components/tabs'
 
 const ProjectsScreen = (): JSX.Element => {
   return (
@@ -6,7 +7,8 @@ const ProjectsScreen = (): JSX.Element => {
       <Header />
       <div className='wrapper'>
         <div className='projects-screen'>
-          <h1 className='projects-screen__h1'>Projectos</h1>
+          <h2 className='projects-screen__h2'>Mis proyectos</h2>
+          <Tabs />
         </div>
       </div>
     </>
