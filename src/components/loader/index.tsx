@@ -1,6 +1,19 @@
+import { motion } from 'framer-motion'
+const containerVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
+}
+
 const Loader = (): JSX.Element => {
   return (
-    <div className='loader-container'>
+    <motion.div
+      className='loader-container'
+      variants={containerVariants}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+    >
       <div className='loader'>
         <div className='loader__isometric'>
           <div className='loader__box'></div>
@@ -12,7 +25,7 @@ const Loader = (): JSX.Element => {
           Loading<span className='loader__span'>...</span>
         </h3>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

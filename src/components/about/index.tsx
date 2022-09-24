@@ -7,7 +7,9 @@ const About = (): JSX.Element => {
         Bienvenido! <br />
         Soy Jonathan
         <br />
-        <strong className='about__strong'>Desarrollador Full-Stack</strong>
+        <strong className='about__strong'>
+          Desarrollador Full-Stack
+        </strong>
       </h1>
       <h2 className='about__h2'>About me</h2>
       <AboutCard />
