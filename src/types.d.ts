@@ -1,3 +1,7 @@
+import { store } from './redux/store'
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+
 type projectCategory = 'full-stack' | 'front-end' | 'html-css'
 
 interface Technology {
