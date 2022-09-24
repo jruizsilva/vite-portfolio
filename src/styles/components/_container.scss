@@ -2,7 +2,7 @@
 @use '../base/breakpoints';
 
 .container {
-  @include mixins.column(start, center, 0px);
+  @include mixins.column(start, start, 0px);
   min-height: 100vh;
 }
 
@@ -24,4 +24,7 @@
   @media (min-width: breakpoints.$lg) {
     max-width: 992px;
   }
+}
+.home {
+  width: 100%;
 }

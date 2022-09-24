@@ -1,5 +1,8 @@
 .loader-container {
-  margin-top: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader {
@@ -17,7 +20,8 @@
     width: var(--size);
     height: var(--size);
     background: #f9ae57;
-    animation: slide 1s cubic-bezier(0.1, 0.1, 0.65, 1) infinite;
+    animation: slide 1s cubic-bezier(0.1, 0.1, 0.65, 1)
+      infinite;
     &::before,
     &::after {
       position: absolute;
