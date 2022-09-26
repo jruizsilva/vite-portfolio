@@ -1,4 +1,4 @@
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 const StyledTitle = styled(motion.h2)`
@@ -17,60 +17,42 @@ const StyledTitle = styled(motion.h2)`
   }
 `
 
-interface PropsTitleShowInView {
-  isInView: boolean
-}
-
-const StyledTitleShowInView = styled(
-  motion.h2
-)<PropsTitleShowInView>`
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  padding: 16px 0;
-
-  @media (min-width: 425px) {
-    font-size: 32px;
-    padding: 24px 0;
-  }
-  @media (min-width: 768px) {
-    font-size: 32px;
-    padding: 32px;
-  }
-`
-
 interface Props {
   children: string
-  variants?: Variants
-  initial?: string
-  animate?: string
-  custom?: number
-  isInView?: boolean
+  custom: number
+}
+
+const titleVariants = {
+  initial: { opacity: 0, y: -50 },
+  animate: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3
+    }
+  }),
+  exit: {
+    opacity: 0
+  }
 }
 
 const SectionTitle = ({
   children,
-  isInView,
-  ...props
+  custom
 }: Props): JSX.Element => {
   return (
-    <>
-      {isInView === true ? (
-        <StyledTitleShowInView
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: { duration: 1 }
-          }}
-          isInView={isInView}
-          {...props}
-        >
-          {children}
-        </StyledTitleShowInView>
-      ) : (
-        <StyledTitle {...props}>{children}</StyledTitle>
-      )}
-    </>
+    <StyledTitle
+      variants={titleVariants}
+      initial='initial'
+      whileInView='animate'
+      exit='exit'
+      custom={custom}
+      viewport={{
+        margin: '0px 0px -250px 0px'
+      }}
+    >
+      {children}
+    </StyledTitle>
   )
 }
 

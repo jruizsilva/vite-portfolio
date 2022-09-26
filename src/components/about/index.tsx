@@ -31,14 +31,7 @@ const About = (): JSX.Element => {
           Desarrollador Full-Stack
         </strong>
       </motion.h1>
-      <SectionTitle
-        variants={variants}
-        initial='initial'
-        animate='animate'
-        custom={2}
-      >
-        About me
-      </SectionTitle>
+      <SectionTitle custom={2}>About me</SectionTitle>
       <AboutCard />
     </div>
   )

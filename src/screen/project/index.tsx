@@ -13,7 +13,9 @@ const ProjectScreen = (): JSX.Element => {
       <Header />
       <div className='wrapper'>
         <div className='project-screen'>
-          <SectionTitle>{project.title}</SectionTitle>
+          <SectionTitle custom={1}>
+            {project.title}
+          </SectionTitle>
           <ProjectScreenCard {...project} />
         </div>
       </div>

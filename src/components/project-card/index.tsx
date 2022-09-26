@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Project } from '../../types'
 import CardButtons from '../card-buttons'
@@ -12,8 +13,9 @@ const ProjectCard = (project: Project): JSX.Element => {
     deploy,
     techList
   } = project
+
   return (
-    <li className='project'>
+    <motion.li className='project'>
       <h3 className='project__h3'>
         <Link to={to} state={{ project }}>
           {title}
@@ -22,7 +24,7 @@ const ProjectCard = (project: Project): JSX.Element => {
       <p className='project__p'>{description}</p>
       <TechStack techList={techList} />
       <CardButtons github={github} deploy={deploy ?? ''} />
-    </li>
+    </motion.li>
   )
 }
 

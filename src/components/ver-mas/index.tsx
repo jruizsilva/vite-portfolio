@@ -5,7 +5,9 @@ import SectionTitle from '../section-title'
 const VerMas = (): JSX.Element => {
   return (
     <div className='ver-mas'>
-      <SectionTitle>¿Quieres ves más?</SectionTitle>
+      <SectionTitle custom={1}>
+        ¿Quieres ves más?
+      </SectionTitle>
       <NavLinkButton
         to={'/projects'}
         bg='transparent'
