@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   Routes,
   Route,
@@ -12,8 +13,8 @@ import ProjectScreen from '../screen/project'
 import ProjectsScreen from '../screen/projects'
 import { useAppSelector } from '../hooks/useAppSelector'
 import { useAppDispatch } from '../hooks/useAppDispatch'
-import { useEffect } from 'react'
 import { setLoading } from '../redux/slice/ui'
+import Transitions from '../components/transitions'
 
 const Router = (): JSX.Element => {
   const location = useLocation()
@@ -38,16 +39,30 @@ const Router = (): JSX.Element => {
           <ScrollToTop />
           <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.key}>
-              <Route path='/' element={<HomeScreen />} />
+              <Route
+                path='/'
+                element={
+                  <Transitions>
+                    <HomeScreen />
+                  </Transitions>
+                }
+              />
               <Route
                 path='/projects'
-                element={<ProjectsScreen />}
+                element={
+                  <Transitions>
+                    <ProjectsScreen />
+                  </Transitions>
+                }
               />
               <Route
                 path='/project/:id'
-                element={<ProjectScreen />}
+                element={
+                  <Transitions>
+                    <ProjectScreen />
+                  </Transitions>
+                }
               />
-              <Route path='/loader' element={<Loader />} />
             </Routes>
           </AnimatePresence>
           <Footer />

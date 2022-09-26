@@ -7,24 +7,25 @@
 }
 
 .wrapper {
-  @include mixins.column(start, start, 32px);
+  @include mixins.column(start, start, 24px);
   padding: 0 16px;
   margin: 0 auto;
 
   @media (min-width: breakpoints.$sm) {
-    row-gap: 36px;
     padding-left: 24px;
     padding-right: 24px;
+    row-gap: 32px;
   }
 
   @media (min-width: breakpoints.$md) {
     max-width: 768px;
+    row-gap: 36px;
   }
 
   @media (min-width: breakpoints.$lg) {
     max-width: 992px;
   }
 }
-.home {
+.transitions {
   width: 100%;
 }

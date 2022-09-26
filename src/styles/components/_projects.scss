@@ -6,18 +6,6 @@
   width: 100%;
   scroll-margin-top: 82px;
 
-  &__h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    padding: 16px 0;
-
-    @media (min-width: breakpoints.$sm) {
-      font-size: 32px;
-      padding: 24px 0;
-    }
-  }
-
   &__ul {
     @include mixins.column(start, center, 16px);
 
@@ -47,6 +35,7 @@
     &.screen {
       padding: 22px;
       max-width: 480px;
+      margin: auto;
     }
   }
 
@@ -200,39 +189,9 @@
 .project-screen {
   width: 100%;
   padding-top: 82px;
-
-  &__h2 {
-    font-size: 24px;
-    line-height: 1.4;
-    padding: 32px 0;
-    text-align: center;
-
-    @media (min-width: breakpoints.$sm) {
-      text-align: center;
-      font-size: 32px;
-      padding: 36px 0;
-    }
-  }
 }
 
 .projects-screen {
   width: 100%;
   padding-top: 82px;
-
-  &__h2 {
-    font-size: 24px;
-    line-height: 1.4;
-    padding: 32px 0;
-    text-align: center;
-
-    &.hidden {
-      display: none;
-    }
-
-    @media (min-width: breakpoints.$sm) {
-      text-align: center;
-      font-size: 32px;
-      padding: 36px 0;
-    }
-  }
 }

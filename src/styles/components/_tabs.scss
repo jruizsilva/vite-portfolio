@@ -2,6 +2,7 @@
 @use '../base/breakpoints';
 
 .tabs {
+  @include mixins.column(center, center, 16px);
   &__ul {
     @include mixins.row(center, center, 16px);
 

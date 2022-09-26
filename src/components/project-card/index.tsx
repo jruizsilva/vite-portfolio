@@ -4,7 +4,14 @@ import CardButtons from '../card-buttons'
 import TechStack from '../tech-stack'
 
 const ProjectCard = (project: Project): JSX.Element => {
-  const { title, description, to, github, deploy, techList } = project
+  const {
+    title,
+    description,
+    to,
+    github,
+    deploy,
+    techList
+  } = project
   return (
     <li className='project'>
       <h3 className='project__h3'>
