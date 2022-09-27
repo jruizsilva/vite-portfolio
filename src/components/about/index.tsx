@@ -2,15 +2,17 @@ import { motion, Variants } from 'framer-motion'
 import AboutCard from '../about-card'
 import SectionTitle from '../section-title'
 
-const variants: Variants = {
-  initial: { opacity: 0, y: -50 },
-  animate: (i: number) => ({
-    opacity: 1,
+const titleVariants: Variants = {
+  initial: { y: -100, opacity: 0 },
+  animate: {
     y: 0,
+    opacity: 1,
     transition: {
-      delay: i * 0.3
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1
     }
-  })
+  }
 }
 
 const About = (): JSX.Element => {
@@ -18,10 +20,7 @@ const About = (): JSX.Element => {
     <div className='about' id='about'>
       <motion.h1
         className='about__h1'
-        variants={variants}
-        initial='initial'
-        whileInView='animate'
-        custom={1}
+        variants={titleVariants}
       >
         Bienvenido! <br />
         Soy Jonathan
@@ -30,7 +29,7 @@ const About = (): JSX.Element => {
           Desarrollador Full-Stack
         </strong>
       </motion.h1>
-      <SectionTitle custom={2} viewportMargin='0px'>
+      <SectionTitle titleVariants={titleVariants}>
         About me
       </SectionTitle>
       <AboutCard />

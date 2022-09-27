@@ -3,16 +3,15 @@ import { icons } from '../../assets'
 
 const cardVariants = {
   initial: { opacity: 0, x: '500', scale: 0.2 },
-  animate: (i: number) => ({
+  animate: {
     opacity: 1,
     x: 0,
     scale: 1,
     transition: {
-      delay: i * 0.3,
       ease: 'easeInOut',
       duration: 1
     }
-  })
+  }
 }
 
 const AboutCard = (): JSX.Element => {
@@ -20,9 +19,6 @@ const AboutCard = (): JSX.Element => {
     <motion.div
       className='about-card'
       variants={cardVariants}
-      initial='initial'
-      animate='animate'
-      custom={3}
     >
       <h3 className='about-card__h3'>
         Objetivo profesional

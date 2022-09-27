@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import styled from 'styled-components'
 
 const StyledTitle = styled(motion.h2)`
@@ -19,39 +19,15 @@ const StyledTitle = styled(motion.h2)`
 
 interface Props {
   children: string
-  custom: number
-  viewportMargin: string
-}
-
-const titleVariants = {
-  initial: { opacity: 0, y: -50 },
-  animate: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.3
-    }
-  }),
-  exit: {
-    opacity: 0
-  }
+  titleVariants: Variants
 }
 
 const SectionTitle = ({
   children,
-  custom,
-  viewportMargin
+  titleVariants
 }: Props): JSX.Element => {
   return (
-    <StyledTitle
-      variants={titleVariants}
-      initial='initial'
-      whileInView='animate'
-      custom={custom}
-      viewport={{
-        margin: viewportMargin
-      }}
-    >
+    <StyledTitle variants={titleVariants}>
       {children}
     </StyledTitle>
   )

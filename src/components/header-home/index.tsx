@@ -41,13 +41,7 @@ const HeaderHome = (): JSX.Element => {
     <header
       className={`header ${isOpenMenu ? 'open' : ''}`}
     >
-      <motion.nav
-        className='header__nav'
-        initial='initial'
-        whileInView='animate'
-        viewport={{ once: true }}
-        transition={{ staggerChildren: 0.5 }}
-      >
+      <nav className='header__nav'>
         <ul
           className={`header__ul ${
             isOpenMenu ? 'open' : ''
@@ -116,7 +110,7 @@ const HeaderHome = (): JSX.Element => {
           <div className='header__bar-middle'></div>
           <div className='header__bar-bottom'></div>
         </motion.div>
-      </motion.nav>
+      </nav>
     </header>
   )
 }
