@@ -18,7 +18,12 @@ const Projects = ({
     <div className='projects' id='projects'>
       <AnimatePresence exitBeforeEnter>
         {title !== undefined && (
-          <SectionTitle custom={1}>{title}</SectionTitle>
+          <SectionTitle
+            custom={1}
+            viewportMargin='0px 0px -250px 0px'
+          >
+            {title}
+          </SectionTitle>
         )}
       </AnimatePresence>
       <ul className='projects__ul'>

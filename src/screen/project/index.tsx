@@ -13,7 +13,7 @@ const ProjectScreen = (): JSX.Element => {
       <Header />
       <div className='wrapper'>
         <div className='project-screen'>
-          <SectionTitle custom={1}>
+          <SectionTitle custom={1} viewportMargin='0px'>
             {project.title}
           </SectionTitle>
           <ProjectScreenCard {...project} />

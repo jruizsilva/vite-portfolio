@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { motion, Variants } from 'framer-motion'
 import styled from 'styled-components'
 
 type children = string | JSX.Element[]
@@ -17,13 +17,30 @@ interface AnchorProps extends Props {
   type?: string
 }
 interface NavLinkProps extends Props {
-  to: string
+  onClick: () => void
 }
 
-const StyledButton = styled('a')<AnchorProps>`
-  background-color: ${({ bg, theme }) => (bg !== undefined ? bg : theme.btn)};
-  color: ${({ text, theme }) => (text !== undefined ? text : theme.white)};
-  border: ${({ border }) => border !== undefined && `1px solid ${border}`};
+const buttonVariants: Variants = {
+  initial: { opacity: 0, scale: 0.2 },
+  animate: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.3,
+      ease: 'easeInOut',
+      duration: 1
+    }
+  }),
+  exit: { opacity: 0, scale: 0.2 }
+}
+
+const StyledButton = styled(motion.a)<AnchorProps>`
+  background-color: ${({ bg, theme }) =>
+    bg !== undefined ? bg : theme.btn};
+  color: ${({ text, theme }) =>
+    text !== undefined ? text : theme.white};
+  border: ${({ border }) =>
+    border !== undefined && `1px solid ${border}`};
   height: 3rem;
   display: flex;
   justify-content: center;
@@ -39,14 +56,18 @@ const StyledButton = styled('a')<AnchorProps>`
   & img {
     width: 22px;
     height: 22px;
-    color: ${({ text, theme }) => (text !== undefined ? text : theme.white)};
+    color: ${({ text, theme }) =>
+      text !== undefined ? text : theme.white};
   }
 `
 
-const StyledNavLink = styled(NavLink)<NavLinkProps>`
-  background-color: ${({ bg, theme }) => (bg !== undefined ? bg : theme.btn)};
-  color: ${({ text, theme }) => (text !== undefined ? text : theme.white)};
-  border: ${({ border }) => border !== undefined && `1px solid ${border}`};
+const StyledNavLink = styled(motion.button)<NavLinkProps>`
+  background-color: ${({ bg, theme }) =>
+    bg !== undefined ? bg : theme.btn};
+  color: ${({ text, theme }) =>
+    text !== undefined ? text : theme.white};
+  border: ${({ border }) =>
+    border !== undefined && `1px solid ${border}`};
   height: 3rem;
   display: flex;
 
@@ -63,7 +84,8 @@ const StyledNavLink = styled(NavLink)<NavLinkProps>`
   & img {
     width: 22px;
     height: 22px;
-    color: ${({ text, theme }) => (text !== undefined ? text : theme.white)};
+    color: ${({ text, theme }) =>
+      text !== undefined ? text : theme.white};
   }
 `
 
@@ -81,7 +103,11 @@ const AnchorButton = ({
     <StyledButton
       type={type}
       href={href}
-      target={type === 'submit' || type === 'button' ? '_self' : '_blank'}
+      target={
+        type === 'submit' || type === 'button'
+          ? '_self'
+          : '_blank'
+      }
       bg={bg}
       text={text}
       w={w}
@@ -100,10 +126,24 @@ const NavLinkButton = ({
   icon,
   w,
   border,
-  to
+  onClick
 }: NavLinkProps): JSX.Element => {
   return (
-    <StyledNavLink to={to} bg={bg} text={text} w={w} border={border}>
+    <StyledNavLink
+      bg={bg}
+      text={text}
+      w={w}
+      border={border}
+      onClick={onClick}
+      variants={buttonVariants}
+      initial='initial'
+      whileInView='animate'
+      exit='exit'
+      custom={2}
+      viewport={{
+        margin: '0px 0px -50px 0px'
+      }}
+    >
       <span>{children}</span>
       <img src={icon} />
     </StyledNavLink>

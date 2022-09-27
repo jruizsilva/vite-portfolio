@@ -21,7 +21,6 @@ const About = (): JSX.Element => {
         variants={variants}
         initial='initial'
         whileInView='animate'
-        viewport={{ once: false }}
         custom={1}
       >
         Bienvenido! <br />
@@ -31,7 +30,9 @@ const About = (): JSX.Element => {
           Desarrollador Full-Stack
         </strong>
       </motion.h1>
-      <SectionTitle custom={2}>About me</SectionTitle>
+      <SectionTitle custom={2} viewportMargin='0px'>
+        About me
+      </SectionTitle>
       <AboutCard />
     </div>
   )

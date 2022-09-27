@@ -24,6 +24,7 @@ interface Project {
   techList: Technology[]
   overview: string
   category: projectCategory
+  custom: number
 }
 
 interface FormField {

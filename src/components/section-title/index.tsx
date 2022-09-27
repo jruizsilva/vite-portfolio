@@ -20,6 +20,7 @@ const StyledTitle = styled(motion.h2)`
 interface Props {
   children: string
   custom: number
+  viewportMargin: string
 }
 
 const titleVariants = {
@@ -38,7 +39,8 @@ const titleVariants = {
 
 const SectionTitle = ({
   children,
-  custom
+  custom,
+  viewportMargin
 }: Props): JSX.Element => {
   return (
     <StyledTitle
@@ -48,7 +50,7 @@ const SectionTitle = ({
       exit='exit'
       custom={custom}
       viewport={{
-        margin: '0px 0px -250px 0px'
+        margin: viewportMargin
       }}
     >
       {children}
