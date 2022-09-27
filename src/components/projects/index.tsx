@@ -7,12 +7,14 @@ interface Props {
   title?: string
   limit?: number
   category: string
+  custom: number
 }
 
 const Projects = ({
   title,
   limit = projectList.length,
-  category
+  category,
+  custom
 }: Props): JSX.Element => {
   return (
     <div className='projects' id='projects'>
@@ -32,7 +34,12 @@ const Projects = ({
             .filter(p => p.category === category)
             .slice(0, limit)
             .map((project, i) => (
-              <ProjectCard key={project.id} {...project} />
+              <ProjectCard
+                key={project.id}
+                project={project}
+                custom={custom}
+                i={i}
+              />
             ))}
       </ul>
     </div>

@@ -47,7 +47,6 @@ const SectionTitle = ({
       variants={titleVariants}
       initial='initial'
       whileInView='animate'
-      exit='exit'
       custom={custom}
       viewport={{
         margin: viewportMargin

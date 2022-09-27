@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { icons } from '../../assets'
 
-const variants = {
+const cardVariants = {
   initial: { opacity: 0, x: '500', scale: 0.2 },
   animate: (i: number) => ({
     opacity: 1,
@@ -19,7 +19,7 @@ const AboutCard = (): JSX.Element => {
   return (
     <motion.div
       className='about-card'
-      variants={variants}
+      variants={cardVariants}
       initial='initial'
       animate='animate'
       custom={3}

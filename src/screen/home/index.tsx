@@ -14,6 +14,7 @@ const HomeScreen = (): JSX.Element => {
           title='Proyectos'
           limit={2}
           category='full-stack'
+          custom={2}
         />
         <VerMas />
         <Contact />

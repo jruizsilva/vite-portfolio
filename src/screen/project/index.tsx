@@ -16,7 +16,7 @@ const ProjectScreen = (): JSX.Element => {
           <SectionTitle custom={1} viewportMargin='0px'>
             {project.title}
           </SectionTitle>
-          <ProjectScreenCard {...project} />
+          <ProjectScreenCard project={project} custom={2} />
         </div>
       </div>
     </>

@@ -6,17 +6,17 @@ import SectionTitle from '../section-title'
 import { contactFields } from './const'
 
 const contactVariants: Variants = {
-  initial: { opacity: 0, scale: 0.2 },
+  initial: { opacity: 0, scale: 0.5 },
   animate: (i: number) => ({
     opacity: 1,
     scale: 1,
     transition: {
       delay: i * 0.3,
       ease: 'easeInOut',
-      duration: 1
+      duration: i * 0.3
     }
   }),
-  exit: { opacity: 0, scale: 0.2 }
+  exit: { opacity: 0, scale: 0.5 }
 }
 
 const Contact = (): JSX.Element => {
@@ -33,23 +33,11 @@ const Contact = (): JSX.Element => {
         variants={contactVariants}
         initial='initial'
         whileInView='animate'
-        exit='exit'
         custom={2}
-        viewport={{
-          margin: '0px'
-        }}
       >
         {contactFields.map(
           ({ id, label, type, placeholder }: FormField) => (
-            <motion.div
-              key={id}
-              className='contact__box'
-              variants={contactVariants}
-              custom={id + 2}
-              viewport={{
-                margin: '0px 0px -50px 0px'
-              }}
-            >
+            <div key={id} className='contact__box'>
               <label className='contact__label'>
                 {label}
               </label>
@@ -64,17 +52,10 @@ const Contact = (): JSX.Element => {
                   placeholder={placeholder}
                 />
               )}
-            </motion.div>
+            </div>
           )
         )}
-        <motion.div
-          className='contact__box'
-          variants={contactVariants}
-          custom={6}
-          viewport={{
-            margin: '0px 0px 0px 0px'
-          }}
-        >
+        <div className='contact__box'>
           <AnchorButton
             type='submit'
             href='#'
@@ -85,7 +66,7 @@ const Contact = (): JSX.Element => {
           >
             Enviar correo
           </AnchorButton>
-        </motion.div>
+        </div>
       </motion.form>
     </div>
   )

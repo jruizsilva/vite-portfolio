@@ -19,7 +19,17 @@ const cardVariants = {
   exit: { opacity: 0, x: -50, scale: 0.2 }
 }
 
-const ProjectCard = (project: Project): JSX.Element => {
+interface Props {
+  project: Project
+  custom: number
+  i: number
+}
+
+const ProjectCard = ({
+  project,
+  custom,
+  i
+}: Props): JSX.Element => {
   const {
     title,
     description,
@@ -35,8 +45,7 @@ const ProjectCard = (project: Project): JSX.Element => {
       variants={cardVariants}
       initial='initial'
       whileInView='animate'
-      exit='exit'
-      custom={project.id + 1}
+      custom={custom + i}
       viewport={{
         margin: '0px 0px -50px 0px'
       }}

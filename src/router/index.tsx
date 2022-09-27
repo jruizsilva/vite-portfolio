@@ -7,7 +7,6 @@ import {
 import { AnimatePresence } from 'framer-motion'
 import Footer from '../components/footer'
 import Loader from '../components/loader'
-import ScrollToTop from '../components/scroll-to-top/scroll-to-top'
 import HomeScreen from '../screen/home'
 import ProjectScreen from '../screen/project'
 import ProjectsScreen from '../screen/projects'
@@ -30,14 +29,20 @@ const Router = (): JSX.Element => {
     }
   }, [])
 
+  const scrollToTop = (): void => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
       {loading ? (
         <Loader key={location.key} />
       ) : (
         <div className='container'>
-          <ScrollToTop />
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence
+            exitBeforeEnter
+            onExitComplete={scrollToTop}
+          >
             <Routes location={location} key={location.key}>
               <Route
                 path='/'

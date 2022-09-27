@@ -24,7 +24,6 @@ interface Project {
   techList: Technology[]
   overview: string
   category: projectCategory
-  custom: number
 }
 
 interface FormField {
@@ -32,7 +31,6 @@ interface FormField {
   placeholder: string
   label: string
   type?: string
-  techList: string[]
 }
 
 interface NavbarLink {

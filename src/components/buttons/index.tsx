@@ -28,7 +28,7 @@ const buttonVariants: Variants = {
     transition: {
       delay: i * 0.3,
       ease: 'easeInOut',
-      duration: 1
+      duration: i * 0.3
     }
   }),
   exit: { opacity: 0, scale: 0.2 }
@@ -138,7 +138,6 @@ const NavLinkButton = ({
       variants={buttonVariants}
       initial='initial'
       whileInView='animate'
-      exit='exit'
       custom={2}
       viewport={{
         margin: '0px 0px -50px 0px'
