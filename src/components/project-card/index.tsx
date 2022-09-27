@@ -11,8 +11,7 @@ const cardVariants = {
     scale: 1,
     x: 0,
     transition: {
-      ease: 'easeInOut',
-      duration: 0.5
+      ease: 'easeInOut'
     }
   }
 }

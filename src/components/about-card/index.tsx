@@ -13,8 +13,7 @@ const cardVariants = {
     scale: 1,
     x: 0,
     transition: {
-      ease: 'easeInOut',
-      duration: 0.5
+      ease: 'easeInOut'
     }
   },
   exit: { opacity: 0, x: -50, scale: 0.2 }
@@ -28,7 +27,6 @@ const itemVariants: Variants = {
     transition: {
       type: 'spring',
       bounce: 0.4,
-      duration: 0.5,
       delay: i * 0.5
     }
   })

@@ -11,8 +11,7 @@ const contactVariants: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      ease: 'easeInOut',
-      duration: 0.5
+      ease: 'easeInOut'
     }
   }
 }
