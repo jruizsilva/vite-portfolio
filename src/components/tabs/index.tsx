@@ -84,32 +84,12 @@ const Tabs = (): JSX.Element => {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
+            {/* TODO: se puede mejorar ↓↓ */}
             {index === 1 && 'full-stack'}
             {index === 2 && 'front-end'}
             {index === 3 && 'html-css'}
           </motion.div>
         </AnimatePresence>
-        {/* <div
-          className={`tabs__content ${
-            index === 1 ? 'tabs__content--active' : ''
-          }`}
-        >
-          <Projects category='full-stack' custom={5} />
-        </div>
-        <div
-          className={`tabs__content ${
-            index === 2 ? 'tabs__content--active' : ''
-          }`}
-        >
-          FRONT-END
-        </div>
-        <div
-          className={`tabs__content ${
-            index === 3 ? 'tabs__content--active' : ''
-          }`}
-        >
-          HTML/CSS
-        </div> */}
       </div>
     </div>
   )
