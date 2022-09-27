@@ -1,11 +1,18 @@
-import { motion } from 'framer-motion'
+import {
+  motion,
+  Variants,
+  useAnimationControls
+} from 'framer-motion'
+import { useEffect } from 'react'
 import { icons } from '../../assets'
 
-const cardVariants = {
-  initial: { opacity: 0, x: '500', scale: 0.2 },
+const cardVariants: Variants = {
+  initial: {
+    opacity: 0,
+    scale: 0.2
+  },
   animate: {
     opacity: 1,
-    x: 0,
     scale: 1,
     transition: {
       ease: 'easeInOut',
@@ -14,25 +21,84 @@ const cardVariants = {
   }
 }
 
+const textVariants: Variants = {
+  initial: { y: -100, opacity: 0 },
+  animate: i => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1,
+      delay: i * 0.5
+    }
+  })
+}
+
+const iconVariants: Variants = {
+  initial: { opacity: 0 },
+  animate: i => ({
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.5,
+      delay: i * 0.5
+    }
+  })
+}
+
 const AboutCard = (): JSX.Element => {
+  const textControls = useAnimationControls()
+  const iconControls = useAnimationControls()
+
+  useEffect(() => {
+    textControls.set(textVariants.initial)
+    iconControls.set(iconVariants.initial)
+  }, [])
+
+  const handleOnCompleteCardAnimation = (): void => {
+    textControls
+      .start(textVariants.animate)
+      .catch(console.log)
+  }
+
   return (
     <motion.div
       className='about-card'
       variants={cardVariants}
+      onAnimationComplete={handleOnCompleteCardAnimation}
     >
-      <h3 className='about-card__h3'>
+      <motion.h3
+        className='about-card__h3'
+        animate={textControls}
+        custom={0}
+      >
         Objetivo profesional
-      </h3>
-      <p className='about-card__p'>
+      </motion.h3>
+      <motion.p
+        className='about-card__p'
+        animate={textControls}
+        custom={1}
+        onAnimationComplete={() => {
+          iconControls
+            .start(iconVariants.animate)
+            .catch(console.log)
+        }}
+      >
         Soy un Full-stack developer Javascript con 1 año de
         experiencia académica en el desarrollo de software.
         Busco insertarme en la industria IT y desarrollar
         mis habilidades en un ámbito profesional. Mi
         distingo por mi colaboración en trabajo en equipo y
         adaptabilidad a los cambios.
-      </p>
+      </motion.p>
       <ul className='about-card__ul'>
-        <li className='about-card__li'>
+        <motion.li
+          className='about-card__li'
+          animate={iconControls}
+          custom={0}
+        >
           <a
             href='https://github.com/jruizsilva'
             target='_blank'
@@ -44,8 +110,12 @@ const AboutCard = (): JSX.Element => {
               title='Linkedin profile'
             />
           </a>
-        </li>
-        <li className='about-card__li'>
+        </motion.li>
+        <motion.li
+          className='about-card__li'
+          animate={iconControls}
+          custom={1}
+        >
           <a
             href='https://www.linkedin.com/in/jruizsilva'
             target='_blank'
@@ -57,7 +127,7 @@ const AboutCard = (): JSX.Element => {
               title='Github profile'
             />
           </a>
-        </li>
+        </motion.li>
       </ul>
     </motion.div>
   )
