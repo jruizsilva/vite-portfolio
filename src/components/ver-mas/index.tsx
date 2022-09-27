@@ -8,12 +8,7 @@ const VerMas = (): JSX.Element => {
 
   return (
     <div className='ver-mas'>
-      <SectionTitle
-        custom={1}
-        viewportMargin='0px 0px -150px 0px'
-      >
-        ¿Quieres ves más?
-      </SectionTitle>
+      <SectionTitle>¿Quieres ves más?</SectionTitle>
       <NavLinkButton
         onClick={() => navigate('/projects')}
         bg='transparent'

@@ -23,7 +23,7 @@ const Router = (): JSX.Element => {
   useEffect(() => {
     const timer = setTimeout(() => {
       dispatch(setLoading(false))
-    }, 1000)
+    }, 500)
     return () => {
       clearTimeout(timer)
     }

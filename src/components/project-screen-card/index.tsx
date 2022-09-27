@@ -7,16 +7,15 @@ import TechStack from '../tech-stack'
 
 const projectCardVariants = {
   initial: { opacity: 0, x: '500', scale: 0.2 },
-  animate: (i: number) => ({
+  animate: {
     opacity: 1,
     x: 0,
     scale: 1,
     transition: {
-      delay: i * 0.3,
       ease: 'easeInOut',
-      duration: 1
+      duration: 0.5
     }
-  })
+  }
 }
 
 interface Props {

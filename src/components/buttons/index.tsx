@@ -22,16 +22,14 @@ interface NavLinkProps extends Props {
 
 const buttonVariants: Variants = {
   initial: { opacity: 0, scale: 0.2 },
-  animate: (i: number) => ({
+  animate: {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: i * 0.3,
       ease: 'easeInOut',
-      duration: i * 0.3
+      duration: 0.5
     }
-  }),
-  exit: { opacity: 0, scale: 0.2 }
+  }
 }
 
 const StyledButton = styled(motion.a)<AnchorProps>`

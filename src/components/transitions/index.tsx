@@ -18,7 +18,7 @@ const Transitions = ({ children }: Props): JSX.Element => {
       initial='initial'
       animate='animate'
       exit='exit'
-      transition={{ staggerChildren: 0.5 }}
+      transition={{ staggerChildren: 0.3 }}
     >
       {children}
     </motion.div>

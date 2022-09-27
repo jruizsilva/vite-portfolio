@@ -8,9 +8,7 @@ const ProjectsScreen = (): JSX.Element => {
       <Header />
       <div className='wrapper'>
         <div className='projects-screen'>
-          <SectionTitle custom={1} viewportMargin='0px'>
-            Mis proyectos
-          </SectionTitle>
+          <SectionTitle>Mis proyectos</SectionTitle>
           <Tabs />
         </div>
       </div>

@@ -7,27 +7,20 @@ import { contactFields } from './const'
 
 const contactVariants: Variants = {
   initial: { opacity: 0, scale: 0.5 },
-  animate: (i: number) => ({
+  animate: {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: i * 0.3,
       ease: 'easeInOut',
-      duration: i * 0.3
+      duration: 0.5
     }
-  }),
-  exit: { opacity: 0, scale: 0.5 }
+  }
 }
 
 const Contact = (): JSX.Element => {
   return (
     <div className='contact' id='contact'>
-      <SectionTitle
-        custom={1}
-        viewportMargin='0px 0px -300px 0px'
-      >
-        Contacto
-      </SectionTitle>
+      <SectionTitle>Contacto</SectionTitle>
       <motion.form
         className='contact__form'
         variants={contactVariants}

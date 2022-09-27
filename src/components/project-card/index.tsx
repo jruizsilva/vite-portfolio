@@ -6,30 +6,22 @@ import TechStack from '../tech-stack'
 
 const cardVariants = {
   initial: { opacity: 0, x: -50, scale: 0.2 },
-  animate: (i: number) => ({
+  animate: {
     opacity: 1,
     scale: 1,
     x: 0,
     transition: {
-      delay: i * 0.3,
       ease: 'easeInOut',
-      duration: i * 0.3
+      duration: 0.5
     }
-  }),
-  exit: { opacity: 0, x: -50, scale: 0.2 }
+  }
 }
 
 interface Props {
   project: Project
-  custom: number
-  i: number
 }
 
-const ProjectCard = ({
-  project,
-  custom,
-  i
-}: Props): JSX.Element => {
+const ProjectCard = ({ project }: Props): JSX.Element => {
   const {
     title,
     description,
@@ -40,16 +32,7 @@ const ProjectCard = ({
   } = project
 
   return (
-    <motion.li
-      className='project'
-      variants={cardVariants}
-      initial='initial'
-      whileInView='animate'
-      custom={custom + i}
-      viewport={{
-        margin: '0px 0px -50px 0px'
-      }}
-    >
+    <motion.li className='project' variants={cardVariants}>
       <h3 className='project__h3'>
         <Link to={to} state={{ project }}>
           {title}

@@ -17,15 +17,24 @@ const StyledTitle = styled(motion.h2)`
   }
 `
 
-interface Props {
-  children: string
-  titleVariants: Variants
+const titleVariants: Variants = {
+  initial: { y: -100, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.5
+    }
+  }
 }
 
-const SectionTitle = ({
-  children,
-  titleVariants
-}: Props): JSX.Element => {
+interface Props {
+  children: string
+}
+
+const SectionTitle = ({ children }: Props): JSX.Element => {
   return (
     <StyledTitle variants={titleVariants}>
       {children}

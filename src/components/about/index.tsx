@@ -10,7 +10,7 @@ const titleVariants: Variants = {
     transition: {
       type: 'spring',
       bounce: 0.4,
-      duration: 1
+      duration: 0.5
     }
   }
 }
@@ -29,9 +29,7 @@ const About = (): JSX.Element => {
           Desarrollador Full-Stack
         </strong>
       </motion.h1>
-      <SectionTitle titleVariants={titleVariants}>
-        About me
-      </SectionTitle>
+      <SectionTitle>About me</SectionTitle>
       <AboutCard />
     </div>
   )

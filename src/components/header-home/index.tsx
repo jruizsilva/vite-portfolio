@@ -14,7 +14,7 @@ const itemVariants: Variants = {
     transition: {
       type: 'spring',
       bounce: 0.4,
-      duration: 1
+      duration: 0.5
     }
   }
 }
@@ -27,7 +27,7 @@ const menuVariants: Variants = {
     transition: {
       type: 'spring',
       bounce: 0.4,
-      duration: 1,
+      duration: 0.5,
       delay: 0.5
     }
   }
