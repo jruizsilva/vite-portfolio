@@ -18,11 +18,11 @@ const Projects = ({
 }: Props): JSX.Element => {
   return (
     <div className='projects' id='projects'>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         {title !== undefined && (
           <SectionTitle
             custom={1}
-            viewportMargin='0px 0px -250px 0px'
+            viewportMargin='0px 0px -300px 0px'
           >
             {title}
           </SectionTitle>

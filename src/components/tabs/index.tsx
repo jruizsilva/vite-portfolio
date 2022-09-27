@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import useTabs from '../../hooks/useTabs'
 import Projects from '../projects'
 
@@ -24,9 +24,8 @@ const Tabs = (): JSX.Element => {
     <div className='tabs'>
       <ul className='tabs__ul'>
         <motion.li
-          className={`tabs__li ${
-            index === 1 ? 'tabs__li--active' : ''
-          }`}
+          className='tabs__li'
+          key={1}
           onClick={showFullStackTab}
           variants={tabVariants}
           initial='initial'
@@ -34,11 +33,16 @@ const Tabs = (): JSX.Element => {
           custom={2}
         >
           FULL-STACK
+          {index === 1 && (
+            <motion.div
+              className='tabs__underline'
+              layoutId='tabs__underline'
+            ></motion.div>
+          )}
         </motion.li>
         <motion.li
-          className={`tabs__li ${
-            index === 2 ? 'tabs__li--active' : ''
-          }`}
+          className='tabs__li'
+          key={2}
           onClick={showFrontEndTab}
           variants={tabVariants}
           initial='initial'
@@ -46,11 +50,16 @@ const Tabs = (): JSX.Element => {
           custom={3}
         >
           FRONT-END
+          {index === 2 && (
+            <motion.div
+              className='tabs__underline'
+              layoutId='tabs__underline'
+            ></motion.div>
+          )}
         </motion.li>
         <motion.li
-          className={`tabs__li ${
-            index === 3 ? 'tabs__li--active' : ''
-          }`}
+          className='tabs__li'
+          key={3}
           onClick={showHTMLCSSTab}
           variants={tabVariants}
           initial='initial'
@@ -58,10 +67,29 @@ const Tabs = (): JSX.Element => {
           custom={4}
         >
           HTML/CSS
+          {index === 3 && (
+            <motion.div
+              className='tabs__underline'
+              layoutId='tabs__underline'
+            ></motion.div>
+          )}
         </motion.li>
       </ul>
       <div className='tabs__content-container'>
-        <div
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={index}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {index === 1 && 'full-stack'}
+            {index === 2 && 'front-end'}
+            {index === 3 && 'html-css'}
+          </motion.div>
+        </AnimatePresence>
+        {/* <div
           className={`tabs__content ${
             index === 1 ? 'tabs__content--active' : ''
           }`}
@@ -81,7 +109,7 @@ const Tabs = (): JSX.Element => {
           }`}
         >
           HTML/CSS
-        </div>
+        </div> */}
       </div>
     </div>
   )

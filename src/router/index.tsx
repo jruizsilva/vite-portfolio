@@ -34,13 +34,13 @@ const Router = (): JSX.Element => {
   }
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode='wait' initial={false}>
       {loading ? (
         <Loader key={location.key} />
       ) : (
         <div className='container'>
           <AnimatePresence
-            exitBeforeEnter
+            mode='wait'
             onExitComplete={scrollToTop}
           >
             <Routes location={location} key={location.key}>

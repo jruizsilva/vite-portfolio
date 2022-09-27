@@ -11,10 +11,12 @@
     }
   }
   &__li {
+    position: relative;
     user-select: none;
     font-size: 14px;
     text-transform: uppercase;
     padding-bottom: 4px;
+    cursor: default;
 
     @media (min-width: breakpoints.$sm) {
       font-size: 18px;
@@ -24,6 +26,15 @@
       border-bottom: 1px solid #fff;
     }
   }
+  &__underline {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #fff;
+  }
+
   &__content-container {
   }
   &__content {
