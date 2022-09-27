@@ -1,3 +1,4 @@
+import { motion, Variants } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { navbarLinkList } from './const'
 import { NavbarLink } from '../../types'
@@ -5,14 +6,57 @@ import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 
+const itemVariants: Variants = {
+  initial: { y: -100, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1
+    }
+  }
+}
+
+const menuVariants: Variants = {
+  initial: { y: -100, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1,
+      delay: 0.5
+    }
+  }
+}
+
 const HeaderHome = (): JSX.Element => {
-  const { isOpenMenu, toggleOpenMenu, closeMenu } = useResponsiveMenu()
+  const { isOpenMenu, toggleOpenMenu, closeMenu } =
+    useResponsiveMenu()
 
   return (
-    <header className={`header ${isOpenMenu ? 'open' : ''}`}>
-      <nav className='header__nav'>
-        <ul className={`header__ul ${isOpenMenu ? 'open' : ''}`}>
-          <li className='header__li'>
+    <header
+      className={`header ${isOpenMenu ? 'open' : ''}`}
+    >
+      <motion.nav
+        className='header__nav'
+        initial='initial'
+        whileInView='animate'
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.5 }}
+      >
+        <ul
+          className={`header__ul ${
+            isOpenMenu ? 'open' : ''
+          }`}
+        >
+          <motion.li
+            className='header__li'
+            variants={itemVariants}
+          >
             <AnchorButton
               href='http://google.com'
               icon={icons.link}
@@ -21,26 +65,34 @@ const HeaderHome = (): JSX.Element => {
             >
               Descargar CV
             </AnchorButton>
-          </li>
+          </motion.li>
           <ul className='header__ul--links'>
-            {navbarLinkList.map(({ id, href, name, offset }: NavbarLink) => (
-              <li key={id} className='header__li--links'>
-                <Link
-                  className='header__a'
-                  activeClass='header__a--active'
-                  to={href}
-                  onClick={closeMenu}
-                  spy
-                  smooth
-                  offset={offset}
+            {navbarLinkList.map(
+              ({ id, href, name, offset }: NavbarLink) => (
+                <motion.li
+                  key={id}
+                  className='header__li--links'
+                  variants={itemVariants}
                 >
-                  {name}
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    className='header__a'
+                    activeClass='header__a--active'
+                    to={href}
+                    onClick={closeMenu}
+                    spy
+                    smooth
+                    offset={offset}
+                  >
+                    {name}
+                  </Link>
+                </motion.li>
+              )
+            )}
           </ul>
-
-          <li className='header__li'>
+          <motion.li
+            className='header__li'
+            variants={itemVariants}
+          >
             <select className='header__select'>
               <option className='header__option' value='es'>
                 ES
@@ -49,17 +101,22 @@ const HeaderHome = (): JSX.Element => {
                 EN
               </option>
             </select>
-          </li>
+          </motion.li>
         </ul>
-        <div
-          className={`header__hamburger-menu ${isOpenMenu ? 'open' : ''}`}
+        <motion.div
+          className={`header__hamburger-menu ${
+            isOpenMenu ? 'open' : ''
+          }`}
           onClick={toggleOpenMenu}
+          variants={menuVariants}
+          initial='initial'
+          animate='animate'
         >
           <div className='header__bar-top'></div>
           <div className='header__bar-middle'></div>
           <div className='header__bar-bottom'></div>
-        </div>
-      </nav>
+        </motion.div>
+      </motion.nav>
     </header>
   )
 }
