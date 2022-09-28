@@ -6,11 +6,11 @@ import CardButtons from '../card-buttons'
 import TechStack from '../tech-stack'
 
 const projectCardVariants = {
-  initial: { opacity: 0, x: '500', scale: 0.2 },
+  initial: { opacity: 0, x: -50, scale: 0.2 },
   animate: {
     opacity: 1,
-    x: 0,
     scale: 1,
+    x: 0,
     transition: {
       ease: 'easeInOut'
     }
@@ -19,12 +19,10 @@ const projectCardVariants = {
 
 interface Props {
   project: Project
-  custom: number
 }
 
 const ProjectScreenCard = ({
-  project,
-  custom
+  project
 }: Props): JSX.Element => {
   const {
     title,
@@ -45,9 +43,6 @@ const ProjectScreenCard = ({
       <motion.div
         className='project screen'
         variants={projectCardVariants}
-        initial='initial'
-        animate='animate'
-        custom={custom}
       >
         <p className='project__p screen'>{description}</p>
         <TechStack techList={techList} />

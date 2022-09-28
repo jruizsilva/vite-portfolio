@@ -15,6 +15,7 @@ interface Props {
 interface AnchorProps extends Props {
   href: string
   type?: string
+  variants?: Variants
 }
 interface NavLinkProps extends Props {
   onClick: () => void
@@ -46,6 +47,7 @@ const StyledButton = styled(motion.a)<AnchorProps>`
   column-gap: 12px;
   border-radius: 1rem;
   width: ${({ w }) => (w !== undefined ? w : '12.5rem')};
+  cursor: default;
 
   & span {
     font-size: 16px;
@@ -74,6 +76,7 @@ const StyledNavLink = styled(motion.button)<NavLinkProps>`
   column-gap: 12px;
   border-radius: 1rem;
   width: ${({ w }) => (w !== undefined ? w : '12.5rem')};
+  cursor: default;
 
   & span {
     font-size: 16px;
@@ -95,7 +98,8 @@ const AnchorButton = ({
   w,
   border,
   href,
-  type
+  type,
+  variants
 }: AnchorProps): JSX.Element => {
   return (
     <StyledButton
@@ -110,6 +114,7 @@ const AnchorButton = ({
       text={text}
       w={w}
       border={border}
+      variants={variants}
     >
       <span>{children}</span>
       <img src={icon} />

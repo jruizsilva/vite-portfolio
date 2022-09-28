@@ -18,10 +18,15 @@ const StyledTitle = styled(motion.h2)`
 `
 
 const titleVariants: Variants = {
-  initial: { y: -100, opacity: 0 },
+  initial: {
+    y: -100,
+    opacity: 0,
+    visibility: 'hidden'
+  },
   animate: {
     y: 0,
     opacity: 1,
+    visibility: 'visible',
     transition: {
       type: 'spring',
       bounce: 0.4

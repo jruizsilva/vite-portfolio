@@ -37,7 +37,6 @@ interface NavbarLink {
   id: number
   href: string
   name: string
-  offset: number
 }
 
 export { Technology, Project, FormField, NavbarLink }
