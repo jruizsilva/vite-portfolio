@@ -1,15 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import useTabs from '../../hooks/useTabs'
-import Projects from '../projects'
 
 const tabVariants = {
   initial: { opacity: 0 },
-  animate: (i: number) => ({
-    opacity: 1,
-    transition: {
-      delay: i * 0.3
-    }
-  })
+  animate: {
+    opacity: 1
+  }
 }
 
 const Tabs = (): JSX.Element => {
@@ -28,9 +24,6 @@ const Tabs = (): JSX.Element => {
           key={1}
           onClick={showFullStackTab}
           variants={tabVariants}
-          initial='initial'
-          animate='animate'
-          custom={2}
         >
           FULL-STACK
           {index === 1 && (
@@ -45,9 +38,6 @@ const Tabs = (): JSX.Element => {
           key={2}
           onClick={showFrontEndTab}
           variants={tabVariants}
-          initial='initial'
-          animate='animate'
-          custom={3}
         >
           FRONT-END
           {index === 2 && (
@@ -62,9 +52,6 @@ const Tabs = (): JSX.Element => {
           key={3}
           onClick={showHTMLCSSTab}
           variants={tabVariants}
-          initial='initial'
-          animate='animate'
-          custom={4}
         >
           HTML/CSS
           {index === 3 && (
@@ -77,12 +64,7 @@ const Tabs = (): JSX.Element => {
       </ul>
       <div className='tabs__content-container'>
         <AnimatePresence mode='wait'>
-          <motion.div
-            key={index}
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
-          >
+          <motion.div key={index} variants={tabVariants}>
             {/* TODO: se puede mejorar ↓↓ */}
             {index === 1 && 'full-stack'}
             {index === 2 && 'front-end'}

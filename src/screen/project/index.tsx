@@ -14,8 +14,7 @@ const ProjectScreen = (): JSX.Element => {
       initial='initial'
       animate='animate'
       viewport={{
-        once: true,
-        margin: '0px'
+        once: true
       }}
       transition={{ staggerChildren: 0.3 }}
     >
