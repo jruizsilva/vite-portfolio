@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import ProjectCard from '../project-card'
-import { projectList } from './const'
 import SectionTitle from '../section-title'
+import { projectList } from './const'
 
 interface Props {
   title?: string

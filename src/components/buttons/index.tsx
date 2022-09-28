@@ -21,12 +21,13 @@ interface NavLinkProps extends Props {
 }
 
 const buttonVariants: Variants = {
-  initial: { opacity: 0, scale: 0.2 },
+  initial: { y: -100, opacity: 0 },
   animate: {
+    y: 0,
     opacity: 1,
-    scale: 1,
     transition: {
-      ease: 'easeInOut'
+      type: 'spring',
+      bounce: 0.4
     }
   }
 }
@@ -133,12 +134,6 @@ const NavLinkButton = ({
       border={border}
       onClick={onClick}
       variants={buttonVariants}
-      initial='initial'
-      whileInView='animate'
-      custom={2}
-      viewport={{
-        margin: '0px 0px -50px 0px'
-      }}
     >
       <span>{children}</span>
       <img src={icon} />

@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { store } from './redux/store'
-import { Provider } from 'react-redux'
 import Router from './router'
 import './styles/styles.scss'
-import { BrowserRouter } from 'react-router-dom'
 
 const theme = {
   bg: '#3870ba',
@@ -15,7 +15,9 @@ const theme = {
   'card-title': '#004bad'
 }
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>

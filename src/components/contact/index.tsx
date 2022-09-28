@@ -6,10 +6,11 @@ import SectionTitle from '../section-title'
 import { contactFields } from './const'
 
 const contactVariants: Variants = {
-  initial: { opacity: 0, scale: 0.5 },
+  initial: { opacity: 0, x: -50, scale: 0.2 },
   animate: {
     opacity: 1,
     scale: 1,
+    x: 0,
     transition: {
       ease: 'easeInOut'
     }
@@ -18,14 +19,21 @@ const contactVariants: Variants = {
 
 const Contact = (): JSX.Element => {
   return (
-    <div className='contact' id='contact'>
+    <motion.div
+      className='contact'
+      id='contact'
+      initial='initial'
+      whileInView='animate'
+      viewport={{
+        once: true,
+        margin: '0px 0px -250px 0px'
+      }}
+      transition={{ staggerChildren: 0.3 }}
+    >
       <SectionTitle>Contacto</SectionTitle>
       <motion.form
         className='contact__form'
         variants={contactVariants}
-        initial='initial'
-        whileInView='animate'
-        custom={2}
       >
         {contactFields.map(
           ({ id, label, type, placeholder }: FormField) => (
@@ -60,7 +68,7 @@ const Contact = (): JSX.Element => {
           </AnchorButton>
         </div>
       </motion.form>
-    </div>
+    </motion.div>
   )
 }
 

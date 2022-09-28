@@ -1,7 +1,7 @@
 import {
   motion,
-  Variants,
-  useAnimationControls
+  useAnimationControls,
+  Variants
 } from 'framer-motion'
 import { useEffect } from 'react'
 import { icons } from '../../assets'
@@ -15,8 +15,7 @@ const cardVariants = {
     transition: {
       ease: 'easeInOut'
     }
-  },
-  exit: { opacity: 0, x: -50, scale: 0.2 }
+  }
 }
 
 const itemVariants: Variants = {
