@@ -27,7 +27,8 @@ const ProjectCard = ({ project }: Props): JSX.Element => {
     to,
     github,
     deploy,
-    techList
+    techList,
+    id
   } = project
 
   return (
@@ -38,7 +39,7 @@ const ProjectCard = ({ project }: Props): JSX.Element => {
         </Link>
       </h3>
       <p className='project__p'>{description}</p>
-      <TechStack techList={techList} />
+      <TechStack techList={techList} projectId={id} />
       <CardButtons github={github} deploy={deploy ?? ''} />
     </motion.li>
   )

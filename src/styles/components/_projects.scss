@@ -146,6 +146,23 @@
     @include mixins.row(center, center);
   }
 
+  &__modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 3;
+
+    & * {
+      pointer-events: all;
+    }
+  }
+
   &__modal {
     @include mixins.column(start, start, 8px);
     background-color: #fff;

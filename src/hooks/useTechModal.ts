@@ -1,33 +1,42 @@
 import { useState } from 'react'
 
+interface State {
+  tech: {
+    index: string | null
+    modalTitle: string
+    modalContent: string
+  }
+}
+
 interface returnHook {
-  isOpenTechModal: boolean
-  openTechModal: (title: string, content: string) => void
+  tech: State['tech']
+  openTechModal: (newValues: State['tech']) => void
   closeTechModal: () => void
-  modalTitle: string
-  modalContent: string
+}
+
+const initialValues = {
+  index: null,
+  modalTitle: '',
+  modalContent: ''
 }
 
 const useTechModal = (): returnHook => {
-  const [isOpenTechModal, setIsOpenTechModal] = useState(false)
-  const [modalTitle, setModalTitle] = useState('')
-  const [modalContent, setModalContent] = useState('')
+  const [tech, setTech] =
+    useState<State['tech']>(initialValues)
 
-  const openTechModal = (title: string, content: string): void => {
-    setModalTitle(title)
-    setModalContent(content)
-    setIsOpenTechModal(true)
+  const openTechModal = (
+    newValues: State['tech']
+  ): void => {
+    setTech(newValues)
   }
   const closeTechModal = (): void => {
-    setIsOpenTechModal(false)
+    setTech(initialValues)
   }
 
   return {
-    isOpenTechModal,
+    tech,
     openTechModal,
-    closeTechModal,
-    modalTitle,
-    modalContent
+    closeTechModal
   }
 }
 
