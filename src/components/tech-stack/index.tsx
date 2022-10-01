@@ -22,7 +22,11 @@ const TechStack = ({
 
   return (
     <>
-      <ul ref={ulRef} className='project__ul--tech-stack'>
+      <motion.ul
+        ref={ulRef}
+        className='project__ul--tech-stack'
+        layout
+      >
         {techList.map(
           ({ id, svg, title, description }: Technology) => (
             <li
@@ -46,7 +50,7 @@ const TechStack = ({
             </li>
           )
         )}
-      </ul>
+      </motion.ul>
 
       <AnimatePresence>
         {index !== null && (
