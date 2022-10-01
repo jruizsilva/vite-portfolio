@@ -165,9 +165,8 @@
   &__modal {
     @include mixins.column(start, start, 8px);
     background-color: #fff;
-    width: 100%;
-    max-width: 95%;
-    height: 240px;
+    max-width: 320px;
+    min-height: 240px;
     border-radius: 16px;
     padding: 16px;
     position: relative;
@@ -178,10 +177,12 @@
       background-position: center;
       border-radius: 4px;
       padding: 4px;
+      max-width: 95%;
+      width: 95%;
 
       @media (min-width: breakpoints.$md) {
-        max-width: 80%;
-        height: 480px;
+        max-width: 70%;
+        height: 360px;
       }
     }
   }
