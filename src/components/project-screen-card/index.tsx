@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { icons } from '../../assets'
 import useImageModal from '../../hooks/useImageModal'
 import { Project } from '../../types'
@@ -25,7 +25,6 @@ const ProjectScreenCard = ({
   project
 }: Props): JSX.Element => {
   const {
-    title,
     description,
     github,
     deploy,
@@ -45,47 +44,47 @@ const ProjectScreenCard = ({
         variants={projectCardVariants}
       >
         <p className='project__p screen'>{description}</p>
-        <TechStack techList={techList} />
-        <div
+        <TechStack
+          techList={techList}
+          projectId={project.id}
+        />
+        <motion.div
           className='project__img-container border'
           onClick={openImageModal}
-        >
-          <img
-            className='project__img border'
-            src={overview}
-            alt={title}
-          />
-        </div>
+          layoutId={`project-${project.id}-image`}
+          style={{ backgroundImage: `url(${overview})` }}
+        ></motion.div>
         <CardButtons
           github={github}
           deploy={deploy ?? ''}
         />
       </motion.div>
-      {isOpenImageModal && (
-        <div
-          className='project__overlay'
-          onClick={closeImageModal}
-        >
-          <div
-            className='project__modal image'
-            onClick={e => e.stopPropagation()}
-          >
-            <div className='project__img-container'>
-              <img
-                className='project__img modal'
-                src={overview}
-                alt={title}
-              />
-            </div>
-          </div>
-          <button
-            className='project__button--modal'
+      <AnimatePresence>
+        {isOpenImageModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='project__overlay'
             onClick={closeImageModal}
           >
-            <img src={icons.close_white} alt='close' />
-          </button>
-        </div>
-      )}
+            <motion.div
+              className='project__modal image'
+              onClick={e => e.stopPropagation()}
+              layoutId={`project-${project.id}-image`}
+              style={{
+                backgroundImage: `url(${overview})`
+              }}
+            ></motion.div>
+            <button
+              className='project__button--modal'
+              onClick={closeImageModal}
+            >
+              <img src={icons.close_white} alt='close' />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
