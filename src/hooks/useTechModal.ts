@@ -3,8 +3,9 @@ import { useState } from 'react'
 interface State {
   tech: {
     index: string | null
+    isOpen: boolean
     modalTitle: string
-    modalContent: string
+    modalDescription: string
   }
 }
 
@@ -16,8 +17,9 @@ interface returnHook {
 
 const initialValues = {
   index: null,
+  isOpen: false,
   modalTitle: '',
-  modalContent: ''
+  modalDescription: ''
 }
 
 const useTechModal = (): returnHook => {

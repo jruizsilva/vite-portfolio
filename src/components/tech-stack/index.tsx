@@ -4,12 +4,6 @@ import useHorizontalDragScroll from '../../hooks/useHorizontalDragScroll'
 import useTechModal from '../../hooks/useTechModal'
 import { Technology } from '../../types'
 
-const overlayVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 }
-}
-
 interface Props {
   techList: Technology[]
   projectId: number
@@ -23,32 +17,33 @@ const TechStack = ({
 
   const { tech, openTechModal, closeTechModal } =
     useTechModal()
-  const { index, modalTitle, modalContent } = tech
+
+  const { index, modalTitle, modalDescription } = tech
 
   return (
     <>
       <ul ref={ulRef} className='project__ul--tech-stack'>
         {techList.map(
-          ({ id, svg, name, content }: Technology) => (
-            <motion.li
-              layout
+          ({ id, svg, title, description }: Technology) => (
+            <li
               key={id}
               className='project__li--tech-stack'
-              onClick={() =>
-                openTechModal({
-                  index: `${projectId}-${id}`,
-                  modalTitle: name,
-                  modalContent: content
-                })
-              }
-              title={`${name} icon`}
             >
               <motion.img
                 src={svg}
-                alt={name}
+                alt={title}
                 layoutId={`${projectId}-${id}`}
+                onClick={() =>
+                  openTechModal({
+                    index: `${projectId}-${id}`,
+                    isOpen: true,
+                    modalTitle: title,
+                    modalDescription: description
+                  })
+                }
+                title={`${title} icon`}
               />
-            </motion.li>
+            </li>
           )
         )}
       </ul>
@@ -56,30 +51,23 @@ const TechStack = ({
       <AnimatePresence>
         {index !== null && (
           <motion.div
-            key='overlay'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className='project__overlay'
-            variants={overlayVariants}
-            initial='initial'
-            animate='animate'
-            exit='exit'
             onClick={closeTechModal}
-          ></motion.div>
-        )}
-        {index !== null && (
-          <motion.div
-            key='tech-modal'
-            layoutId={`${index}`}
-            className='project__modal-container'
           >
-            <div
+            <motion.div
               className='project__modal'
+              key='tech-modal'
+              layoutId={`${index}`}
               onClick={e => e.stopPropagation()}
             >
               <h3 className='project__h3--modal'>
                 {modalTitle}
               </h3>
               <p className='project__p--modal'>
-                {modalContent}
+                {modalDescription}
               </p>
               <button
                 className='project__button--modal'
@@ -87,7 +75,7 @@ const TechStack = ({
               >
                 <img src={icons.close} alt='close' />
               </button>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
