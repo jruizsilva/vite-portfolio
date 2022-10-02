@@ -1,10 +1,12 @@
 import { motion, Variants } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-scroll'
-import { navbarLinkList } from './const'
-import { NavbarLink } from '../../types'
-import { AnchorButton } from '../buttons'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
+import { NavbarLink } from '../../types'
+import { AnchorButton } from '../buttons'
+import { navbarLinkList } from './const'
 
 const itemVariants: Variants = {
   initial: { y: -100, opacity: 0 },
@@ -34,6 +36,23 @@ const menuVariants: Variants = {
 const HeaderHome = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu, closeMenu } =
     useResponsiveMenu()
+  const { t, i18n } = useTranslation(['header'])
+  const [language, setLanguage] = useState<string | null>(
+    null
+  )
+
+  const handleChangeLanguage = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
+    const newLanguage = e.target.value
+    setLanguage(newLanguage)
+  }
+
+  useEffect(() => {
+    if (language !== null) {
+      i18n.changeLanguage(language).catch(console.log)
+    }
+  }, [language])
 
   return (
     <header
@@ -55,7 +74,7 @@ const HeaderHome = (): JSX.Element => {
               bg='transparent'
               border='#fff'
             >
-              Descargar CV
+              {t('header.cv')}
             </AnchorButton>
           </motion.li>
           <ul className='header__ul--links'>
@@ -85,12 +104,15 @@ const HeaderHome = (): JSX.Element => {
             className='header__li'
             variants={itemVariants}
           >
-            <select className='header__select'>
-              <option className='header__option' value='es'>
-                ES
-              </option>
+            <select
+              className='header__select'
+              onChange={handleChangeLanguage}
+            >
               <option className='header__option' value='en'>
                 EN
+              </option>
+              <option className='header__option' value='es'>
+                ES
               </option>
             </select>
           </motion.li>

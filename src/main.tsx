@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import './config/i18n'
 import { store } from './redux/store'
 import Router from './router'
 import './styles/styles.scss'
@@ -22,7 +23,9 @@ ReactDOM.createRoot(
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <BrowserRouter>
-          <Router />
+          <Suspense fallback='Loading...'>
+            <Router />
+          </Suspense>
         </BrowserRouter>
       </Provider>
     </ThemeProvider>
