@@ -1,3 +1,10 @@
 {
-  "header": { "cv": "Descargar CV" }
+  "header": {
+    "cv": "Descargar CV",
+    "navlink": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  }
 }

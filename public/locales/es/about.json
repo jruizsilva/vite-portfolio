@@ -1,0 +1,10 @@
+{
+  "about": {
+    "title": "Bienvenido! <br />Soy Jonathan<br /><strong className='about__strong'>Desarrollador Full-Stack</strong>",
+    "section-title": "Sobre mí",
+    "section": {
+      "title": "Objetivo profesional",
+      "description": "Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios."
+    }
+  }
+}

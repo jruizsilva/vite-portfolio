@@ -1,4 +1,5 @@
 import { motion, Variants } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import AboutCard from '../about-card'
 import SectionTitle from '../section-title'
 
@@ -15,20 +16,20 @@ const titleVariants: Variants = {
 }
 
 const About = (): JSX.Element => {
+  const { t } = useTranslation(['about'])
   return (
     <div className='about' id='about'>
       <motion.h1
         className='about__h1'
         variants={titleVariants}
-      >
-        Bienvenido! <br />
-        Soy Jonathan
-        <br />
-        <strong className='about__strong'>
-          Desarrollador Full-Stack
-        </strong>
-      </motion.h1>
-      <SectionTitle>About me</SectionTitle>
+        dangerouslySetInnerHTML={{
+          __html: t('about.title')
+        }}
+      />
+
+      <SectionTitle>
+        {t('about.section-title')}
+      </SectionTitle>
       <AboutCard />
     </div>
   )

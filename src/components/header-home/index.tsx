@@ -79,7 +79,7 @@ const HeaderHome = (): JSX.Element => {
           </motion.li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(
-              ({ id, href, name, offset }: NavbarLink) => (
+              ({ id, href }: NavbarLink) => (
                 <motion.li
                   key={id}
                   className='header__li--links'
@@ -92,9 +92,9 @@ const HeaderHome = (): JSX.Element => {
                     onClick={closeMenu}
                     spy
                     smooth
-                    offset={offset}
+                    offset={-82}
                   >
-                    {name}
+                    {t(`header.navlink.${href}`)}
                   </Link>
                 </motion.li>
               )

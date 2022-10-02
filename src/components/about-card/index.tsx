@@ -4,6 +4,7 @@ import {
   Variants
 } from 'framer-motion'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 
 const cardVariants = {
@@ -32,6 +33,7 @@ const itemVariants: Variants = {
 }
 
 const AboutCard = (): JSX.Element => {
+  const { t } = useTranslation(['about'])
   const controls = useAnimationControls()
 
   useEffect(() => {
@@ -49,15 +51,10 @@ const AboutCard = (): JSX.Element => {
       onAnimationComplete={handleOnCompleteAnimation}
     >
       <h3 className='about-card__h3'>
-        Objetivo profesional
+        {t('about.section.title')}
       </h3>
       <p className='about-card__p'>
-        Soy un Full-stack developer Javascript con 1 año de
-        experiencia académica en el desarrollo de software.
-        Busco insertarme en la industria IT y desarrollar
-        mis habilidades en un ámbito profesional. Mi
-        distingo por mi colaboración en trabajo en equipo y
-        adaptabilidad a los cambios.
+        {t('about.section.description')}
       </p>
       <ul className='about-card__ul'>
         <li className='about-card__li'>

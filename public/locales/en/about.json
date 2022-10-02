@@ -1,0 +1,10 @@
+{
+  "about": {
+    "title": "Welcome!<br />I'm Jonathan<br /><strong className='about__strong'>Full-Stack Developer</strong>",
+    "section-title": "About me",
+    "section": {
+      "title": "Professional objective",
+      "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+    }
+  }
+}

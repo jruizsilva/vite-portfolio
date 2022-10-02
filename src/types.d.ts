@@ -36,7 +36,6 @@ interface FormField {
 interface NavbarLink {
   id: number
   href: string
-  name: string
 }
 
 export { Technology, Project, FormField, NavbarLink }
