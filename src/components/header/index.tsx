@@ -58,7 +58,7 @@ const Header = (): JSX.Element => {
           </li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(
-              ({ id, href, name }: NavbarLink) => (
+              ({ id, href }: NavbarLink) => (
                 <motion.li
                   key={id}
                   className='header__li--links'
@@ -74,7 +74,7 @@ const Header = (): JSX.Element => {
                     to={href}
                     onClick={toggleOpenMenu}
                   >
-                    {name}
+                    fix me
                   </NavLink>
                 </motion.li>
               )

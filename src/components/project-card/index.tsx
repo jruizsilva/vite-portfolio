@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Project } from '../../types'
 import CardButtons from '../card-buttons'
@@ -21,24 +22,19 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props): JSX.Element => {
-  const {
-    title,
-    description,
-    to,
-    github,
-    deploy,
-    techList,
-    id
-  } = project
+  const { t } = useTranslation(['projects'])
+  const { to, github, deploy, techList, id } = project
 
   return (
     <motion.li className='project' variants={cardVariants}>
       <h3 className='project__h3'>
         <Link to={to} state={{ project }}>
-          {title}
+          {t(`projects.${id}.title`)}
         </Link>
       </h3>
-      <p className='project__p'>{description}</p>
+      <p className='project__p'>
+        {t(`projects.${id}.description`)}
+      </p>
       <TechStack techList={techList} projectId={id} />
       <CardButtons github={github} deploy={deploy ?? ''} />
     </motion.li>
