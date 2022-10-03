@@ -3,8 +3,10 @@
     "section-title": "Proyectos",
     "button": {
       "github": "Ver repositorio",
-      "deploy": "Abrir deploy"
+      "deploy": "Abrir deploy",
+      "view-more": "Click aquí"
     },
+    "section-view-more": "¿Quieres ves más?",
     "1": {
       "title": "Mercado App",
       "description": "Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.",
