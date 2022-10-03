@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import Header from '../../components/header'
 import SectionTitle from '../../components/section-title'
 import Tabs from '../../components/tabs'
 
 const ProjectsScreen = (): JSX.Element => {
+  const { t } = useTranslation(['projects'])
   return (
     <motion.div
       initial='initial'
@@ -16,7 +18,9 @@ const ProjectsScreen = (): JSX.Element => {
       <Header />
       <div className='wrapper'>
         <div className='projects-screen'>
-          <SectionTitle>Mis proyectos</SectionTitle>
+          <SectionTitle>
+            {t('projects.section-title')}
+          </SectionTitle>
           <Tabs />
         </div>
       </div>

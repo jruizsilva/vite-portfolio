@@ -1,6 +1,8 @@
 {
   "header": {
-    "cv": "Descargar CV",
+    "button": {
+      "cv": "Descargar CV"
+    },
     "navlink": {
       "about": "Sobre mí",
       "projects": "Proyectos",

@@ -8,7 +8,6 @@ interface Props {
   title?: string
   limit?: number
   category: string
-  custom: number
 }
 
 const Projects = ({
@@ -23,6 +22,7 @@ const Projects = ({
       id='projects'
       initial='initial'
       whileInView='animate'
+      exit={{ opacity: 0 }}
       viewport={{
         once: true,
         margin: '0px 0px -250px 0px'

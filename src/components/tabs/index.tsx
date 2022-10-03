@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import useTabs from '../../hooks/useTabs'
+import Projects from '../projects'
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -15,6 +16,8 @@ const Tabs = (): JSX.Element => {
     showFrontEndTab,
     showHTMLCSSTab
   } = useTabs()
+
+  console.log(index)
 
   return (
     <div className='tabs'>
@@ -65,10 +68,15 @@ const Tabs = (): JSX.Element => {
       <div className='tabs__content-container'>
         <AnimatePresence mode='wait'>
           <motion.div key={index} variants={tabVariants}>
-            {/* TODO: se puede mejorar ↓↓ */}
-            {index === 1 && 'full-stack'}
-            {index === 2 && 'front-end'}
-            {index === 3 && 'html-css'}
+            {index === 1 && (
+              <Projects category='full-stack' />
+            )}
+            {index === 2 && (
+              <Projects category='full-stack' />
+            )}
+            {index === 3 && (
+              <Projects category='full-stack' />
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
