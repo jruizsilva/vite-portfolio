@@ -74,12 +74,12 @@ const HeaderHome = (): JSX.Element => {
               bg='transparent'
               border='#fff'
             >
-              {t('header.cv')}
+              {t('header.button.cv')}
             </AnchorButton>
           </motion.li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(
-              ({ id, href }: NavbarLink) => (
+              ({ id, href, name }: NavbarLink) => (
                 <motion.li
                   key={id}
                   className='header__li--links'
@@ -94,7 +94,7 @@ const HeaderHome = (): JSX.Element => {
                     smooth
                     offset={-82}
                   >
-                    {t(`header.navlink.${href}`)}
+                    {t(`header.navlink.${name}`)}
                   </Link>
                 </motion.li>
               )

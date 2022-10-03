@@ -4,12 +4,12 @@ const navbarLinkList: NavbarLink[] = [
   {
     id: 1,
     href: '/',
-    name: 'Inicio'
+    name: 'home'
   },
   {
     id: 2,
     href: '/projects',
-    name: 'Projectos'
+    name: 'projects'
   }
 ]
 

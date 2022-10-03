@@ -5,6 +5,10 @@
       "about": "Sobre mí",
       "projects": "Proyectos",
       "contact": "Contacto"
+    },
+    "navlink2": {
+      "home": "Inicio",
+      "projects": "Proyectos"
     }
   }
 }

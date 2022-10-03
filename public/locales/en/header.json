@@ -1,10 +1,16 @@
 {
   "header": {
-    "cv": "Download CV",
+    "button": {
+      "cv": "Download CV"
+    },
     "navlink": {
       "about": "About me",
       "projects": "Projects",
       "contact": "Contact"
+    },
+    "navlink2": {
+      "home": "Home",
+      "projects": "Projects"
     }
   }
 }

@@ -1,4 +1,6 @@
 import { motion, Variants } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { NavLink, useLocation } from 'react-router-dom'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
@@ -34,6 +36,23 @@ const menuVariants: Variants = {
 const Header = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
   const { pathname } = useLocation()
+  const { t, i18n } = useTranslation(['header'])
+  const [language, setLanguage] = useState<string>(
+    i18n.language
+  )
+
+  const handleChangeLanguage = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
+    const newLanguage = e.target.value
+    setLanguage(newLanguage)
+  }
+
+  useEffect(() => {
+    if (language !== null) {
+      i18n.changeLanguage(language).catch(console.log)
+    }
+  }, [language])
 
   return (
     <header
@@ -53,12 +72,12 @@ const Header = (): JSX.Element => {
               border='#fff'
               variants={itemVariants}
             >
-              Descargar CV
+              {t('header.button.cv')}
             </AnchorButton>
           </li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(
-              ({ id, href }: NavbarLink) => (
+              ({ id, href, name }: NavbarLink) => (
                 <motion.li
                   key={id}
                   className='header__li--links'
@@ -74,7 +93,7 @@ const Header = (): JSX.Element => {
                     to={href}
                     onClick={toggleOpenMenu}
                   >
-                    fix me
+                    {t(`header.navlink2.${name}`)}
                   </NavLink>
                 </motion.li>
               )
@@ -85,7 +104,11 @@ const Header = (): JSX.Element => {
             className='header__li'
             variants={itemVariants}
           >
-            <select className='header__select'>
+            <select
+              className='header__select'
+              value={language}
+              onChange={handleChangeLanguage}
+            >
               <option className='header__option' value='es'>
                 ES
               </option>

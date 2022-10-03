@@ -3,15 +3,18 @@ import { NavbarLink } from '../../types'
 const navbarLinkList: NavbarLink[] = [
   {
     id: 1,
-    href: 'about'
+    href: 'about',
+    name: 'about'
   },
   {
     id: 2,
-    href: 'projects'
+    href: 'projects',
+    name: 'projects'
   },
   {
     id: 3,
-    href: 'contact'
+    href: 'contact',
+    name: 'contact'
   }
 ]
 

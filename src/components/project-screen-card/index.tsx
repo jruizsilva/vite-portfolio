@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 import useImageModal from '../../hooks/useImageModal'
 import { Project } from '../../types'
@@ -24,13 +25,8 @@ interface Props {
 const ProjectScreenCard = ({
   project
 }: Props): JSX.Element => {
-  const {
-    description,
-    github,
-    deploy,
-    techList,
-    overview
-  } = project
+  const { t } = useTranslation(['projects'])
+  const { github, deploy, techList, overview, id } = project
 
   const {
     isOpenImageModal,
@@ -43,7 +39,9 @@ const ProjectScreenCard = ({
         className='project screen'
         variants={projectCardVariants}
       >
-        <p className='project__p screen'>{description}</p>
+        <p className='project__p screen'>
+          {t(`projects.${id}.description`)}
+        </p>
         <TechStack
           techList={techList}
           projectId={project.id}
