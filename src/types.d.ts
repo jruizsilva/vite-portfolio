@@ -27,8 +27,7 @@ interface Project {
 
 interface FormField {
   id: number
-  placeholder: string
-  label: string
+  field: string
   type?: string
 }
 

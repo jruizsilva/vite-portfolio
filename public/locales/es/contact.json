@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "email": {
+        "label": "Correo",
+        "placeholder": "Ingrese el correo..."
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "Ingrese el asunto..."
+      },
+      "description": {
+        "label": "Descripción",
+        "placeholder": "Ingrese la descripción..."
+      }
+    },
+    "button": {
+      "submit": "Enviar correo"
+    }
+  }
+}

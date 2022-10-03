@@ -1,4 +1,5 @@
 import { motion, Variants } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 import { FormField } from '../../types'
 import { AnchorButton } from '../buttons'
@@ -18,6 +19,7 @@ const contactVariants: Variants = {
 }
 
 const Contact = (): JSX.Element => {
+  const { t } = useTranslation('contact')
   return (
     <motion.div
       className='contact'
@@ -30,26 +32,30 @@ const Contact = (): JSX.Element => {
       }}
       transition={{ staggerChildren: 0.3 }}
     >
-      <SectionTitle>Contacto</SectionTitle>
+      <SectionTitle>{t('contact.title')}</SectionTitle>
       <motion.form
         className='contact__form'
         variants={contactVariants}
       >
         {contactFields.map(
-          ({ id, label, type, placeholder }: FormField) => (
+          ({ id, field, type }: FormField) => (
             <div key={id} className='contact__box'>
               <label className='contact__label'>
-                {label}
+                {t(`contact.form.${field}.label`)}
               </label>
               {type === 'textarea' ? (
                 <textarea
                   className='contact__textarea'
-                  placeholder={placeholder}
+                  placeholder={t(
+                    `contact.form.${field}.placeholder`
+                  )}
                 ></textarea>
               ) : (
                 <input
                   className='contact__input'
-                  placeholder={placeholder}
+                  placeholder={t(
+                    `contact.form.${field}.placeholder`
+                  )}
                 />
               )}
             </div>
@@ -64,7 +70,7 @@ const Contact = (): JSX.Element => {
             bg='transparent'
             border='#fff'
           >
-            Enviar correo
+            {t('contact.button.submit')}
           </AnchorButton>
         </div>
       </motion.form>
