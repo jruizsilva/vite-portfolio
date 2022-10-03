@@ -1,6 +1,8 @@
+import { useFormik } from 'formik'
 import { motion, Variants } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import * as yup from 'yup'
 import { icons } from '../../assets'
 import { FormField } from '../../types'
 import { AnchorButton } from '../buttons'
@@ -19,9 +21,65 @@ const contactVariants: Variants = {
   }
 }
 
+const initialValues = {
+  email: '',
+  subject: '',
+  message: ''
+}
+
 const Contact = (): JSX.Element => {
   const { t } = useTranslation('contact')
   const form = useRef<HTMLFormElement>(null)
+  const formik = useFormik({
+    initialValues,
+    validationSchema: yup.object({
+      email: yup
+        .string()
+        .min(
+          6,
+          t('contact.form.email.validation.minlength')
+        )
+        .email(t('contact.form.email.validation.email'))
+        .max(
+          24,
+          t('contact.form.email.validation.maxlength')
+        )
+        .required(
+          t('contact.form.email.validation.required')
+        ),
+      subject: yup
+        .string()
+        .min(
+          4,
+          t('contact.form.email.validation.minlength')
+        )
+        .max(
+          128,
+          t('contact.form.email.validation.maxlength')
+        )
+        .required(
+          t('contact.form.email.validation.required')
+        ),
+      message: yup
+        .string()
+        .min(
+          4,
+          t('contact.form.email.validation.minlength')
+        )
+        .max(
+          256,
+          t('contact.form.email.validation.maxlength')
+        )
+        .required(
+          t('contact.form.email.validation.required')
+        )
+    }),
+    onSubmit: () => {
+      console.log(formik.values)
+    }
+  })
+
+  console.log(formik.errors)
 
   return (
     <motion.div
@@ -38,6 +96,7 @@ const Contact = (): JSX.Element => {
       <SectionTitle>{t('contact.title')}</SectionTitle>
       <motion.form
         ref={form}
+        onSubmit={formik.handleSubmit}
         className='contact__form'
         variants={contactVariants}
       >
@@ -54,6 +113,9 @@ const Contact = (): JSX.Element => {
                     `contact.form.${field}.placeholder`
                   )}
                   name={field}
+                  value={formik.values[field]}
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
                 ></textarea>
               ) : (
                 <input
@@ -62,6 +124,9 @@ const Contact = (): JSX.Element => {
                     `contact.form.${field}.placeholder`
                   )}
                   name={field}
+                  value={formik.values[field]}
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
                 />
               )}
             </div>

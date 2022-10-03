@@ -27,7 +27,7 @@ interface Project {
 
 interface FormField {
   id: number
-  field: string
+  field: 'email' | 'subject' | 'message'
   type?: string
 }
 

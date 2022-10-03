@@ -4,15 +4,31 @@
     "form": {
       "email": {
         "label": "Email",
-        "placeholder": "Enter the email..."
+        "placeholder": "Enter the email...",
+        "validation": {
+          "required": "Email is required",
+          "email": "Invalid email address",
+          "minlength": "Must be 6 characters or more",
+          "maxlength": "Must be 24 characters or less"
+        }
       },
       "subject": {
         "label": "Subject",
-        "placeholder": "Enter the subject..."
+        "placeholder": "Enter the subject...",
+        "validation": {
+          "required": "Subject is required",
+          "minlength": "Must be 4 characters or more",
+          "maxlength": "Must be 128 characters or less"
+        }
       },
       "message": {
         "label": "Description",
-        "placeholder": "Enter the description..."
+        "placeholder": "Enter the description...",
+        "validation": {
+          "required": "Description is required",
+          "minlength": "Must be 4 characters or more",
+          "maxlength": "Must be 256 characters or less"
+        }
       }
     },
     "button": {
