@@ -11,6 +11,7 @@
     "lint": "eslint --fix . --ext .ts,.tsx"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@reduxjs/toolkit": "^1.8.5",
     "framer-motion": "^7.3.6",
     "i18next": "^21.9.2",
