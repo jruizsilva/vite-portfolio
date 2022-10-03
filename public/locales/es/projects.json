@@ -1,7 +1,11 @@
 {
   "projects": {
+    "button": {
+      "github": "Ver repositorio",
+      "deploy": "Abrir deploy"
+    },
     "1": {
-      "title": "Marketplace App",
+      "title": "Mercado App",
       "description": "Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.",
       "techList": {
         "1": {
@@ -32,7 +36,7 @@
     },
 
     "2": {
-      "title": "Finances App",
+      "title": "Finanzas App",
       "description": "Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.",
       "techList": {
         "1": {

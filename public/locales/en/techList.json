@@ -1,0 +1,28 @@
+{
+  "techList": {
+    "html": {
+      "description": "HTML (HyperText Markup Language) is the most basic component of the Web. Defines the meaning and structure of web content."
+    },
+    "css": {
+      "description": "Cascading Style Sheets or CSS is the style language used to describe the presentation of HTML or XML documents (en-US)"
+    },
+    "javascript": {
+      "description": "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is best known as a scripting language for web pages, and is used in many non-browser environments, such as Node.js, Apache CouchDB, and Adobe Acrobat, JavaScript is a prototype-based programming language, multi-paradigm, single-threaded, dynamic, with support for object-oriented, imperative and declarative programming (eg functional programming)."
+    },
+    "react": {
+      "description": "React is a Javascript library focused on the development of user interfaces. This is how the bookstore itself is defined and obviously, that is its main area of work. However, the truth is that in React we find an excellent ally to make all kinds of web applications, SPA (Single Page Application) or even mobile applications. To do this, around React there is a complete ecosystem of modules, tools and components capable of helping the developer to cover advanced objectives with relatively little effort."
+    },
+    "redux": {
+      "description": "Redux is a data architecture pattern that allows application state to be handled in a predictable way. It is intended to reduce the number of relationships between application components and maintain a simple data flow."
+    },
+    "node": {
+      "description": "It is basically a minimalist development framework for Node.js that allows us to structure an application in an agile way, it provides us with functionalities such as routing, options to manage sessions and cookies, etc."
+    },
+    "postgre": {
+      "description": "PostgreSQL, or just Postgres to give it a more colorful name, is an open source relational database management system, although it is also possible to run non-relational queries. In this system, relational queries are based on SQL, while non-relational queries use JSON."
+    },
+    "sequelize": {
+      "description": "Sequelize is an ORM for Nodejs that allows us to manipulate several SQL databases in a very simple way, among these databases we can find: mysql, sqlite, postgres, mssql."
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 import { AnchorButton } from '../buttons'
 
@@ -6,12 +7,20 @@ interface Props {
   deploy: string
 }
 
-const CardButtons = ({ github, deploy }: Props): JSX.Element => {
+const CardButtons = ({
+  github,
+  deploy
+}: Props): JSX.Element => {
+  const { t } = useTranslation(['projects'])
   return (
     <ul className='project__ul--buttons'>
       <li className='project__li--button'>
-        <AnchorButton href={github} icon={icons.github_white} w='100%'>
-          Ver repositorio
+        <AnchorButton
+          href={github}
+          icon={icons.github_white}
+          w='100%'
+        >
+          {t('projects.button.github')}
         </AnchorButton>
       </li>
       <li className='project__li--button'>
@@ -23,7 +32,7 @@ const CardButtons = ({ github, deploy }: Props): JSX.Element => {
           border='#006cfa'
           bg='#fff'
         >
-          Abrir deploy
+          {t('projects.button.deploy')}
         </AnchorButton>
       </li>
     </ul>

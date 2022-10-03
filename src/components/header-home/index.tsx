@@ -37,8 +37,8 @@ const HeaderHome = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu, closeMenu } =
     useResponsiveMenu()
   const { t, i18n } = useTranslation(['header'])
-  const [language, setLanguage] = useState<string | null>(
-    null
+  const [language, setLanguage] = useState<string>(
+    i18n.language
   )
 
   const handleChangeLanguage = (
@@ -49,6 +49,7 @@ const HeaderHome = (): JSX.Element => {
   }
 
   useEffect(() => {
+    console.log(i18n.language)
     if (language !== null) {
       i18n.changeLanguage(language).catch(console.log)
     }
@@ -107,6 +108,7 @@ const HeaderHome = (): JSX.Element => {
             <select
               className='header__select'
               onChange={handleChangeLanguage}
+              value={language}
             >
               <option className='header__option' value='en'>
                 EN
