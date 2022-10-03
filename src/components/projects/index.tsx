@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import ProjectCard from '../project-card'
 import SectionTitle from '../section-title'
 import { projectList } from './const'
@@ -15,6 +16,7 @@ const Projects = ({
   limit = projectList.length,
   category
 }: Props): JSX.Element => {
+  const { t } = useTranslation(['projects'])
   return (
     <motion.div
       className='projects'
@@ -28,7 +30,9 @@ const Projects = ({
       transition={{ staggerChildren: 0.3 }}
     >
       {title !== undefined && (
-        <SectionTitle>{title}</SectionTitle>
+        <SectionTitle>
+          {t('projects.section-title')}
+        </SectionTitle>
       )}
       <ul className='projects__ul'>
         {projectList.length > 0 &&

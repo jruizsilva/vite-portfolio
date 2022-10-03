@@ -1,5 +1,6 @@
 {
   "projects": {
+    "section-title": "Projects",
     "button": {
       "github": "View repository",
       "deploy": "Open deploy"
