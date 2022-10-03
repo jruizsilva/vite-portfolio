@@ -1,4 +1,5 @@
 import { motion, Variants } from 'framer-motion'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 import { FormField } from '../../types'
@@ -20,6 +21,8 @@ const contactVariants: Variants = {
 
 const Contact = (): JSX.Element => {
   const { t } = useTranslation('contact')
+  const form = useRef<HTMLFormElement>(null)
+
   return (
     <motion.div
       className='contact'
@@ -34,6 +37,7 @@ const Contact = (): JSX.Element => {
     >
       <SectionTitle>{t('contact.title')}</SectionTitle>
       <motion.form
+        ref={form}
         className='contact__form'
         variants={contactVariants}
       >
@@ -49,6 +53,7 @@ const Contact = (): JSX.Element => {
                   placeholder={t(
                     `contact.form.${field}.placeholder`
                   )}
+                  name={field}
                 ></textarea>
               ) : (
                 <input
@@ -56,6 +61,7 @@ const Contact = (): JSX.Element => {
                   placeholder={t(
                     `contact.form.${field}.placeholder`
                   )}
+                  name={field}
                 />
               )}
             </div>

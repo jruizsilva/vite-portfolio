@@ -10,7 +10,7 @@
         "label": "Asunto",
         "placeholder": "Ingrese el asunto..."
       },
-      "description": {
+      "message": {
         "label": "Descripción",
         "placeholder": "Ingrese la descripción..."
       }

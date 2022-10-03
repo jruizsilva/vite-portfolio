@@ -11,7 +11,7 @@ const contactFields: FormField[] = [
   },
   {
     id: 3,
-    field: 'description',
+    field: 'message',
     type: 'textarea'
   }
 ]

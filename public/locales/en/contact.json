@@ -10,7 +10,7 @@
         "label": "Subject",
         "placeholder": "Enter the subject..."
       },
-      "description": {
+      "message": {
         "label": "Description",
         "placeholder": "Enter the description..."
       }
