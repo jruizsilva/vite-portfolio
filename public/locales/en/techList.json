@@ -15,7 +15,7 @@
     "redux": {
       "description": "Redux is a data architecture pattern that allows application state to be handled in a predictable way. It is intended to reduce the number of relationships between application components and maintain a simple data flow."
     },
-    "node": {
+    "express": {
       "description": "It is basically a minimalist development framework for Node.js that allows us to structure an application in an agile way, it provides us with functionalities such as routing, options to manage sessions and cookies, etc."
     },
     "postgre": {

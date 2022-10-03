@@ -10,7 +10,6 @@ type projectCategory =
 interface Technology {
   id: number
   title: string
-  description: string
   svg: string
 }
 

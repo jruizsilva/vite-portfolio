@@ -14,58 +14,42 @@ const projectList: Project[] = [
       {
         id: 1,
         title: 'html',
-        svg: icons.html,
-        description:
-          'HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web.'
+        svg: icons.html
       },
       {
         id: 2,
-        title: 'css3',
-        svg: icons.css3,
-        description:
-          'Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML (en-US)'
+        title: 'css',
+        svg: icons.css3
       },
       {
         id: 3,
         title: 'javascript',
-        svg: icons.javascript,
-        description:
-          'JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). '
+        svg: icons.javascript
       },
       {
         id: 4,
         title: 'react',
-        svg: icons.react,
-        description:
-          'React es una librería Javascript focalizada en el desarrollo de interfaces de usuario. Así se define la propia librería y evidentemente, esa es su principal área de trabajo. Sin embargo, lo cierto es que en React encontramos un excelente aliado para hacer todo tipo de aplicaciones web, SPA (Single Page Application) o incluso aplicaciones para móviles. Para ello, alrededor de React existe un completo ecosistema de módulos, herramientas y componentes capaces de ayudar al desarrollador a cubrir objetivos avanzados con relativamente poco esfuerzo.'
+        svg: icons.react
       },
       {
         id: 5,
         title: 'redux',
-        svg: icons.redux,
-        description:
-          'Redux es un patrón de arquitectura de datos que permite manejar el estado de la aplicación de una manera predecible. Está pensado para reducir el número de relaciones entre componentes de la aplicación y mantener un flujo de datos sencillo.'
+        svg: icons.redux
       },
       {
         id: 6,
         title: 'express',
-        svg: icons.express,
-        description:
-          'Básicamente es un marco de desarrollo minimalista para Node.js que permite estructurar una aplicación de una manera ágil, nos proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies, etc.'
+        svg: icons.express
       },
       {
         id: 7,
-        title: 'postgresql',
-        svg: icons.postgresql,
-        description:
-          'PostgreSQL, o simplemente Postgres para darle un nombre más pintoresco, es un sistema de código abierto de administración de bases de datos del tipo relacional, aunque también es posible ejecutar consultas que sean no relaciones. En este sistema, las consultas relacionales se basan en SQL, mientras que las no relacionales hacen uso de JSON.'
+        title: 'postgre',
+        svg: icons.postgresql
       },
       {
         id: 8,
         title: 'sequelize',
-        svg: icons.sequelize,
-        description:
-          'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
+        svg: icons.sequelize
       }
     ],
     overview:
@@ -86,58 +70,42 @@ const projectList: Project[] = [
       {
         id: 1,
         title: 'html',
-        svg: icons.html,
-        description:
-          'HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web.'
+        svg: icons.html
       },
       {
         id: 2,
-        title: 'css3',
-        svg: icons.css3,
-        description:
-          'Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML (en-US)'
+        title: 'css',
+        svg: icons.css3
       },
       {
         id: 3,
         title: 'javascript',
-        svg: icons.javascript,
-        description:
-          'JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). '
+        svg: icons.javascript
       },
       {
         id: 4,
         title: 'react',
-        svg: icons.react,
-        description:
-          'React es una librería Javascript focalizada en el desarrollo de interfaces de usuario. Así se define la propia librería y evidentemente, esa es su principal área de trabajo. Sin embargo, lo cierto es que en React encontramos un excelente aliado para hacer todo tipo de aplicaciones web, SPA (Single Page Application) o incluso aplicaciones para móviles. Para ello, alrededor de React existe un completo ecosistema de módulos, herramientas y componentes capaces de ayudar al desarrollador a cubrir objetivos avanzados con relativamente poco esfuerzo.'
+        svg: icons.react
       },
       {
         id: 5,
         title: 'redux',
-        svg: icons.redux,
-        description:
-          'Redux es un patrón de arquitectura de datos que permite manejar el estado de la aplicación de una manera predecible. Está pensado para reducir el número de relaciones entre componentes de la aplicación y mantener un flujo de datos sencillo.'
+        svg: icons.redux
       },
       {
         id: 6,
         title: 'express',
-        svg: icons.express,
-        description:
-          'Básicamente es un marco de desarrollo minimalista para Node.js que permite estructurar una aplicación de una manera ágil, nos proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies, etc.'
+        svg: icons.express
       },
       {
         id: 7,
-        title: 'postgresql',
-        svg: icons.postgresql,
-        description:
-          'PostgreSQL, o simplemente Postgres para darle un nombre más pintoresco, es un sistema de código abierto de administración de bases de datos del tipo relacional, aunque también es posible ejecutar consultas que sean no relaciones. En este sistema, las consultas relacionales se basan en SQL, mientras que las no relacionales hacen uso de JSON.'
+        title: 'postgre',
+        svg: icons.postgresql
       },
       {
         id: 8,
         title: 'sequelize',
-        svg: icons.sequelize,
-        description:
-          'Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.'
+        svg: icons.sequelize
       }
     ],
     overview:

@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
 import useHorizontalDragScroll from '../../hooks/useHorizontalDragScroll'
 import useTechModal from '../../hooks/useTechModal'
@@ -13,6 +14,7 @@ const TechStack = ({
   techList,
   projectId
 }: Props): JSX.Element => {
+  const { t } = useTranslation('techList')
   const ulRef = useHorizontalDragScroll()
 
   const { tech, openTechModal, closeTechModal } =
@@ -23,29 +25,26 @@ const TechStack = ({
   return (
     <>
       <ul ref={ulRef} className='project__ul--tech-stack'>
-        {techList.map(
-          ({ id, svg, title, description }: Technology) => (
-            <li
-              key={id}
-              className='project__li--tech-stack'
-            >
-              <motion.img
-                src={svg}
-                alt={title}
-                layoutId={`${projectId}-${id}`}
-                onClick={() =>
-                  openTechModal({
-                    index: `${projectId}-${id}`,
-                    isOpen: true,
-                    modalTitle: title,
-                    modalDescription: description
-                  })
-                }
-                title={`${title} icon`}
-              />
-            </li>
-          )
-        )}
+        {techList.map(({ id, svg, title }: Technology) => (
+          <li key={id} className='project__li--tech-stack'>
+            <motion.img
+              src={svg}
+              alt={title}
+              layoutId={`${projectId}-${id}`}
+              onClick={() =>
+                openTechModal({
+                  index: `${projectId}-${id}`,
+                  isOpen: true,
+                  modalTitle: title,
+                  modalDescription: t(
+                    `techList.${title}.description`
+                  )
+                })
+              }
+              title={`${title} icon`}
+            />
+          </li>
+        ))}
       </ul>
       <AnimatePresence>
         {index !== null && (

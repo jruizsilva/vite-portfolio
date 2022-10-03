@@ -49,7 +49,6 @@ const HeaderHome = (): JSX.Element => {
   }
 
   useEffect(() => {
-    console.log(i18n.language)
     if (language !== null) {
       i18n.changeLanguage(language).catch(console.log)
     }
