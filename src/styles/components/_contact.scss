@@ -7,13 +7,13 @@
 
   &__form {
     width: 100%;
-    min-height: 390px;
+    min-height: 360px;
     max-width: 375px;
     margin: auto;
     border: 1px solid colors.$white;
     padding: 16px;
     border-radius: 16px;
-    @include mixins.column(start, center, 12px);
+    @include mixins.column(start, center, 14px);
   }
 
   &__box {
@@ -27,15 +27,17 @@
 
   &__label {
     font-size: 16px;
+    margin-bottom: 4px;
   }
 
   &__input,
   &__textarea {
+    height: 48px;
     background-color: transparent;
-    border-bottom: 2px solid #ffffffaa;
+    border: 1px solid #ffffffaa;
     width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 16px;
+    border-radius: 8px;
     font-size: 16px;
     color: colors.$white;
     outline: none;
@@ -44,15 +46,16 @@
       color: #ffffffaa;
     }
     &:focus {
-      border-bottom-color: colors.$white;
+      border-color: colors.$white;
+      border-width: 2px;
     }
   }
 
   &__textarea {
-    min-height: 72px;
+    min-height: 92px;
     resize: vertical;
   }
   &__error-message {
-    margin-top: 4px;
+    margin-top: 2px;
   }
 }

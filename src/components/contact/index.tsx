@@ -65,12 +65,17 @@ const Contact = (): JSX.Element => {
             ),
           message: yup
             .string()
-            .min(4, 'contact.validation.subject.minlength')
+            .min(
+              4,
+              'contact.validation.description.minlength'
+            )
             .max(
               256,
-              'contact.validation.subject.maxlength'
+              'contact.validation.description.maxlength'
             )
-            .required('contact.validation.subject.required')
+            .required(
+              'contact.validation.description.required'
+            )
         })}
         onSubmit={values => {
           console.log(values)
@@ -87,7 +92,6 @@ const Contact = (): JSX.Element => {
             handleSubmit,
             setFieldTouched
           } = props
-          console.log(Object.keys(errors).length)
           i18n.on('languageChanged', () => {
             Object.keys(errors).forEach(fieldName => {
               if (
@@ -97,7 +101,6 @@ const Contact = (): JSX.Element => {
               }
             })
           })
-          console.log(errors)
           return (
             <motion.form
               ref={form}
@@ -162,7 +165,10 @@ const Contact = (): JSX.Element => {
                   w='100%'
                   bg='transparent'
                   border='#fff'
-                  disabled={isSubmitting}
+                  disabled={
+                    isSubmitting ||
+                    Object.keys(errors).length > 0
+                  }
                 >
                   {t('contact.button.submit')}
                 </Button>

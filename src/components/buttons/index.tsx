@@ -78,6 +78,10 @@ const StyledButton = styled(motion.button)<ButtonProps>`
   width: ${({ w }) => (w !== undefined ? w : '12.5rem')};
   cursor: default;
 
+  &:disabled {
+    opacity: 0.5 !important;
+  }
+
   & span {
     font-size: 16px;
     letter-spacing: 0.01em;
