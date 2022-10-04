@@ -87,6 +87,7 @@ const Contact = (): JSX.Element => {
             handleSubmit,
             setFieldTouched
           } = props
+          console.log(Object.keys(errors).length)
           i18n.on('languageChanged', () => {
             Object.keys(errors).forEach(fieldName => {
               if (
@@ -108,11 +109,16 @@ const Contact = (): JSX.Element => {
                 ({ id, field, type }: FormField) => (
                   <div key={id} className='contact__box'>
                     <label className='contact__label'>
-                      {t(`contact.form.${field}.label`)}
+                      {t(`contact.form.${field}.label`)} 👇
                     </label>
                     {type === 'textarea' ? (
                       <textarea
-                        className='contact__textarea'
+                        className={`contact__textarea ${
+                          errors[field] !== undefined &&
+                          touched[field] !== undefined
+                            ? 'error'
+                            : ''
+                        }`}
                         placeholder={t(
                           `contact.form.${field}.placeholder`
                         )}
@@ -120,10 +126,16 @@ const Contact = (): JSX.Element => {
                         onBlur={handleBlur}
                         onChange={handleChange}
                         value={values[field]}
+                        autoComplete='off'
                       ></textarea>
                     ) : (
                       <input
-                        className='contact__input'
+                        className={`contact__input ${
+                          errors[field] !== undefined &&
+                          touched[field] !== undefined
+                            ? 'error'
+                            : ''
+                        }`}
                         placeholder={t(
                           `contact.form.${field}.placeholder`
                         )}
@@ -131,13 +143,14 @@ const Contact = (): JSX.Element => {
                         onBlur={handleBlur}
                         onChange={handleChange}
                         value={values[field]}
+                        autoComplete='off'
                       />
                     )}
                     {errors[field] !== undefined &&
                       touched[field] !== undefined && (
-                        <div>
+                        <span className='contact__error-message'>
                           {t(errors[field] as string)}
-                        </div>
+                        </span>
                       )}
                   </div>
                 )
@@ -145,7 +158,7 @@ const Contact = (): JSX.Element => {
               <div className='contact__box'>
                 <AnchorButton
                   type='submit'
-                  href='#'
+                  href={undefined}
                   icon={icons.send}
                   w='100%'
                   bg='transparent'

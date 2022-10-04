@@ -10,16 +10,15 @@ interface Props {
   icon?: string
   border?: string
   w?: string
-  onClick?: () => void
 }
 interface AnchorProps extends Props {
   href: string
-  type?: string
   variants?: Variants
   disabled?: boolean
 }
-interface NavLinkProps extends Props {
-  onClick: () => void
+interface ButtonProps extends Props {
+  type: 'button' | 'submit'
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const buttonVariants: Variants = {
@@ -34,7 +33,7 @@ const buttonVariants: Variants = {
   }
 }
 
-const StyledButton = styled(motion.a)<AnchorProps>`
+const StyledAnchor = styled(motion.a)<AnchorProps>`
   background-color: ${({ bg, theme }) =>
     bg !== undefined ? bg : theme.btn};
   color: ${({ text, theme }) =>
@@ -62,7 +61,7 @@ const StyledButton = styled(motion.a)<AnchorProps>`
   }
 `
 
-const StyledNavLink = styled(motion.button)<NavLinkProps>`
+const StyledButton = styled(motion.button)<ButtonProps>`
   background-color: ${({ bg, theme }) =>
     bg !== undefined ? bg : theme.btn};
   color: ${({ text, theme }) =>
@@ -91,7 +90,7 @@ const StyledNavLink = styled(motion.button)<NavLinkProps>`
   }
 `
 
-const AnchorButton = ({
+const Anchor = ({
   children,
   bg,
   text,
@@ -99,25 +98,46 @@ const AnchorButton = ({
   w,
   border,
   href,
-  type,
   variants,
   disabled
 }: AnchorProps): JSX.Element => {
   return (
-    <StyledButton
-      type={type}
+    <StyledAnchor
       href={href}
-      target={
-        type === 'submit' || type === 'button'
-          ? '_self'
-          : '_blank'
-      }
+      target='_blank'
       bg={bg}
       text={text}
       w={w}
       border={border}
       variants={variants}
       disabled={disabled}
+      onClick={e => {}}
+    >
+      <span>{children}</span>
+      <img src={icon} />
+    </StyledAnchor>
+  )
+}
+
+const Button = ({
+  children,
+  bg,
+  text,
+  icon,
+  w,
+  border,
+  onClick,
+  type = 'button'
+}: ButtonProps): JSX.Element => {
+  return (
+    <StyledButton
+      type={type}
+      onClick={onClick}
+      bg={bg}
+      text={text}
+      w={w}
+      border={border}
+      variants={buttonVariants}
     >
       <span>{children}</span>
       <img src={icon} />
@@ -125,28 +145,4 @@ const AnchorButton = ({
   )
 }
 
-const NavLinkButton = ({
-  children,
-  bg,
-  text,
-  icon,
-  w,
-  border,
-  onClick
-}: NavLinkProps): JSX.Element => {
-  return (
-    <StyledNavLink
-      bg={bg}
-      text={text}
-      w={w}
-      border={border}
-      onClick={onClick}
-      variants={buttonVariants}
-    >
-      <span>{children}</span>
-      <img src={icon} />
-    </StyledNavLink>
-  )
-}
-
-export { AnchorButton, NavLinkButton }
+export { Anchor, Button }
