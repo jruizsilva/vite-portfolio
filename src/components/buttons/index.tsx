@@ -14,11 +14,11 @@ interface Props {
 interface AnchorProps extends Props {
   href: string
   variants?: Variants
-  disabled?: boolean
 }
 interface ButtonProps extends Props {
-  type: 'button' | 'submit'
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+  type?: 'button' | 'submit'
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  disabled?: boolean
 }
 
 const buttonVariants: Variants = {
@@ -98,8 +98,7 @@ const Anchor = ({
   w,
   border,
   href,
-  variants,
-  disabled
+  variants
 }: AnchorProps): JSX.Element => {
   return (
     <StyledAnchor
@@ -110,8 +109,6 @@ const Anchor = ({
       w={w}
       border={border}
       variants={variants}
-      disabled={disabled}
-      onClick={e => {}}
     >
       <span>{children}</span>
       <img src={icon} />
@@ -127,7 +124,8 @@ const Button = ({
   w,
   border,
   onClick,
-  type = 'button'
+  type = 'button',
+  disabled = false
 }: ButtonProps): JSX.Element => {
   return (
     <StyledButton
@@ -138,6 +136,7 @@ const Button = ({
       w={w}
       border={border}
       variants={buttonVariants}
+      disabled={disabled}
     >
       <span>{children}</span>
       <img src={icon} />

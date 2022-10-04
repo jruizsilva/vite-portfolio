@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
 import { icons } from '../../assets'
 import { FormField } from '../../types'
-import { AnchorButton } from '../buttons'
+import { Button } from '../buttons'
 import SectionTitle from '../section-title'
 import { contactFields } from './const'
 
@@ -156,9 +156,8 @@ const Contact = (): JSX.Element => {
                 )
               )}
               <div className='contact__box'>
-                <AnchorButton
+                <Button
                   type='submit'
-                  href={undefined}
                   icon={icons.send}
                   w='100%'
                   bg='transparent'
@@ -166,7 +165,7 @@ const Contact = (): JSX.Element => {
                   disabled={isSubmitting}
                 >
                   {t('contact.button.submit')}
-                </AnchorButton>
+                </Button>
               </div>
             </motion.form>
           )

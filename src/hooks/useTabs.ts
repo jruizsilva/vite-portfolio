@@ -20,7 +20,12 @@ const useTabs = (): returnTabs => {
     setIndex(3)
   }
 
-  return { index, showFullStackTab, showFrontEndTab, showHTMLCSSTab }
+  return {
+    index,
+    showFullStackTab,
+    showFrontEndTab,
+    showHTMLCSSTab
+  }
 }
 
 export default useTabs

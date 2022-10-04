@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 import { NavbarLink } from '../../types'
-import { AnchorButton } from '../buttons'
+import { Anchor } from '../buttons'
 import { navbarLinkList } from './const'
 
 const itemVariants: Variants = {
@@ -55,7 +55,7 @@ const Header = (): JSX.Element => {
           }`}
         >
           <li className='header__li'>
-            <AnchorButton
+            <Anchor
               href='http://google.com'
               icon={icons.link}
               bg='transparent'
@@ -63,7 +63,7 @@ const Header = (): JSX.Element => {
               variants={itemVariants}
             >
               {t('header.button.cv')}
-            </AnchorButton>
+            </Anchor>
           </li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(

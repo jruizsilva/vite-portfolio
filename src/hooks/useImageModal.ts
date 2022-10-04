@@ -7,7 +7,8 @@ interface returnHook {
 }
 
 const useImageModal = (): returnHook => {
-  const [isOpenImageModal, setIsOpenImageModal] = useState(false)
+  const [isOpenImageModal, setIsOpenImageModal] =
+    useState(false)
 
   const openImageModal = (): void => {
     setIsOpenImageModal(true)

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { icons } from '../../assets'
-import { NavLinkButton } from '../buttons'
+import { Button } from '../buttons'
 import SectionTitle from '../section-title'
 
 const VerMas = (): JSX.Element => {
@@ -23,14 +23,14 @@ const VerMas = (): JSX.Element => {
       <SectionTitle>
         {t('projects.section-view-more')}
       </SectionTitle>
-      <NavLinkButton
+      <Button
         onClick={() => navigate('/projects')}
         bg='transparent'
         border='#fff'
         icon={icons.link}
       >
         {t('projects.button.view-more')}
-      </NavLinkButton>
+      </Button>
     </motion.div>
   )
 }

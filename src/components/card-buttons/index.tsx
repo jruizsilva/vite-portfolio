@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { icons } from '../../assets'
-import { AnchorButton } from '../buttons'
+import { Anchor } from '../buttons'
 
 interface Props {
   github: string
@@ -15,16 +15,16 @@ const CardButtons = ({
   return (
     <ul className='project__ul--buttons'>
       <li className='project__li--button'>
-        <AnchorButton
+        <Anchor
           href={github}
           icon={icons.github_white}
           w='100%'
         >
           {t('projects.button.github')}
-        </AnchorButton>
+        </Anchor>
       </li>
       <li className='project__li--button'>
-        <AnchorButton
+        <Anchor
           href={deploy}
           icon={icons.globe}
           w='100%'
@@ -33,7 +33,7 @@ const CardButtons = ({
           bg='#fff'
         >
           {t('projects.button.deploy')}
-        </AnchorButton>
+        </Anchor>
       </li>
     </ul>
   )

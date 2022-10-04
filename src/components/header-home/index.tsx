@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 import { icons } from '../../assets'
 import useResponsiveMenu from '../../hooks/useResponsiveMenu'
 import { NavbarLink } from '../../types'
-import { AnchorButton } from '../buttons'
+import { Anchor } from '../buttons'
 import { navbarLinkList } from './const'
 
 const itemVariants: Variants = {
@@ -58,14 +58,14 @@ const HeaderHome = (): JSX.Element => {
             className='header__li'
             variants={itemVariants}
           >
-            <AnchorButton
+            <Anchor
               href='http://google.com'
               icon={icons.link}
               bg='transparent'
               border='#fff'
             >
               {t('header.button.cv')}
-            </AnchorButton>
+            </Anchor>
           </motion.li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(

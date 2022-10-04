@@ -5,7 +5,9 @@ interface returnBurgerMenu {
 }
 
 const useShowMenuIcon = (): returnBurgerMenu => {
-  const [showMenuIcon, setShowMenuIcon] = useState(window.innerWidth < 768)
+  const [showMenuIcon, setShowMenuIcon] = useState(
+    window.innerWidth < 768
+  )
 
   const resizeWindow = (): void => {
     if (window.innerWidth < 768) {
