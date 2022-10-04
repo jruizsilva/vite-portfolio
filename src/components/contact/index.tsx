@@ -98,22 +98,19 @@ const Contact = (): JSX.Element => {
   })
 
   useEffect(() => {
+    console.log(formik.errors)
     i18n.on('languageChanged', () => {
       Object.keys(formik.errors).forEach(fieldName => {
         if (
           Object.keys(formik.touched).includes(fieldName)
         ) {
-          console.log(fieldName)
           formik
             .setFieldTouched(fieldName)
             .catch(console.log)
         }
       })
-      return () => {
-        i18n.off('languageChanged', lng => {})
-      }
     })
-  }, [formik.errors])
+  })
 
   return (
     <motion.div
@@ -147,9 +144,9 @@ const Contact = (): JSX.Element => {
                     `contact.form.${field}.placeholder`
                   )}
                   name={field}
-                  value={formik.values[field]}
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
+                  value={formik.values[field]}
                 ></textarea>
               ) : (
                 <input
@@ -158,13 +155,13 @@ const Contact = (): JSX.Element => {
                     `contact.form.${field}.placeholder`
                   )}
                   name={field}
-                  value={formik.values[field]}
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
+                  value={formik.values[field]}
                 />
               )}
-              {formik.errors[field] !== undefined &&
-                formik.touched[field] !== undefined && (
+              {formik.touched[field] !== undefined &&
+                formik.errors[field] !== undefined && (
                   <div>{formik.errors[field]}</div>
                 )}
             </div>
