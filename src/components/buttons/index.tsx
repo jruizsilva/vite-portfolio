@@ -16,6 +16,7 @@ interface AnchorProps extends Props {
   href: string
   type?: string
   variants?: Variants
+  disabled?: boolean
 }
 interface NavLinkProps extends Props {
   onClick: () => void
@@ -99,7 +100,8 @@ const AnchorButton = ({
   border,
   href,
   type,
-  variants
+  variants,
+  disabled
 }: AnchorProps): JSX.Element => {
   return (
     <StyledButton
@@ -115,6 +117,7 @@ const AnchorButton = ({
       w={w}
       border={border}
       variants={variants}
+      disabled={disabled}
     >
       <span>{children}</span>
       <img src={icon} />

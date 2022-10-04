@@ -1,6 +1,6 @@
-import { useFormik } from 'formik'
+import { Formik } from 'formik'
 import { motion, Variants } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
 import { icons } from '../../assets'
@@ -30,87 +30,6 @@ const initialValues = {
 const Contact = (): JSX.Element => {
   const { t, i18n } = useTranslation('contact')
   const form = useRef<HTMLFormElement>(null)
-  const formik = useFormik({
-    initialValues,
-    validationSchema: yup.object({
-      email: yup
-        .string()
-        .min(
-          6,
-          t('contact.validation.minlength', {
-            minlength: 6
-          })
-        )
-        .email(t('contact.validation.email'))
-        .max(
-          24,
-          t('contact.validation.maxlength', {
-            maxlength: 24
-          })
-        )
-        .required(
-          t('contact.validation.required', {
-            field: 'email'
-          })
-        ),
-      subject: yup
-        .string()
-        .min(
-          4,
-          t('contact.validation.minlength', {
-            minlength: 4
-          })
-        )
-        .max(
-          128,
-          t('contact.validation.maxlength', {
-            maxlength: 128
-          })
-        )
-        .required(
-          t('contact.validation.required', {
-            field: 'subject'
-          })
-        ),
-      message: yup
-        .string()
-        .min(
-          4,
-          t('contact.validation.minlength', {
-            minlength: 4
-          })
-        )
-        .max(
-          256,
-          t('contact.validation.maxlength', {
-            maxlength: 128
-          })
-        )
-        .required(
-          t('contact.validation.required', {
-            field: 'description'
-          })
-        )
-    }),
-    onSubmit: () => {
-      console.log(formik.values)
-    }
-  })
-
-  useEffect(() => {
-    console.log(formik.errors)
-    i18n.on('languageChanged', () => {
-      Object.keys(formik.errors).forEach(fieldName => {
-        if (
-          Object.keys(formik.touched).includes(fieldName)
-        ) {
-          formik
-            .setFieldTouched(fieldName)
-            .catch(console.log)
-        }
-      })
-    })
-  })
 
   return (
     <motion.div
@@ -125,61 +44,121 @@ const Contact = (): JSX.Element => {
       transition={{ staggerChildren: 0.3 }}
     >
       <SectionTitle>{t('contact.title')}</SectionTitle>
-      <motion.form
-        ref={form}
-        onSubmit={formik.handleSubmit}
-        className='contact__form'
-        variants={contactVariants}
+      <Formik
+        initialValues={initialValues}
+        validationSchema={yup.object({
+          email: yup
+            .string()
+            .min(6, 'contact.validation.email.minlength')
+            .email('contact.validation.email.valid')
+            .max(24, 'contact.validation.email.maxlength')
+            .required('contact.validation.email.required'),
+          subject: yup
+            .string()
+            .min(4, 'contact.validation.subject.minlength')
+            .max(
+              128,
+              'contact.validation.subject.maxlength'
+            )
+            .required(
+              'contact.validation.subject.required'
+            ),
+          message: yup
+            .string()
+            .min(4, 'contact.validation.subject.minlength')
+            .max(
+              256,
+              'contact.validation.subject.maxlength'
+            )
+            .required('contact.validation.subject.required')
+        })}
+        onSubmit={values => {
+          console.log(values)
+        }}
       >
-        {contactFields.map(
-          ({ id, field, type }: FormField) => (
-            <div key={id} className='contact__box'>
-              <label className='contact__label'>
-                {t(`contact.form.${field}.label`)}
-              </label>
-              {type === 'textarea' ? (
-                <textarea
-                  className='contact__textarea'
-                  placeholder={t(
-                    `contact.form.${field}.placeholder`
-                  )}
-                  name={field}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values[field]}
-                ></textarea>
-              ) : (
-                <input
-                  className='contact__input'
-                  placeholder={t(
-                    `contact.form.${field}.placeholder`
-                  )}
-                  name={field}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values[field]}
-                />
+        {props => {
+          const {
+            values,
+            touched,
+            errors,
+            isSubmitting,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            setFieldTouched
+          } = props
+          i18n.on('languageChanged', () => {
+            Object.keys(errors).forEach(fieldName => {
+              if (
+                Object.keys(touched).includes(fieldName)
+              ) {
+                setFieldTouched(fieldName)
+              }
+            })
+          })
+          console.log(errors)
+          return (
+            <motion.form
+              ref={form}
+              onSubmit={handleSubmit}
+              className='contact__form'
+              variants={contactVariants}
+            >
+              {contactFields.map(
+                ({ id, field, type }: FormField) => (
+                  <div key={id} className='contact__box'>
+                    <label className='contact__label'>
+                      {t(`contact.form.${field}.label`)}
+                    </label>
+                    {type === 'textarea' ? (
+                      <textarea
+                        className='contact__textarea'
+                        placeholder={t(
+                          `contact.form.${field}.placeholder`
+                        )}
+                        name={field}
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values[field]}
+                      ></textarea>
+                    ) : (
+                      <input
+                        className='contact__input'
+                        placeholder={t(
+                          `contact.form.${field}.placeholder`
+                        )}
+                        name={field}
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values[field]}
+                      />
+                    )}
+                    {errors[field] !== undefined &&
+                      touched[field] !== undefined && (
+                        <div>
+                          {t(errors[field] as string)}
+                        </div>
+                      )}
+                  </div>
+                )
               )}
-              {formik.touched[field] !== undefined &&
-                formik.errors[field] !== undefined && (
-                  <div>{formik.errors[field]}</div>
-                )}
-            </div>
+              <div className='contact__box'>
+                <AnchorButton
+                  type='submit'
+                  href='#'
+                  icon={icons.send}
+                  w='100%'
+                  bg='transparent'
+                  border='#fff'
+                  disabled={isSubmitting}
+                >
+                  {t('contact.button.submit')}
+                </AnchorButton>
+              </div>
+            </motion.form>
           )
-        )}
-        <div className='contact__box'>
-          <AnchorButton
-            type='submit'
-            href='#'
-            icon={icons.send}
-            w='100%'
-            bg='transparent'
-            border='#fff'
-          >
-            {t('contact.button.submit')}
-          </AnchorButton>
-        </div>
-      </motion.form>
+        }}
+      </Formik>
     </motion.div>
   )
 }

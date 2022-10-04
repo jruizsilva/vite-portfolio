@@ -16,10 +16,22 @@
       }
     },
     "validation": {
-      "required": "{{field}} es requerido",
-      "email": "El correo no es válido",
-      "minlength": "Debe tener {{minlength}} caracteres o más",
-      "maxlength": "Debe tener {{maxlength}} caracteres o menos"
+      "email": {
+        "required": "El correo es requerido",
+        "valid": "El correo no es válido",
+        "minlength": "Debe tener 6 caracteres o más",
+        "maxlength": "Debe tener 24 caracteres o menos"
+      },
+      "subject": {
+        "required": "El asunto es requerido",
+        "minlength": "Debe tener 4 caracteres o más",
+        "maxlength": "Debe tener 128 caracteres o menos"
+      },
+      "description": {
+        "required": "La description es requerida",
+        "minlength": "Debe tener 4 caracteres o más",
+        "maxlength": "Debe tener 256 caracteres o menos"
+      }
     },
     "button": {
       "submit": "Enviar correo"
