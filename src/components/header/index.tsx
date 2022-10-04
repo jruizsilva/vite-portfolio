@@ -1,5 +1,4 @@
 import { motion, Variants } from 'framer-motion'
-import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink, useLocation } from 'react-router-dom'
 import { icons } from '../../assets'
@@ -37,22 +36,13 @@ const Header = (): JSX.Element => {
   const { isOpenMenu, toggleOpenMenu } = useResponsiveMenu()
   const { pathname } = useLocation()
   const { t, i18n } = useTranslation(['header'])
-  const [language, setLanguage] = useState<string>(
-    i18n.language
-  )
 
   const handleChangeLanguage = (
     e: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const newLanguage = e.target.value
-    setLanguage(newLanguage)
+    i18n.changeLanguage(newLanguage).catch(console.log)
   }
-
-  useEffect(() => {
-    if (language !== null) {
-      i18n.changeLanguage(language).catch(console.log)
-    }
-  }, [language])
 
   return (
     <header
@@ -106,7 +96,7 @@ const Header = (): JSX.Element => {
           >
             <select
               className='header__select'
-              value={language}
+              value={i18n.language}
               onChange={handleChangeLanguage}
             >
               <option className='header__option' value='es'>

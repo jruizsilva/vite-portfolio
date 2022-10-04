@@ -4,32 +4,22 @@
     "form": {
       "email": {
         "label": "Correo",
-        "placeholder": "Ingrese el correo...",
-        "validation": {
-          "required": "El correo es requerido",
-          "email": "El correo no es válido",
-          "minlength": "Debe tener 6 caracteres o más",
-          "maxlength": "Debe tener 24 caracteres o menos"
-        }
+        "placeholder": "Ingrese el correo..."
       },
       "subject": {
         "label": "Asunto",
-        "placeholder": "Ingrese el asunto...",
-        "validation": {
-          "required": "El asunto es requerido",
-          "minlength": "Debe tener 4 caracteres o más",
-          "maxlength": "Debe tener 128 caracteres o menos"
-        }
+        "placeholder": "Ingrese el asunto..."
       },
       "message": {
         "label": "Descripción",
-        "placeholder": "Ingrese la descripción...",
-        "validation": {
-          "required": "La descripción es requerida",
-          "minlength": "Debe tener 4 caracteres o más",
-          "maxlength": "Debe tener 256 caracteres o menos"
-        }
+        "placeholder": "Ingrese la descripción..."
       }
+    },
+    "validation": {
+      "required": "{{field}} es requerido",
+      "email": "El correo no es válido",
+      "minlength": "Debe tener {{minlength}} caracteres o más",
+      "maxlength": "Debe tener {{maxlength}} caracteres o menos"
     },
     "button": {
       "submit": "Enviar correo"

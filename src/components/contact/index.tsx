@@ -1,6 +1,6 @@
 import { useFormik } from 'formik'
 import { motion, Variants } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
 import { icons } from '../../assets'
@@ -28,7 +28,7 @@ const initialValues = {
 }
 
 const Contact = (): JSX.Element => {
-  const { t } = useTranslation('contact')
+  const { t, i18n } = useTranslation('contact')
   const form = useRef<HTMLFormElement>(null)
   const formik = useFormik({
     initialValues,
@@ -37,41 +37,59 @@ const Contact = (): JSX.Element => {
         .string()
         .min(
           6,
-          t('contact.form.email.validation.minlength')
+          t('contact.validation.minlength', {
+            minlength: 6
+          })
         )
-        .email(t('contact.form.email.validation.email'))
+        .email(t('contact.validation.email'))
         .max(
           24,
-          t('contact.form.email.validation.maxlength')
+          t('contact.validation.maxlength', {
+            maxlength: 24
+          })
         )
         .required(
-          t('contact.form.email.validation.required')
+          t('contact.validation.required', {
+            field: 'email'
+          })
         ),
       subject: yup
         .string()
         .min(
           4,
-          t('contact.form.email.validation.minlength')
+          t('contact.validation.minlength', {
+            minlength: 4
+          })
         )
         .max(
           128,
-          t('contact.form.email.validation.maxlength')
+          t('contact.validation.maxlength', {
+            maxlength: 128
+          })
         )
         .required(
-          t('contact.form.email.validation.required')
+          t('contact.validation.required', {
+            field: 'subject'
+          })
         ),
       message: yup
         .string()
         .min(
           4,
-          t('contact.form.email.validation.minlength')
+          t('contact.validation.minlength', {
+            minlength: 4
+          })
         )
         .max(
           256,
-          t('contact.form.email.validation.maxlength')
+          t('contact.validation.maxlength', {
+            maxlength: 128
+          })
         )
         .required(
-          t('contact.form.email.validation.required')
+          t('contact.validation.required', {
+            field: 'description'
+          })
         )
     }),
     onSubmit: () => {
@@ -79,7 +97,23 @@ const Contact = (): JSX.Element => {
     }
   })
 
-  console.log(formik.errors)
+  useEffect(() => {
+    i18n.on('languageChanged', () => {
+      Object.keys(formik.errors).forEach(fieldName => {
+        if (
+          Object.keys(formik.touched).includes(fieldName)
+        ) {
+          console.log(fieldName)
+          formik
+            .setFieldTouched(fieldName)
+            .catch(console.log)
+        }
+      })
+      return () => {
+        i18n.off('languageChanged', lng => {})
+      }
+    })
+  }, [formik.errors])
 
   return (
     <motion.div
@@ -129,6 +163,10 @@ const Contact = (): JSX.Element => {
                   onChange={formik.handleChange}
                 />
               )}
+              {formik.errors[field] !== undefined &&
+                formik.touched[field] !== undefined && (
+                  <div>{formik.errors[field]}</div>
+                )}
             </div>
           )
         )}
