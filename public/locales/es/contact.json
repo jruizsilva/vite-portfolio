@@ -33,6 +33,11 @@
         "maxlength": "Debe tener 256 caracteres o menos"
       }
     },
+    "toast": {
+      "loading": "Cargando...",
+      "success": "Correo enviado",
+      "error": "Error al enviar el mensaje, intente nuevamente"
+    },
     "button": {
       "submit": "Enviar correo"
     }
