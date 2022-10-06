@@ -61,7 +61,7 @@ const Router = (): JSX.Element => {
                 }
               />
               <Route
-                path='/project/:id'
+                path='/project/:stack/:id'
                 element={
                   <Transitions>
                     <ProjectScreen />

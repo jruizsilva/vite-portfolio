@@ -7,14 +7,18 @@
       "view-more": "Click here"
     },
     "section-view-more": "Do you want to see more?",
-    "1": {
-      "title": "Marketplace App",
-      "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
-    },
+    "html-css": {},
+    "front-end": {},
+    "full-stack": {
+      "1": {
+        "title": "Marketplace App",
+        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+      },
 
-    "2": {
-      "title": "Finances App",
-      "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+      "2": {
+        "title": "Finances App",
+        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+      }
     }
   }
 }

@@ -12,10 +12,12 @@ import { useEffect, useState } from 'react'
 import { getProjectById } from '../../helper/getProjectById'
 import { Project } from '../../types'
 import Loader from '../../components/loader'
+import { useTranslation } from 'react-i18next'
 const ProjectScreen = (): JSX.Element => {
   const [project, setProject] = useState<Project | null>(
     null
   )
+  const { t } = useTranslation(['projects'])
 
   const navigate = useNavigate()
   const { state } = useLocation()
@@ -50,7 +52,11 @@ const ProjectScreen = (): JSX.Element => {
           <Header />
           <div className='wrapper'>
             <div className='project-screen'>
-              <SectionTitle>{project.title}</SectionTitle>
+              <SectionTitle>
+                {t(
+                  `projects.${project.category}.${project.id}.title`
+                )}
+              </SectionTitle>
               <ProjectScreenCard project={project} />
             </div>
           </div>

@@ -16,6 +16,13 @@ import sequelize from './svg/sequelize.svg'
 import close from './svg/close.svg'
 import close_white from './svg/close_white.svg'
 import notfound from './html-css/not-found.png'
+import portfolio2021 from './html-css/portfolio.png'
+import checkout from './html-css/checkout-page.png'
+import ediehomepage from './html-css/edie-homepage.png'
+import interiorconsultant from './html-css/interior-consultant.png'
+import mygallery from './html-css/my-gallery.png'
+import recipe from './html-css/recipe-page.png'
+import team from './html-css/team-page.png'
 
 const icons = {
   link,
@@ -39,7 +46,14 @@ const icons = {
 
 const projects = {
   'html-css': {
-    notfound
+    notfound,
+    portfolio2021,
+    checkout,
+    ediehomepage,
+    interiorconsultant,
+    mygallery,
+    recipe,
+    team
   }
 }
 

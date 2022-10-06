@@ -27,7 +27,14 @@ const ProjectScreenCard = ({
 }: Props): JSX.Element => {
   const { t } = useTranslation(['projects'])
 
-  const { github, deploy, techList, overview, id } = project
+  const {
+    github,
+    deploy,
+    techList,
+    overview,
+    id,
+    category
+  } = project
 
   const {
     isOpenImageModal,
@@ -41,7 +48,7 @@ const ProjectScreenCard = ({
         variants={projectCardVariants}
       >
         <p className='project__p screen'>
-          {t(`projects.${id}.description`)}
+          {t(`projects.${category}.${id}.description`)}
         </p>
         <TechStack
           techList={techList}

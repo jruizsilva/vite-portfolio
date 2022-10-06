@@ -72,10 +72,10 @@ const Tabs = (): JSX.Element => {
               <Projects category='full-stack' />
             )}
             {index === 2 && (
-              <Projects category='full-stack' />
+              <Projects category='front-end' />
             )}
             {index === 3 && (
-              <Projects category='full-stack' />
+              <Projects category='html-css' />
             )}
           </motion.div>
         </AnimatePresence>

@@ -11,10 +11,9 @@ const HomeScreen = (): JSX.Element => {
       <div className='wrapper'>
         <About />
         <Projects
-          title='Proyectos'
           limit={2}
           category='full-stack'
-          custom={2}
+          showTitle
         />
         <VerMas />
         <Contact />

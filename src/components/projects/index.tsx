@@ -5,15 +5,15 @@ import SectionTitle from '../section-title'
 import { projectList } from './const'
 
 interface Props {
-  title?: string
   limit?: number
-  category: string
+  category: 'html-css' | 'front-end' | 'full-stack'
+  showTitle?: boolean
 }
 
 const Projects = ({
-  title,
-  limit = projectList.length,
-  category
+  category,
+  limit = projectList[category].length,
+  showTitle = false
 }: Props): JSX.Element => {
   const { t } = useTranslation(['projects'])
   return (
@@ -29,15 +29,15 @@ const Projects = ({
       }}
       transition={{ staggerChildren: 0.3 }}
     >
-      {title !== undefined && (
+      {showTitle && (
         <SectionTitle>
           {t('projects.section-title')}
         </SectionTitle>
       )}
+
       <ul className='projects__ul'>
-        {projectList.length > 0 &&
-          projectList
-            .filter(p => p.category === category)
+        {projectList[category].length > 0 &&
+          projectList[category]
             .slice(0, limit)
             .map(project => (
               <ProjectCard
