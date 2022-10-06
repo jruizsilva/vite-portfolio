@@ -15,6 +15,7 @@ import postgresql from './svg/postgresql.svg'
 import sequelize from './svg/sequelize.svg'
 import close from './svg/close.svg'
 import close_white from './svg/close_white.svg'
+// HTML-CSS ↓↓
 import notfound from './html-css/not-found.png'
 import portfolio2021 from './html-css/portfolio.png'
 import checkout from './html-css/checkout-page.png'
@@ -23,6 +24,13 @@ import interiorconsultant from './html-css/interior-consultant.png'
 import mygallery from './html-css/my-gallery.png'
 import recipe from './html-css/recipe-page.png'
 import team from './html-css/team-page.png'
+// FRONT-END ↓↓
+import button from './front-end/buttons.png'
+import input from './front-end/input-component.png'
+// FULL-STACK ↓↓
+import marketplace from './full-stack/marketplace-app.png'
+import myfinances from './full-stack/my-finances-app.png'
+import uploadyourimages from './full-stack/upload-your-images.png'
 
 const icons = {
   link,
@@ -54,6 +62,15 @@ const projects = {
     mygallery,
     recipe,
     team
+  },
+  'front-end': {
+    button,
+    input
+  },
+  'full-stack': {
+    marketplace,
+    myfinances,
+    uploadyourimages
   }
 }
 

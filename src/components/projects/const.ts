@@ -12,9 +12,6 @@ interface ProjectsInterface {
 const htmlcssList: projectListType = [
   {
     id: 1,
-    title: '404 not found',
-    description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
     github:
       'https://github.com/jruizsilva/404-not-found-devchallengs.io',
     deploy: 'https://devchallenges-project-1.netlify.app',
@@ -35,9 +32,6 @@ const htmlcssList: projectListType = [
   },
   {
     id: 2,
-    title: '404 not found',
-    description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
     github:
       'https://github.com/jruizsilva/404-not-found-devchallengs.io',
     deploy: 'https://devchallenges-project-1.netlify.app',
@@ -58,9 +52,6 @@ const htmlcssList: projectListType = [
   },
   {
     id: 3,
-    title: '404 not found',
-    description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
     github:
       'https://github.com/jruizsilva/404-not-found-devchallengs.io',
     deploy: 'https://devchallenges-project-1.netlify.app',
@@ -86,11 +77,8 @@ const frontendList: projectListType = []
 const fullstackList: projectListType = [
   {
     id: 1,
-    title: 'Marketplace App',
-    description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
-    github: 'https://github.com/jruizsilva/e-commerce-labs',
     deploy: 'https://e-commerce-labs.vercel.app',
+    github: 'https://e-commerce-labs.vercel.app',
     techList: [
       {
         id: 1,
@@ -133,15 +121,11 @@ const fullstackList: projectListType = [
         svg: icons.sequelize
       }
     ],
-    overview:
-      'https://i.ibb.co/3kLt0Z6/Marketplace-App.png',
+    overview: projects['full-stack'].marketplace,
     category: 'full-stack'
   },
   {
-    id: 2,
-    title: 'Finances App',
-    description:
-      'Soy un Full-stack developer Javascript con 1 año de experiencia académica en el desarrollo de software. Busco insertarme en la industria IT y desarrollar mis habilidades en un ámbito profesional. Mi distingo por mi colaboración en trabajo en equipo y adaptabilidad a los cambios.',
+    id: 3,
     github:
       'https://github.com/jruizsilva/challenge-fullstack-alkemy',
     deploy:
@@ -188,8 +172,58 @@ const fullstackList: projectListType = [
         svg: icons.sequelize
       }
     ],
-    overview:
-      'https://i.ibb.co/dPGYGvb/Mis-finanzas-app.png',
+    overview: projects['full-stack'].myfinances,
+    category: 'full-stack'
+  },
+  {
+    id: 2,
+    github:
+      'https://github.com/jruizsilva/challenge-fullstack-alkemy',
+    deploy:
+      'https://challenge-fullstack-alkemy-six.vercel.app',
+    techList: [
+      {
+        id: 1,
+        title: 'html',
+        svg: icons.html
+      },
+      {
+        id: 2,
+        title: 'css',
+        svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
+      },
+      {
+        id: 5,
+        title: 'redux',
+        svg: icons.redux
+      },
+      {
+        id: 6,
+        title: 'express',
+        svg: icons.express
+      },
+      {
+        id: 7,
+        title: 'postgre',
+        svg: icons.postgresql
+      },
+      {
+        id: 8,
+        title: 'sequelize',
+        svg: icons.sequelize
+      }
+    ],
+    overview: projects['full-stack'].uploadyourimages,
     category: 'full-stack'
   }
 ]
