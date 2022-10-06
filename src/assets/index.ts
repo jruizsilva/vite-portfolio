@@ -15,6 +15,7 @@ import postgresql from './svg/postgresql.svg'
 import sequelize from './svg/sequelize.svg'
 import close from './svg/close.svg'
 import close_white from './svg/close_white.svg'
+import notfound from './html-css/not-found.png'
 
 const icons = {
   link,
@@ -36,4 +37,10 @@ const icons = {
   close_white
 }
 
-export { icons }
+const projects = {
+  'html-css': {
+    notfound
+  }
+}
+
+export { icons, projects }

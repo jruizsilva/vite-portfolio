@@ -23,12 +23,12 @@ interface Props {
 
 const ProjectCard = ({ project }: Props): JSX.Element => {
   const { t } = useTranslation(['projects'])
-  const { to, github, deploy, techList, id } = project
+  const { github, deploy, techList, id } = project
 
   return (
     <motion.li className='project' variants={cardVariants}>
       <h3 className='project__h3'>
-        <Link to={to} state={{ project }}>
+        <Link to={`/project/${id}`} state={{ project }}>
           {t(`projects.${id}.title`)}
         </Link>
       </h3>

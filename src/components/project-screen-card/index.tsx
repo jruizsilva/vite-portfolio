@@ -26,6 +26,7 @@ const ProjectScreenCard = ({
   project
 }: Props): JSX.Element => {
   const { t } = useTranslation(['projects'])
+
   const { github, deploy, techList, overview, id } = project
 
   const {
