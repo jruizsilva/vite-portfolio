@@ -21,15 +21,26 @@ const ProjectScreen = (): JSX.Element => {
 
   const navigate = useNavigate()
   const { state } = useLocation()
-  const { id } = useParams()
+  const { id, stack } = useParams<{
+    id: string
+    stack:
+      | 'html-css'
+      | 'front-end'
+      | 'full-stack'
+      | undefined
+  }>()
 
   useEffect(() => {
     if (state?.project !== undefined) {
       setProject(state.project)
     } else {
-      const project = getProjectById(Number(id))
-      if (project !== undefined) {
-        setProject(project)
+      if (stack !== undefined) {
+        const project = getProjectById(Number(id), stack)
+        if (project !== undefined) {
+          setProject(project)
+        } else {
+          navigate('/projects')
+        }
       } else {
         navigate('/projects')
       }
