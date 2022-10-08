@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 const StyledTitle = styled(motion.h2)`
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
-  padding: 16px 0;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 
   @media (min-width: 425px) {
     font-size: 32px;
