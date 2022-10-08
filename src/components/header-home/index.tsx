@@ -7,7 +7,7 @@ import { NavbarLink } from '../../types'
 import { Anchor } from '../buttons'
 import { navbarLinkList } from './const'
 
-const itemVariants: Variants = {
+const headerVariants: Variants = {
   initial: { y: -100, opacity: 0 },
   animate: {
     y: 0,
@@ -15,19 +15,6 @@ const itemVariants: Variants = {
     transition: {
       type: 'spring',
       bounce: 0.4
-    }
-  }
-}
-
-const menuVariants: Variants = {
-  initial: { y: -100, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      delay: 0.5
     }
   }
 }
@@ -45,8 +32,9 @@ const HeaderHome = (): JSX.Element => {
   }
 
   return (
-    <header
+    <motion.header
       className={`header ${isOpenMenu ? 'open' : ''}`}
+      variants={headerVariants}
     >
       <nav className='header__nav'>
         <ul
@@ -54,10 +42,7 @@ const HeaderHome = (): JSX.Element => {
             isOpenMenu ? 'open' : ''
           }`}
         >
-          <motion.li
-            className='header__li'
-            variants={itemVariants}
-          >
+          <li className='header__li'>
             <Anchor
               href='http://google.com'
               icon={icons.link}
@@ -66,15 +51,11 @@ const HeaderHome = (): JSX.Element => {
             >
               {t('header.button.cv')}
             </Anchor>
-          </motion.li>
+          </li>
           <ul className='header__ul--links'>
             {navbarLinkList.map(
               ({ id, href, name }: NavbarLink) => (
-                <motion.li
-                  key={id}
-                  className='header__li--links'
-                  variants={itemVariants}
-                >
+                <li key={id} className='header__li--links'>
                   <Link
                     className='header__a'
                     activeClass='header__a--active'
@@ -86,14 +67,11 @@ const HeaderHome = (): JSX.Element => {
                   >
                     {t(`header.navlink.${name}`)}
                   </Link>
-                </motion.li>
+                </li>
               )
             )}
           </ul>
-          <motion.li
-            className='header__li'
-            variants={itemVariants}
-          >
+          <li className='header__li'>
             <select
               className='header__select'
               onChange={handleChangeLanguage}
@@ -106,23 +84,20 @@ const HeaderHome = (): JSX.Element => {
                 ES
               </option>
             </select>
-          </motion.li>
+          </li>
         </ul>
-        <motion.div
+        <div
           className={`header__hamburger-menu ${
             isOpenMenu ? 'open' : ''
           }`}
           onClick={toggleOpenMenu}
-          variants={menuVariants}
-          initial='initial'
-          animate='animate'
         >
           <div className='header__bar-top'></div>
           <div className='header__bar-middle'></div>
           <div className='header__bar-bottom'></div>
-        </motion.div>
+        </div>
       </nav>
-    </header>
+    </motion.header>
   )
 }
 
