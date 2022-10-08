@@ -3,19 +3,14 @@ import styled from 'styled-components'
 
 const StyledTitle = styled(motion.h2)`
   text-align: center;
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 400;
   margin-top: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   line-height: 1.4;
 
-  @media (min-width: 425px) {
+  @media (min-width: 375px) {
     font-size: 32px;
-    padding: 24px 0;
-  }
-  @media (min-width: 768px) {
-    font-size: 32px;
-    padding: 32px;
   }
 `
 
