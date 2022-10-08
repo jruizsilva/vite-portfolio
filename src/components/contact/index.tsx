@@ -131,8 +131,7 @@ const Contact = (): JSX.Element => {
                   ({ id, field, type }: FormField) => (
                     <div key={id} className='contact__box'>
                       <label className='contact__label'>
-                        {t(`contact.form.${field}.label`)}{' '}
-                        👇
+                        {t(`contact.form.${field}.label`)}
                       </label>
                       {type === 'textarea' ? (
                         <textarea

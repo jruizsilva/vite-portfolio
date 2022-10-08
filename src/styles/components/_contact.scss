@@ -10,9 +10,10 @@
     min-height: 360px;
     max-width: 375px;
     margin: auto;
-    border: 1px solid colors.$white;
+    background-color: #fff;
+    color: #333;
     padding: 16px;
-    border-radius: 16px;
+    border-radius: 8px;
     @include mixins.column(start, center, 14px);
   }
 
@@ -27,27 +28,27 @@
 
   &__label {
     font-size: 16px;
-    margin-bottom: 4px;
+    color: inherit;
+    font-weight: 500;
   }
 
   &__input,
   &__textarea {
     height: 48px;
-    background-color: transparent;
-    border: 1px solid #ffffffaa;
     width: 100%;
     padding: 16px;
+    border: 1px solid #b0b0b0;
     border-radius: 8px;
     font-size: 16px;
-    color: colors.$white;
-    outline: none;
+
+    background-color: colors.$white;
 
     &::placeholder {
-      color: #ffffffaa;
+      color: #989898;
     }
     &:focus {
-      border-color: colors.$white;
-      border-width: 2px;
+      outline: none;
+      box-shadow: 0px 0px 5px #007bff;
     }
   }
 
@@ -57,5 +58,7 @@
   }
   &__error-message {
     margin-top: 2px;
+    font-size: 14px;
+    color: red;
   }
 }

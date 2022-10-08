@@ -45,7 +45,7 @@ const StyledAnchor = styled(motion.a)<AnchorProps>`
   justify-content: center;
   align-items: center;
   column-gap: 12px;
-  border-radius: 1rem;
+  border-radius: 8px;
   width: ${({ w }) => (w !== undefined ? w : '12.5rem')};
   cursor: default;
 
@@ -74,7 +74,7 @@ const StyledButton = styled(motion.button)<ButtonProps>`
   justify-content: center;
   align-items: center;
   column-gap: 12px;
-  border-radius: 1rem;
+  border-radius: 8px;
   width: ${({ w }) => (w !== undefined ? w : '12.5rem')};
   cursor: default;
 
