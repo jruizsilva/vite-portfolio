@@ -182,8 +182,6 @@ const Contact = (): JSX.Element => {
                     type='submit'
                     icon={icons.send}
                     w='100%'
-                    bg='transparent'
-                    border='#fff'
                     disabled={
                       isSubmitting ||
                       Object.keys(errors).length > 0
