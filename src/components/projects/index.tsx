@@ -8,6 +8,7 @@ interface Props {
   limit?: number
   category: 'html-css' | 'front-end' | 'full-stack'
   showTitle?: boolean
+  lg?: boolean
 }
 
 const Projects = ({

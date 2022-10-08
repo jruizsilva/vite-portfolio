@@ -4,7 +4,6 @@ import {
   useParams
 } from 'react-router-dom'
 import Header from '../../components/header'
-import ProjectScreenCard from '../../components/project-screen-card'
 import SectionTitle from '../../components/section-title'
 
 import { motion } from 'framer-motion'
@@ -13,6 +12,7 @@ import { getProjectById } from '../../helper/getProjectById'
 import { Project } from '../../types'
 import Loader from '../../components/loader'
 import { useTranslation } from 'react-i18next'
+import ProjectCard from '../../components/project-card'
 const ProjectScreen = (): JSX.Element => {
   const [project, setProject] = useState<Project | null>(
     null
@@ -68,7 +68,7 @@ const ProjectScreen = (): JSX.Element => {
                   `projects.${project.category}.${project.id}.title`
                 )}
               </SectionTitle>
-              <ProjectScreenCard project={project} />
+              <ProjectCard project={project} lg />
             </div>
           </div>
         </motion.div>
