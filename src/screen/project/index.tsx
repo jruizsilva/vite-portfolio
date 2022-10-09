@@ -42,6 +42,7 @@ const ProjectScreen = (): JSX.Element => {
           navigate('/projects')
         }
       } else {
+        console.log('navigate')
         navigate('/projects')
       }
     }
