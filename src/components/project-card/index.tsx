@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { icons } from '../../assets'
 import useImageModal from '../../hooks/useImageModal'
 import { Project } from '../../types'
 import CardButtons from '../card-buttons'
@@ -48,17 +47,20 @@ const ProjectCard = ({
   return (
     <>
       <motion.li
-        className='project'
+        className={`project ${lg === true ? 'screen' : ''}`}
         variants={cardVariants}
       >
-        <h3 className='project__h3'>
-          <Link
-            to={`/project/${category}/${id}`}
-            state={{ project }}
-          >
-            {t(`projects.${category}.${id}.title`)}
-          </Link>
-        </h3>
+        {lg !== true && (
+          <h3 className='project__h3'>
+            <Link
+              to={`/project/${category}/${id}`}
+              state={{ project }}
+            >
+              {t(`projects.${category}.${id}.title`)}
+            </Link>
+          </h3>
+        )}
+
         <p
           className={`project__p ${
             lg === true ? 'screen' : ''
@@ -68,7 +70,9 @@ const ProjectCard = ({
         </p>
 
         <motion.div
-          className='project__img-container border'
+          className={`project__img-container border ${
+            lg === true ? 'screen' : ''
+          }`}
           onClick={openImageModal}
           layoutId={`project-${project.id}-image`}
           style={{
@@ -98,18 +102,11 @@ const ProjectCard = ({
           >
             <motion.div
               className='project__modal image'
-              onClick={e => e.stopPropagation()}
               layoutId={`project-${project.id}-image`}
               style={{
                 backgroundImage: `url(${overview})`
               }}
             ></motion.div>
-            <button
-              className='project__button--modal'
-              onClick={closeImageModal}
-            >
-              <img src={icons.close_white} alt='close' />
-            </button>
           </motion.div>
         )}
       </AnimatePresence>
