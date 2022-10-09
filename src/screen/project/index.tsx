@@ -14,6 +14,7 @@ import Loader from '../../components/loader'
 import { useTranslation } from 'react-i18next'
 import ProjectCard from '../../components/project-card'
 const ProjectScreen = (): JSX.Element => {
+  console.log('dsadasds')
   const [project, setProject] = useState<Project | null>(
     null
   )
@@ -42,7 +43,6 @@ const ProjectScreen = (): JSX.Element => {
           navigate('/projects')
         }
       } else {
-        console.log('navigate')
         navigate('/projects')
       }
     }
