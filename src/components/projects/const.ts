@@ -385,11 +385,30 @@ const frontendList: projectListType = [
         svg: icons.css3
       }
     ],
-    overview: projects['front-end'].dogs,
+    overview: projects['front-end'].crudindexeddb,
     category: 'front-end'
   },
   {
     id: 5,
+    github: 'https://github.com/jruizsilva/dog-app',
+    deploy: 'https://curso-practico-react-3.netlify.app/',
+    techList: [
+      {
+        id: 1,
+        title: 'html',
+        svg: icons.html
+      },
+      {
+        id: 2,
+        title: 'css',
+        svg: icons.css3
+      }
+    ],
+    overview: projects['front-end'].dogs,
+    category: 'front-end'
+  },
+  {
+    id: 6,
     github: 'https://github.com/jruizsilva/ejercicios-dom',
     deploy: 'https://curso-js-jonmircha-dom.netlify.app/',
     techList: [
@@ -408,7 +427,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 6,
+    id: 7,
     github: 'https://github.com/jruizsilva/validar-email',
     deploy: 'https://js-moderno-project-2.netlify.app/',
     techList: [
@@ -427,7 +446,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 7,
+    id: 8,
     github:
       'https://github.com/jruizsilva/button-component-devchallenges.io',
     deploy: 'https://devchallenges-react-1.netlify.app/',
@@ -447,7 +466,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 8,
+    id: 9,
     github:
       'https://github.com/jruizsilva/input-component-devchallenges.io',
     deploy: 'https://dev-challenges-react-2.netlify.app/',
@@ -467,7 +486,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 9,
+    id: 10,
     github:
       'https://github.com/jruizsilva/lista-tareas-local-storage',
     deploy: 'https://jnt-project-1.netlify.app/',
@@ -487,7 +506,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 10,
+    id: 11,
     github:
       'https://github.com/jruizsilva/movie-list-with-use-context',
     deploy:
@@ -508,7 +527,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 11,
+    id: 12,
     github: 'https://github.com/jruizsilva/miListaAnime',
     deploy: 'https://jnt-project-3.netlify.app/',
     techList: [
@@ -527,7 +546,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 12,
+    id: 13,
     github: 'https://github.com/jruizsilva/pokeList',
     deploy: 'https://jruizsilva-pokelist.netlify.app/',
     techList: [
@@ -546,7 +565,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 13,
+    id: 14,
     github: 'https://github.com/jruizsilva/vite-portfolio',
     deploy: 'https://vite-portfolio-jruizsilva.vercel.app/',
     techList: [
@@ -565,7 +584,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 14,
+    id: 15,
     github:
       'https://github.com/jruizsilva/cotizador-seguro-prototype',
     deploy: 'https://js-moderno-project-5.netlify.app/',
@@ -585,7 +604,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 15,
+    id: 16,
     github:
       'https://github.com/jruizsilva/random-quote-machine',
     deploy:
@@ -606,7 +625,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 16,
+    id: 17,
     github: 'https://github.com/jruizsilva/buscador-autos',
     deploy: 'https://js-moderno-project-3.netlify.app/',
     techList: [
@@ -625,7 +644,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 17,
+    id: 18,
     github: 'https://github.com/jruizsilva/lyrics',
     deploy: 'https://js-moderno-project-10.netlify.app/',
     techList: [
@@ -644,7 +663,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 18,
+    id: 19,
     github:
       'https://github.com/jruizsilva/lista-tareas-local-storage',
     deploy: 'https://jnt-project-1.netlify.app/',
@@ -664,7 +683,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 19,
+    id: 20,
     github: 'https://github.com/jruizsilva/react-todo-app',
     deploy: 'https://curso-practico-react-1.netlify.app/',
     techList: [
@@ -683,7 +702,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 20,
+    id: 21,
     github:
       'https://github.com/jruizsilva/veterinaria-administrador',
     deploy: 'https://js-moderno-project-7.netlify.app/',
@@ -703,7 +722,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 21,
+    id: 22,
     github: 'https://github.com/jruizsilva/clima',
     deploy: 'https://js-moderno-project-9.netlify.app/',
     techList: [
@@ -722,7 +741,7 @@ const frontendList: projectListType = [
     category: 'front-end'
   },
   {
-    id: 22,
+    id: 23,
     github: 'https://github.com/jruizsilva/gasto-semanal',
     deploy: 'https://js-moderno-project-6.netlify.app/',
     techList: [
