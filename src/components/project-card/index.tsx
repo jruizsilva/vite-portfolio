@@ -50,16 +50,14 @@ const ProjectCard = ({
         className={`project ${lg === true ? 'screen' : ''}`}
         variants={cardVariants}
       >
-        {lg !== true && (
-          <h3 className='project__h3'>
-            <Link
-              to={`/project/${category}/${id}`}
-              state={{ project }}
-            >
-              {t(`projects.${category}.${id}.title`)}
-            </Link>
-          </h3>
-        )}
+        <h3 className='project__h3'>
+          <Link
+            to={`/project/${category}/${id}`}
+            state={{ project }}
+          >
+            {t(`projects.${category}.${id}.title`)}
+          </Link>
+        </h3>
 
         <p
           className={`project__p ${
