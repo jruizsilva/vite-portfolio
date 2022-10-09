@@ -1,7 +1,8 @@
 import {
   Routes,
   Route,
-  useLocation
+  useLocation,
+  Navigate
 } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Footer from '../components/footer'
@@ -26,10 +27,10 @@ const Router = (): JSX.Element => {
         >
           <Routes location={location} key={location.key}>
             <Route
-              path='/'
+              path='/project/:stack/:id'
               element={
                 <Transitions>
-                  <HomeScreen />
+                  <ProjectScreen />
                 </Transitions>
               }
             />
@@ -41,14 +42,16 @@ const Router = (): JSX.Element => {
                 </Transitions>
               }
             />
+
             <Route
-              path='/project/:stack/:id'
+              path='/'
               element={
                 <Transitions>
-                  <ProjectScreen />
+                  <HomeScreen />
                 </Transitions>
               }
             />
+            <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </AnimatePresence>
         <Footer />

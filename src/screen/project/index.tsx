@@ -14,7 +14,6 @@ import Loader from '../../components/loader'
 import { useTranslation } from 'react-i18next'
 import ProjectCard from '../../components/project-card'
 const ProjectScreen = (): JSX.Element => {
-  console.log('dsadasds')
   const [project, setProject] = useState<Project | null>(
     null
   )
@@ -62,16 +61,20 @@ const ProjectScreen = (): JSX.Element => {
           transition={{ staggerChildren: 0.3 }}
         >
           <Header />
-          <div className='wrapper'>
-            <div className='project-screen'>
-              <SectionTitle>
-                {t(
-                  `projects.${project.category}.${project.id}.title`
-                )}
-              </SectionTitle>
-              <ProjectCard project={project} lg />
+          {project === null ? (
+            <Loader />
+          ) : (
+            <div className='wrapper'>
+              <div className='project-screen'>
+                <SectionTitle>
+                  {t(
+                    `projects.${project.category}.${project.id}.title`
+                  )}
+                </SectionTitle>
+                <ProjectCard project={project} lg />
+              </div>
             </div>
-          </div>
+          )}
         </motion.div>
       )}
     </>

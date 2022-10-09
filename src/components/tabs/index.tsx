@@ -17,8 +17,6 @@ const Tabs = (): JSX.Element => {
     showHTMLCSSTab
   } = useTabs()
 
-  console.log(index)
-
   return (
     <div className='tabs'>
       <ul className='tabs__ul'>
