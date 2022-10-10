@@ -757,7 +757,7 @@ const frontendList: projectListType = [
       }
     ],
     overview: projects['front-end'].universidad,
-    category: 'html-css'
+    category: 'front-end'
   }
 ]
 
