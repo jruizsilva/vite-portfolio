@@ -306,6 +306,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].breakingbad,
@@ -326,6 +336,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].button,
@@ -345,6 +365,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].clientadmin,
@@ -364,6 +394,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].crudindexeddb,
@@ -383,6 +423,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].dogs,
@@ -402,6 +452,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].domexercices,
@@ -421,6 +481,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].formvalidation,
@@ -441,6 +511,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].foxnine,
@@ -461,6 +541,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].input,
@@ -481,6 +571,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].localstorage,
@@ -502,6 +602,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].movielist,
@@ -521,6 +631,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].myanimelist,
@@ -540,6 +660,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].pokelist,
@@ -559,6 +689,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].portfolio2022,
@@ -579,6 +719,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].quoteinsurance,
@@ -600,6 +750,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].randomquotemachine,
@@ -619,6 +779,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].carsearcher,
@@ -638,6 +808,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].songsearcher,
@@ -658,6 +838,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].todoapp,
@@ -677,6 +867,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].todoapp2,
@@ -697,6 +897,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].veterinary,
@@ -716,6 +926,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].weather,
@@ -735,6 +955,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].weeklyexpense,
@@ -754,6 +984,16 @@ const frontendList: projectListType = [
         id: 2,
         title: 'css',
         svg: icons.css3
+      },
+      {
+        id: 3,
+        title: 'javascript',
+        svg: icons.javascript
+      },
+      {
+        id: 4,
+        title: 'react',
+        svg: icons.react
       }
     ],
     overview: projects['front-end'].universidad,
