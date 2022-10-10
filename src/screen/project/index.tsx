@@ -5,12 +5,12 @@ import {
 } from 'react-router-dom'
 import Header from '../../components/header'
 
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { getProjectById } from '../../helper/getProjectById'
 import { Project } from '../../types'
-import Loader from '../../components/loader'
 import ProjectCard from '../../components/project-card'
+import Loader from '../../components/loader'
 const ProjectScreen = (): JSX.Element => {
   const [project, setProject] = useState<Project | null>(
     null
@@ -45,7 +45,7 @@ const ProjectScreen = (): JSX.Element => {
   }, [])
 
   return (
-    <>
+    <AnimatePresence mode='wait'>
       {project === null ? (
         <Loader />
       ) : (
@@ -58,18 +58,15 @@ const ProjectScreen = (): JSX.Element => {
           transition={{ staggerChildren: 0.3 }}
         >
           <Header />
-          {project === null ? (
-            <Loader />
-          ) : (
-            <div className='wrapper'>
-              <div className='project-screen'>
-                <ProjectCard project={project} lg />
-              </div>
+
+          <div className='wrapper'>
+            <div className='project-screen'>
+              <ProjectCard project={project} lg />
             </div>
-          )}
+          </div>
         </motion.div>
       )}
-    </>
+    </AnimatePresence>
   )
 }
 
