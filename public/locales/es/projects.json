@@ -167,23 +167,23 @@
     "full-stack": {
       "1": {
         "title": "Mercado app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto final realizado en <strong>Henry bootcamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "2": {
         "title": "Finanzas app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>Henry bootcamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "3": {
         "title": "Subí tus imáganes",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "4": {
         "title": "Chat grupo",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web en progreso, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "5": {
         "title": "Países app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto individual realizado en <strong>Henry bootcamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       }
     }
   }
