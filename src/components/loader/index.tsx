@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 const containerVariants = {
-  initial: { opacity: 1 },
+  initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 }
 }
