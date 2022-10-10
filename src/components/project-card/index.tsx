@@ -63,9 +63,12 @@ const ProjectCard = ({
           className={`project__p ${
             lg === true ? 'screen' : ''
           }`}
-        >
-          {t(`projects.${category}.${id}.description`)}
-        </p>
+          dangerouslySetInnerHTML={{
+            __html: t(
+              `projects.${category}.${id}.description`
+            )
+          }}
+        />
 
         <motion.div
           className={`project__img-container border ${

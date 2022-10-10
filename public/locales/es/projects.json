@@ -10,11 +10,11 @@
     "html-css": {
       "1": {
         "title": "Caja",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "2": {
         "title": "Documentación JS",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "3": {
         "title": "Edie inicio",

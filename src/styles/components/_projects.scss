@@ -67,9 +67,13 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-weight: 400;
 
     &.screen {
       display: block;
+    }
+    & strong {
+      font-weight: 600;
     }
 
     @media (min-width: breakpoints.$sm) {
@@ -107,7 +111,7 @@
   }
 
   &__ul--tech-stack {
-    width: 100%;
+    margin: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
