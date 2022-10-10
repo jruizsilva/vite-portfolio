@@ -250,25 +250,6 @@ const htmlcssList: projectListType = [
   },
   {
     id: 13,
-    github: 'https://github.com/jruizsilva/carrito-cursos',
-    deploy: 'https://js-moderno-project-1.netlify.app/',
-    techList: [
-      {
-        id: 1,
-        title: 'html',
-        svg: icons.html
-      },
-      {
-        id: 2,
-        title: 'css',
-        svg: icons.css3
-      }
-    ],
-    overview: projects['html-css'].universidad,
-    category: 'html-css'
-  },
-  {
-    id: 14,
     github:
       'https://github.com/jruizsilva/blog-de-viajes-curso',
     deploy: 'https://angry-easley-d5a70b.netlify.app/',
@@ -288,7 +269,7 @@ const htmlcssList: projectListType = [
     category: 'html-css'
   },
   {
-    id: 15,
+    id: 14,
     github:
       'https://github.com/jruizsilva/personal-portfolio-webpage',
     deploy: 'https://jruizsilva.netlify.app/',
@@ -758,6 +739,25 @@ const frontendList: projectListType = [
     ],
     overview: projects['front-end'].weeklyexpense,
     category: 'front-end'
+  },
+  {
+    id: 24,
+    github: 'https://github.com/jruizsilva/carrito-cursos',
+    deploy: 'https://js-moderno-project-1.netlify.app/',
+    techList: [
+      {
+        id: 1,
+        title: 'html',
+        svg: icons.html
+      },
+      {
+        id: 2,
+        title: 'css',
+        svg: icons.css3
+      }
+    ],
+    overview: projects['front-end'].universidad,
+    category: 'html-css'
   }
 ]
 

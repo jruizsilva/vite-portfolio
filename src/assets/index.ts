@@ -97,7 +97,6 @@ const projects = {
     surveyform,
     team,
     tribute,
-    universidad,
     travelsblog,
     portfolio2021
   },
@@ -124,7 +123,8 @@ const projects = {
     todoapp2,
     veterinary,
     weather,
-    weeklyexpense
+    weeklyexpense,
+    universidad
   },
   'full-stack': {
     marketplace,

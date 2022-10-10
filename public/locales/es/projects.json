@@ -18,55 +18,52 @@
       },
       "3": {
         "title": "Edie inicio",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "4": {
         "title": "Galeria imagenes",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "5": {
         "title": "Consultora de interiores",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "6": {
         "title": "Página de aterrizaje",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "7": {
         "title": "Página 404 no encontrado",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "8": {
         "title": "Billie portfolio",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "9": {
         "title": "Página de receta",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "10": {
         "title": "Formulario de encuesta",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "11": {
         "title": "Página de equipo",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "12": {
         "title": "Págino de tributo",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
+
       "13": {
-        "title": "Cursos de universidad",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "title": "Blog de viajes",
+        "description": "Sitio web estatico, replique el diseño de un <strong>curso de CSS</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "14": {
-        "title": "Blog de viajes",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
-      },
-      "15": {
         "title": "Portafolio 2021",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Sitio web estatico, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       }
     },
     "front-end": {
@@ -160,6 +157,10 @@
       },
       "23": {
         "title": "Gasto semanal",
+        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+      },
+      "24": {
+        "title": "Cursos de universidad",
         "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
       }
     },
