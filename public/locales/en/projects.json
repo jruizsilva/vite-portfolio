@@ -10,63 +10,59 @@
     "html-css": {
       "1": {
         "title": "Checkout",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "2": {
         "title": "JS Documentation",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>freecodecamp</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "3": {
         "title": "Edie homepage",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "4": {
         "title": "Gallery page",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "5": {
         "title": "Interior consultant",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "6": {
         "title": "Landing page",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>freecodecamp</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "7": {
         "title": "404 not found",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "8": {
         "title": "Billie portfolio",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "9": {
         "title": "Recipe page",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "10": {
         "title": "Survay form",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>freecodecamp</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "11": {
         "title": "Team page",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>devchallenges.io</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "12": {
         "title": "Tribute page",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>freecodecamp</strong> challenge.<br/> The page adapts to different device sizes."
       },
       "13": {
-        "title": "University courses",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "title": "Travel blog",
+        "description": "Static website, replicate the design of a <strong>CSS course</strong>.<br/> The page adapts to different device sizes."
       },
       "14": {
-        "title": "Travel blog",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
-      },
-      "15": {
         "title": "Portfolio 2021",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Static website, replicate the design of a <strong>freecodecamp</strong> challenge.<br/> The page adapts to different device sizes."
       }
     },
     "front-end": {

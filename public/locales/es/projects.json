@@ -69,99 +69,99 @@
     "front-end": {
       "1": {
         "title": "Breaking bad",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de React</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "2": {
         "title": "Componente boton",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "3": {
         "title": "Administrador de clientes",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "4": {
         "title": "IndexedDB CRUD",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>videotutoriales</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "5": {
         "title": "Perros app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de React</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "6": {
         "title": "DOM ejercicios",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>videotutoriales</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "7": {
         "title": "Validaciónes de formulario",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "8": {
         "title": "Foxnine",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para repasar lo aprendido en el <strong>curso de React</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "9": {
         "title": "Componente entrada",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un challenge de <strong>devchallenges.io</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "10": {
         "title": "Localstorage CRUD",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>videotutoriales</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "11": {
         "title": "Lista de peliculas",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de React</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "12": {
         "title": "Mi lista anime",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>cursos y videotutoriales</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "13": {
         "title": "Lista de pokemons",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para poner en practica lo aprendido en <strong>videotutoriales</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "14": {
         "title": "Portafolio 2022",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, proyecto creado para <strong>visualizar los proyectos realizados</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "15": {
         "title": "Cotizador de seguro",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "16": {
         "title": "Frase aleatoria",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un challenge de <strong>freecodecamp</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "17": {
         "title": "Búscador de autos",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "18": {
         "title": "Búscador de canciones",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "19": {
         "title": "Todo app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "20": {
         "title": "Todo app2",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de React</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "21": {
         "title": "Veterinaria app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "22": {
         "title": "Clima app",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "23": {
         "title": "Gasto semanal",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       },
       "24": {
         "title": "Cursos de universidad",
-        "description": "I am a Full-stack Javascript developer with 1 year of academic experience in software development. I seek to insert myself in the IT industry and develop my skills in a professional environment. I distinguish myself by my collaboration in teamwork and adaptability to changes."
+        "description": "Aplicación web, replique el diseño de un <strong>curso de Javascript</strong>.<br/> La página se adapta a los distintos tamaños de dispositivo."
       }
     },
     "full-stack": {
