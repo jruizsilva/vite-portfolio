@@ -44,7 +44,7 @@ const HeaderHome = (): JSX.Element => {
         >
           <li className='header__li'>
             <Anchor
-              href='http://google.com'
+              href='https://drive.google.com/file/d/1yp-r9G5Szopo6xplPYuTjtfetVerh7U_/view?usp=sharing'
               icon={icons.link}
               bg='transparent'
               border='#fff'
